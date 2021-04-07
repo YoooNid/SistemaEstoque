@@ -37,7 +37,17 @@ namespace RmSoft
             this.label1 = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            
+            // 
+            // Senha
+            // 
+            this.Senha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Senha.Location = new System.Drawing.Point(124, 200);
+            this.Senha.Name = "Senha";
+            this.Senha.PasswordChar = '*';
+            this.Senha.Size = new System.Drawing.Size(100, 21);
+            this.Senha.TabIndex = 2;
+            this.Senha.Tag = "1";
+            this.Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // checkBox1
             // 
@@ -90,10 +100,8 @@ namespace RmSoft
             this.Usuario.Size = new System.Drawing.Size(206, 21);
             this.Usuario.TabIndex = 1;
             this.Usuario.Tag = "0";
-            this.Usuario.KeyPress += new
-            System.Windows.Forms.KeyPressEventHandler(Check);
-
-
+            this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
+            this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Check);
             // 
             // Login
             // 
@@ -118,20 +126,6 @@ namespace RmSoft
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
-            // 
-            // Senha
-            // 
-            this.Senha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Senha.Location = new System.Drawing.Point(124, 200);
-            this.Senha.Name = "Senha";
-            this.Senha.PasswordChar = '*';
-            this.Senha.Size = new System.Drawing.Size(100, 21);
-            this.Senha.TabIndex = 2;
-            this.Senha.Tag = "1";
-            this.Senha.KeyPress += new
-            System.Windows.Forms.KeyPressEventHandler(CheckEnter);
-
 
         }
 

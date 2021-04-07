@@ -27,7 +27,7 @@ namespace RmSoft
         private void Form1_Load(object sender, EventArgs e)
 
         {
-
+           
 
             SqlConnection Con = new SqlConnection();
 
@@ -108,5 +108,9 @@ namespace RmSoft
             }
         }
 
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

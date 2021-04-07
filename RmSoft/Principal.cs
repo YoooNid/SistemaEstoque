@@ -27,12 +27,12 @@ namespace RmSoft
         {
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             xtraTabControl1.SelectedTabPageIndex = 2;
-
+            label1.AutoEllipsis = true;
         }
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-            
+            xtraTabControl1.SelectedTabPageIndex = 1;
         }
 
         private void button2_Click(object sender, EventArgs e)

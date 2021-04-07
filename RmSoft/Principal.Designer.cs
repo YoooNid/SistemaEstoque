@@ -148,6 +148,7 @@ namespace RmSoft
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(450, 167);
             this.label8.Name = "label8";
@@ -157,6 +158,7 @@ namespace RmSoft
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.Location = new System.Drawing.Point(570, 161);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
@@ -164,6 +166,7 @@ namespace RmSoft
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.Location = new System.Drawing.Point(570, 26);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(129, 33);
@@ -173,6 +176,7 @@ namespace RmSoft
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Location = new System.Drawing.Point(371, 26);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 33);
@@ -182,6 +186,7 @@ namespace RmSoft
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Location = new System.Drawing.Point(183, 26);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 33);
@@ -192,6 +197,7 @@ namespace RmSoft
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Location = new System.Drawing.Point(5, 26);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 33);
@@ -202,6 +208,7 @@ namespace RmSoft
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(55, 307);
             this.label7.Name = "label7";
@@ -211,6 +218,7 @@ namespace RmSoft
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(326, 253);
             this.label6.Name = "label6";
@@ -220,6 +228,7 @@ namespace RmSoft
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(55, 253);
             this.label5.Name = "label5";
@@ -229,6 +238,7 @@ namespace RmSoft
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(55, 212);
             this.label4.Name = "label4";
@@ -238,6 +248,7 @@ namespace RmSoft
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(237, 164);
             this.label3.Name = "label3";
@@ -247,6 +258,7 @@ namespace RmSoft
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 164);
             this.label2.Name = "label2";
@@ -256,6 +268,7 @@ namespace RmSoft
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(55, 122);
             this.label1.Name = "label1";
@@ -265,6 +278,7 @@ namespace RmSoft
             // 
             // Txt_Nome
             // 
+            this.Txt_Nome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Txt_Nome.Location = new System.Drawing.Point(112, 119);
             this.Txt_Nome.Name = "Txt_Nome";
             this.Txt_Nome.Size = new System.Drawing.Size(658, 21);
@@ -272,6 +286,7 @@ namespace RmSoft
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(112, 161);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(108, 21);
@@ -279,6 +294,7 @@ namespace RmSoft
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Location = new System.Drawing.Point(303, 161);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(108, 21);
@@ -286,6 +302,7 @@ namespace RmSoft
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Location = new System.Drawing.Point(112, 209);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(388, 21);
@@ -293,6 +310,7 @@ namespace RmSoft
             // 
             // textBox5
             // 
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Location = new System.Drawing.Point(112, 250);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(108, 21);
@@ -300,6 +318,7 @@ namespace RmSoft
             // 
             // textBox6
             // 
+            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Location = new System.Drawing.Point(392, 250);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(108, 21);
@@ -307,6 +326,7 @@ namespace RmSoft
             // 
             // textBox7
             // 
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox7.Location = new System.Drawing.Point(112, 304);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(108, 21);

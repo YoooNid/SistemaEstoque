@@ -17,7 +17,7 @@ namespace RmSoft
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
-        IniFiles ini = new IniFiles(@"C:\testes\pdv.ini");
+        IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
 
         public Login()
         {
@@ -33,7 +33,7 @@ namespace RmSoft
 
             try
             {
-                Con.ConnectionString = (@"Data Source=DESKTOP-MHRUPDK\SQL; Initial Catalog=RmSoft;Integrated Security=True");
+                Con.ConnectionString = (@"Data Source="+ini.IniReadValue("DATABASE","SERVIDOR")+"; Initial Catalog=RmSoft;Integrated Security=True");
                 Con.Open();
             }
             catch (Exception)

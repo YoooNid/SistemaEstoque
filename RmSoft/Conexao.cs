@@ -11,12 +11,12 @@ namespace RmSoft
     public class Conexao
 
     {
-        
+        IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
         SqlConnection Con = new SqlConnection();
 
         public Conexao()
         {
-            Con.ConnectionString = (@"Data Source=DESKTOP-MHRUPDK\SQL; Initial Catalog=RmSoft;Integrated Security=True"); //correto
+            Con.ConnectionString = (@"Data Source=" + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Initial Catalog=RmSoft;Integrated Security=True"); //correto
         }
 
         public SqlConnection Conectar()

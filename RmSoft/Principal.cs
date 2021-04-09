@@ -25,7 +25,11 @@ namespace RmSoft
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'rmSoftDataSet.Usuario'. Você pode movê-la ou removê-la conforme necessário.
+            this.usuarioTableAdapter.Fill(this.rmSoftDataSet.Usuario);
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
+
+            dataGridView1.Visible = false;
             xtraTabControl1.SelectedTabPageIndex = 2;
             label1.AutoEllipsis = true;
         }
@@ -37,6 +41,7 @@ namespace RmSoft
 
         private void button2_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible = false;
             Txt_Nome.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -68,6 +73,32 @@ namespace RmSoft
 
             }
 
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                
+
+                
+                //Txt_Nome.Text = Me.dataGridView.CurrentRow.Cells["Nome", e.RowIndex].Value.ToString();
+                //textBox2.Text = dataGridView1["Usuario"].Value.ToString();
+                //textBox3.Text = dataGridView1["Senha"].Value.ToString();
+                //textBox4.Text = dataGridView1["Endereco"].Value.ToString();
+                //textBox5.Text = dataGridView1["Bairro"].Value.ToString();
+                //textBox6.Text = dataGridView1["Cidade"].Value.ToString();
+
+
+
+            
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Visible = true;
+            
+            
         }
     }
 }

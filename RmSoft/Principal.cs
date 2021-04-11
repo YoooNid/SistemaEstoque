@@ -26,10 +26,7 @@ namespace RmSoft
         private void Principal_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'rmSoftDataSet.Usuario'. Você pode movê-la ou removê-la conforme necessário.
-            this.usuarioTableAdapter.Fill(this.rmSoftDataSet.Usuario);
-            xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
-
-            dataGridView1.Visible = false;
+           
             xtraTabControl1.SelectedTabPageIndex = 2;
             label1.AutoEllipsis = true;
         }
@@ -41,7 +38,7 @@ namespace RmSoft
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = false;
+            
             Txt_Nome.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -96,7 +93,7 @@ namespace RmSoft
 
         private void button4_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
+            
             
             
         }

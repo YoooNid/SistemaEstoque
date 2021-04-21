@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace RmSoft
 {
-    public class Cadastro
+    public class CadastroFuncionario
     {
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public Cadastro(String Nome, String Usuario, String Senha, String Endereco, String Bairro,  string Cidade)
+        public CadastroFuncionario(String Nome, String Usuario, String Senha, String Endereco, String Bairro,  string Cidade)
         {
             cmd.CommandText = "insert into Usuario (Nome, Usuario, Senha, Endereco, Bairro, Cidade) values (@Nome, @Usuario, @Senha, @Endereco, @Bairro, @Cidade)"; 
 //            

@@ -29,6 +29,7 @@ namespace RmSoft
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -60,6 +61,8 @@ namespace RmSoft
             this.button1 = new System.Windows.Forms.Button();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -79,7 +82,7 @@ namespace RmSoft
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
-            this.accordionControl1.Size = new System.Drawing.Size(174, 644);
+            this.accordionControl1.Size = new System.Drawing.Size(174, 572);
             this.accordionControl1.TabIndex = 0;
             // 
             // accordionControlElement1
@@ -113,7 +116,7 @@ namespace RmSoft
             this.xtraTabControl1.Location = new System.Drawing.Point(174, 48);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1196, 596);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1204, 531);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -143,14 +146,14 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.textBox6);
             this.xtraTabPage1.Controls.Add(this.textBox7);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1194, 571);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1202, 506);
             this.xtraTabPage1.Text = "xtraTabPage1";
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(564, 245);
+            this.label8.Location = new System.Drawing.Point(568, 213);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 13);
             this.label8.TabIndex = 20;
@@ -159,7 +162,7 @@ namespace RmSoft
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(684, 239);
+            this.dateTimePicker1.Location = new System.Drawing.Point(688, 207);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 2;
@@ -167,7 +170,7 @@ namespace RmSoft
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(777, 109);
+            this.button5.Location = new System.Drawing.Point(781, 77);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 33);
             this.button5.TabIndex = 19;
@@ -177,7 +180,7 @@ namespace RmSoft
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(536, 109);
+            this.button4.Location = new System.Drawing.Point(540, 77);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(209, 33);
             this.button4.TabIndex = 18;
@@ -188,7 +191,7 @@ namespace RmSoft
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(294, 109);
+            this.button3.Location = new System.Drawing.Point(298, 77);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 33);
             this.button3.TabIndex = 17;
@@ -199,7 +202,7 @@ namespace RmSoft
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(61, 109);
+            this.button2.Location = new System.Drawing.Point(65, 77);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 33);
             this.button2.TabIndex = 16;
@@ -211,7 +214,7 @@ namespace RmSoft
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(169, 385);
+            this.label7.Location = new System.Drawing.Point(173, 353);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 15;
@@ -221,7 +224,7 @@ namespace RmSoft
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(440, 331);
+            this.label6.Location = new System.Drawing.Point(444, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 14;
@@ -231,7 +234,7 @@ namespace RmSoft
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(169, 331);
+            this.label5.Location = new System.Drawing.Point(173, 299);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 13;
@@ -241,7 +244,7 @@ namespace RmSoft
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(169, 290);
+            this.label4.Location = new System.Drawing.Point(173, 258);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 12;
@@ -251,7 +254,7 @@ namespace RmSoft
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 242);
+            this.label3.Location = new System.Drawing.Point(355, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 11;
@@ -261,7 +264,7 @@ namespace RmSoft
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 242);
+            this.label2.Location = new System.Drawing.Point(173, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 10;
@@ -271,7 +274,7 @@ namespace RmSoft
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 200);
+            this.label1.Location = new System.Drawing.Point(173, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 9;
@@ -280,7 +283,7 @@ namespace RmSoft
             // Txt_Nome
             // 
             this.Txt_Nome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_Nome.Location = new System.Drawing.Point(226, 197);
+            this.Txt_Nome.Location = new System.Drawing.Point(230, 165);
             this.Txt_Nome.Name = "Txt_Nome";
             this.Txt_Nome.Size = new System.Drawing.Size(658, 21);
             this.Txt_Nome.TabIndex = 2;
@@ -288,7 +291,7 @@ namespace RmSoft
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(226, 239);
+            this.textBox2.Location = new System.Drawing.Point(230, 207);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(108, 21);
             this.textBox2.TabIndex = 3;
@@ -296,7 +299,7 @@ namespace RmSoft
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(417, 239);
+            this.textBox3.Location = new System.Drawing.Point(421, 207);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(108, 21);
             this.textBox3.TabIndex = 4;
@@ -304,7 +307,7 @@ namespace RmSoft
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(226, 287);
+            this.textBox4.Location = new System.Drawing.Point(230, 255);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(388, 21);
             this.textBox4.TabIndex = 5;
@@ -312,7 +315,7 @@ namespace RmSoft
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(226, 328);
+            this.textBox5.Location = new System.Drawing.Point(230, 296);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(108, 21);
             this.textBox5.TabIndex = 6;
@@ -320,7 +323,7 @@ namespace RmSoft
             // textBox6
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(506, 328);
+            this.textBox6.Location = new System.Drawing.Point(510, 296);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(108, 21);
             this.textBox6.TabIndex = 7;
@@ -328,7 +331,7 @@ namespace RmSoft
             // textBox7
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Location = new System.Drawing.Point(226, 382);
+            this.textBox7.Location = new System.Drawing.Point(230, 350);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(108, 21);
             this.textBox7.TabIndex = 8;
@@ -337,7 +340,7 @@ namespace RmSoft
             // 
             this.xtraTabPage2.Controls.Add(this.button1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1283, 753);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1202, 506);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // button1
@@ -354,7 +357,7 @@ namespace RmSoft
             this.xtraTabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.xtraTabPage3.Controls.Add(this.pictureBox1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1283, 753);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1202, 506);
             this.xtraTabPage3.Text = "xtraTabPage3";
             // 
             // pictureBox1
@@ -364,18 +367,28 @@ namespace RmSoft
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(99, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1285, 754);
+            this.pictureBox1.Size = new System.Drawing.Size(986, 413);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(1050, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Bem vindo:";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 644);
+            this.ClientSize = new System.Drawing.Size(1377, 572);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.accordionControl1);
             this.Name = "Principal";
@@ -390,6 +403,7 @@ namespace RmSoft
             this.xtraTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -425,5 +439,7 @@ namespace RmSoft
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -26,7 +26,7 @@ namespace RmSoft
         private void Principal_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'rmSoftDataSet.Usuario'. Você pode movê-la ou removê-la conforme necessário.
-           
+            xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             xtraTabControl1.SelectedTabPageIndex = 2;
             label1.AutoEllipsis = true;
         }
@@ -58,7 +58,7 @@ namespace RmSoft
             }
             else
             {
-                Cadastro cad = new Cadastro(Txt_Nome.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+                CadastroFuncionario cad = new CadastroFuncionario(Txt_Nome.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
                 Txt_Nome.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";

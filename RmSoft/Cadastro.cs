@@ -12,17 +12,28 @@ namespace RmSoft
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public CadastroFuncionario(String Nome, String Usuario, String Senha, String Endereco, String Bairro,  string Cidade)
+        public CadastroFuncionario(String id_usuario, String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro,  String Cidade, String OBS)
         {
-            cmd.CommandText = "insert into Usuario (Nome, Usuario, Senha, Endereco, Bairro, Cidade) values (@Nome, @Usuario, @Senha, @Endereco, @Bairro, @Cidade)"; 
-//            
-            //cmd.Parameters.AddWithValue("@Codigo", Codigo);
+
+
+
+
+
+
+            cmd.CommandText = "insert into Usuario (id_usuario,Codigo, Nome, Sexo, RG, CPF, Usuario, Senha, Endereco, Bairro, Cidade, OBS) values (@Codigo, @Nome, @Sexo, @RG, @CPF, @Usuario, @Senha, @Endereco, @Bairro, @Cidade, @OBS)";
+            //            
+            cmd.Parameters.AddWithValue("@id_usuario", id_usuario);
+            cmd.Parameters.AddWithValue("@Codigo", Codigo);
             cmd.Parameters.AddWithValue("@Nome", Nome);
+            cmd.Parameters.AddWithValue("@Sexo", Sexo);
             cmd.Parameters.AddWithValue("@Usuario", Usuario);
             cmd.Parameters.AddWithValue("@senha", Senha);
             cmd.Parameters.AddWithValue("@Endereco", Endereco);
             cmd.Parameters.AddWithValue("@Bairro", Bairro);
             cmd.Parameters.AddWithValue("@Cidade", Cidade);
+            cmd.Parameters.AddWithValue("@RG", RG);
+            cmd.Parameters.AddWithValue("@CPF", CPF);
+            cmd.Parameters.AddWithValue("@OBS", OBS);
 
 
             try

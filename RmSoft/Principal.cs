@@ -58,7 +58,9 @@ namespace RmSoft
             }
             else
             {
-                CadastroFuncionario cad = new CadastroFuncionario(Txt_Nome.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+                
+                CadastroFuncionario cad = new CadastroFuncionario(textBox10.Text, textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                MessageBox.Show(richTextBox1.Text);
                 Txt_Nome.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";

@@ -29,7 +29,7 @@ namespace Validacao
         public bool verificarLogin(String Usuario, String Senha)
         {
             
-                cmd.CommandText = "select * from Usuario where Usuario = @Usuario and senha = @Senha";
+                cmd.CommandText = "select * from Funcionario where Usuario = @Usuario and senha = @Senha";
                                 // select * from usuario where nome = 'rodrigo' and senha = '123'
                 cmd.Parameters.AddWithValue("@Usuario", Usuario);
                 cmd.Parameters.AddWithValue("@Senha", Senha);

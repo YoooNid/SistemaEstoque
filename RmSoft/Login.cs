@@ -23,17 +23,18 @@ namespace RmSoft
         {
             InitializeComponent();
         }
+        public String usuario;
 
         private void Form1_Load(object sender, EventArgs e)
 
         {
-           
+
 
             SqlConnection Con = new SqlConnection();
 
             try
             {
-                Con.ConnectionString = (@"Data Source="+ini.IniReadValue("DATABASE","SERVIDOR")+"; Initial Catalog=RmSoft;Integrated Security=True");
+                Con.ConnectionString = (@"Data Source=" + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Initial Catalog=RmSoft;Integrated Security=True");
                 Con.Open();
             }
             catch (Exception)
@@ -69,19 +70,23 @@ namespace RmSoft
                     this.Hide();
                     Principal f = new Principal();
                     f.Closed += (s, args) => this.Close();
-                    f.Show();
+                    f.usuario = Usuario.Text;
+                    f.ShowDialog();
+                    
+
 
 
 
                 }
                 else
                 {
-                    
+
                     MessageBox.Show("nao encontrado");
                     Usuario.Text = "";
                     Senha.Text = "";
                 }
-            }else
+            }
+            else
             {
                 MessageBox.Show(controle.mensagem);
             }
@@ -90,7 +95,7 @@ namespace RmSoft
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)
@@ -104,7 +109,7 @@ namespace RmSoft
         {
             if (e.KeyChar == (char)13)
             {
-               Senha.Focus();
+                Senha.Focus();
             }
         }
 

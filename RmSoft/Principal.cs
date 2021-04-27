@@ -50,7 +50,7 @@ namespace RmSoft
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             Txt_Nome.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
@@ -63,20 +63,20 @@ namespace RmSoft
             richTextBox1.Text = "";
             comboBox1.Text = "";
             textBox10.Text = "";
-            
+
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             if (Txt_Nome.Text == "")
             {
-                MessageBox.Show  ("Campo 'NOME' Obrigatorio!");
+                MessageBox.Show("Campo 'NOME' Obrigatorio!");
             }
             else
             {
-                
+
                 CadastroFuncionario cad = new CadastroFuncionario(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
 
                 Txt_Nome.Text = "";
@@ -99,20 +99,20 @@ namespace RmSoft
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-                
-
-                
-                //Txt_Nome.Text = Me.dataGridView.CurrentRow.Cells["Nome", e.RowIndex].Value.ToString();
-                //textBox2.Text = dataGridView1["Usuario"].Value.ToString();
-                //textBox3.Text = dataGridView1["Senha"].Value.ToString();
-                //textBox4.Text = dataGridView1["Endereco"].Value.ToString();
-                //textBox5.Text = dataGridView1["Bairro"].Value.ToString();
-                //textBox6.Text = dataGridView1["Cidade"].Value.ToString();
 
 
 
-            
+
+            //Txt_Nome.Text = Me.dataGridView.CurrentRow.Cells["Nome", e.RowIndex].Value.ToString();
+            //textBox2.Text = dataGridView1["Usuario"].Value.ToString();
+            //textBox3.Text = dataGridView1["Senha"].Value.ToString();
+            //textBox4.Text = dataGridView1["Endereco"].Value.ToString();
+            //textBox5.Text = dataGridView1["Bairro"].Value.ToString();
+            //textBox6.Text = dataGridView1["Cidade"].Value.ToString();
+
+
+
+
 
         }
 
@@ -141,13 +141,29 @@ namespace RmSoft
         private void button5_Click(object sender, EventArgs e)
         {
             DeletarFuncionario del = new DeletarFuncionario(textBox10.Text, textBox2.Text);
+            Txt_Nome.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            richTextBox1.Text = "";
+            comboBox1.Text = "";
+            textBox10.Text = "";
+            MessageBox.Show("deletado com sucesso");
+
 
         }
 
-       
+
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
+
+            //carrega informações nos campos. 
             this.textBox10.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["codigo"].Value);
             this.Txt_Nome.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Nome"].Value);
             this.textBox2.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Usuario"].Value);
@@ -163,6 +179,16 @@ namespace RmSoft
 
 
             dataGridView1.Visible = false;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Hora.Text = DateTime.Now.ToString();
+        }
+
+        private void Hora_Click(object sender, EventArgs e)
+        {
 
         }
     }

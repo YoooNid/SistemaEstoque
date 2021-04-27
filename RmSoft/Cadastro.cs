@@ -19,7 +19,7 @@ namespace RmSoft
 
 
 
-
+            
             cmd.CommandText = "insert into Funcionario (Codigo, Nome, Sexo, RG, CPF, Usuario, Senha, Endereco, Bairro, Cidade, OBS) values (@Codigo, @Nome, @Sexo, @RG, @CPF, @Usuario, @Senha, @Endereco, @Bairro, @Cidade, @OBS)";
             //            
             

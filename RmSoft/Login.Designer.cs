@@ -36,6 +36,7 @@ namespace RmSoft
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Senha
@@ -103,6 +104,18 @@ namespace RmSoft
             this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Check);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.Location = new System.Drawing.Point(12, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(328, 58);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Demonstração";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +123,7 @@ namespace RmSoft
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(356, 468);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -136,6 +150,7 @@ namespace RmSoft
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Usuario;
+        private System.Windows.Forms.Label label2;
     }
 }
 

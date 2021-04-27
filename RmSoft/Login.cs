@@ -28,8 +28,8 @@ namespace RmSoft
         private void Form1_Load(object sender, EventArgs e)
 
         {
-
-
+            
+            
             SqlConnection Con = new SqlConnection();
 
             try
@@ -117,5 +117,11 @@ namespace RmSoft
         {
 
         }
+
+    
+
+      
+
+      
     }
 }

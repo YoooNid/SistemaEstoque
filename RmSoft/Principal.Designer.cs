@@ -38,6 +38,10 @@ namespace RmSoft
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -85,10 +89,6 @@ namespace RmSoft
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -155,7 +155,7 @@ namespace RmSoft
             this.xtraTabControl1.Location = new System.Drawing.Point(174, 73);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1226, 624);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1197, 624);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -197,8 +197,47 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.textBox6);
             this.xtraTabPage1.Controls.Add(this.textBox7);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1224, 599);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1195, 599);
             this.xtraTabPage1.Text = "xtraTabPage1";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(145, 480);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 23);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "OBS";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(330, 343);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(131, 21);
+            this.textBox12.TabIndex = 30;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(757, 377);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(50, 23);
+            this.label20.TabIndex = 29;
+            this.label20.Text = "Sexo";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(75, 313);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(1028, 23);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "------------------------------------------------------------Informações Pessoais-" +
+    "-----------------------------------------------------------";
             // 
             // dataGridView1
             // 
@@ -207,7 +246,7 @@ namespace RmSoft
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1224, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1195, 150);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.Visible = false;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
@@ -467,7 +506,7 @@ namespace RmSoft
             this.xtraTabPage2.Controls.Add(this.button7);
             this.xtraTabPage2.Controls.Add(this.button8);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1275, 617);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1224, 599);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // label14
@@ -508,7 +547,7 @@ namespace RmSoft
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1275, 139);
+            this.dataGridView2.Size = new System.Drawing.Size(1224, 139);
             this.dataGridView2.TabIndex = 3;
             // 
             // button1
@@ -556,7 +595,7 @@ namespace RmSoft
             this.xtraTabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.xtraTabPage3.Controls.Add(this.label18);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1275, 617);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1224, 599);
             this.xtraTabPage3.Text = "xtraTabPage3";
             // 
             // label18
@@ -657,50 +696,11 @@ namespace RmSoft
             this.label17.TabIndex = 7;
             this.label17.Text = "Data:";
             // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(75, 313);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(1028, 23);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "------------------------------------------------------------Informações Pessoais-" +
-    "-----------------------------------------------------------";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(757, 377);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(50, 23);
-            this.label20.TabIndex = 29;
-            this.label20.Text = "Sexo";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(330, 343);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(131, 21);
-            this.textBox12.TabIndex = 30;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(145, 480);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 23);
-            this.label21.TabIndex = 31;
-            this.label21.Text = "OBS";
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1399, 690);
+            this.ClientSize = new System.Drawing.Size(1370, 690);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Hora);
             this.Controls.Add(this.label16);

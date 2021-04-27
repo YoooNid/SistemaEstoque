@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArquivoIni.cs" />
+    <Compile Include="Bd\lembrar.cs" />
     <Compile Include="Bd\LoginDaoComandos.cs" />
     <Compile Include="DeletarFuncionario.cs" />
     <Compile Include="Principal.cs">

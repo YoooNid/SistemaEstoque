@@ -9,9 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ArquivoIni;
+using lembrar.Bd;
 using RmSoft;
 using RmSoft.Bd;
 using Validacao;
+using Limpar.Bd;
 
 namespace RmSoft
 {
@@ -66,6 +68,34 @@ namespace RmSoft
                 {
                     MessageBox.Show("bem vindo");
 
+                    if (checkBox1.Checked)
+                    {
+                        Conexao conexao = new Conexao();
+                        SqlCommand cmd = new SqlCommand();
+                        String mensagem = "";
+
+                        cmd.CommandText = "update Funcionario set marcado = '0'  ";
+                        Lembrar lembrar = new Lembrar(Usuario.Text);
+
+
+                        try
+                        {
+
+                            cmd.Connection = conexao.Conectar();
+                            cmd.ExecuteNonQuery();
+                            conexao.Desconectar();
+
+
+                        }
+                        catch (SqlException E)
+                        {
+                            mensagem = "Erro ao tentar se comunicar com o banco de dados";
+                        }
+                    }
+
+                        
+                    // comando para tirar o 1 do usuario logado antes 
+                    // comando para gravar 1 no usuario logado no sistema 
 
                     this.Hide();
                     Principal f = new Principal();

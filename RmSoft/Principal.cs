@@ -12,6 +12,7 @@ using ArquivoIni;
 using RmSoft;
 using RmSoft.Bd;
 using Validacao;
+using System.Globalization;
 
 namespace RmSoft
 {
@@ -97,25 +98,7 @@ namespace RmSoft
 
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-
-
-            //Txt_Nome.Text = Me.dataGridView.CurrentRow.Cells["Nome", e.RowIndex].Value.ToString();
-            //textBox2.Text = dataGridView1["Usuario"].Value.ToString();
-            //textBox3.Text = dataGridView1["Senha"].Value.ToString();
-            //textBox4.Text = dataGridView1["Endereco"].Value.ToString();
-            //textBox5.Text = dataGridView1["Bairro"].Value.ToString();
-            //textBox6.Text = dataGridView1["Cidade"].Value.ToString();
-
-
-
-
-
-        }
-
+      
         private void button4_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
@@ -132,7 +115,8 @@ namespace RmSoft
             dataGridView1.DataSource = ds.Tables["all"];
             con.Close();
 
-
+            
+            
 
 
 
@@ -159,7 +143,7 @@ namespace RmSoft
         }
 
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
 
@@ -190,6 +174,30 @@ namespace RmSoft
         private void Hora_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Visible = true;
+
+            SqlDataAdapter da;
+            DataSet ds;
+            SqlConnection con = new SqlConnection();
+            ds = new DataSet();
+            con.ConnectionString = (@"Data Source = " + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Integrated Security = True");
+            con.Open();
+            da = new SqlDataAdapter("select * from rmsoft..produtos", con);
+            da.Fill(ds, "all");
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = ds.Tables["all"];
+            con.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            float preco = float.Parse(textBox9.Text);
+            CadastroProdutos cadProd = new CadastroProdutos(textBox11.Text,preco);
         }
     }
 }

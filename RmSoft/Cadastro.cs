@@ -47,7 +47,7 @@ namespace RmSoft
             }
             catch (SqlException E)
             {
-                this.mensagem = "Erro ao tentar se comunicar com o banco de dados";
+                this.mensagem = "Erro ao tentar se comunicar com o banco de dados"+E;
             }
 
 
@@ -56,5 +56,7 @@ namespace RmSoft
 
 
         }
+
+        
     }
 }

@@ -13,7 +13,6 @@ using lembrar.Bd;
 using RmSoft;
 using RmSoft.Bd;
 using Validacao;
-using Limpar.Bd;
 
 namespace RmSoft
 {

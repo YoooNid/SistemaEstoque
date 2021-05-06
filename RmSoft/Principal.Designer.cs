@@ -71,10 +71,10 @@ namespace RmSoft
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.textBox9 = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -143,6 +143,7 @@ namespace RmSoft
             // 
             // accordionControlElement4
             // 
+            this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Text = "Relatorios";
@@ -498,10 +499,10 @@ namespace RmSoft
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.textBox9);
             this.xtraTabPage2.Controls.Add(this.label14);
             this.xtraTabPage2.Controls.Add(this.label13);
             this.xtraTabPage2.Controls.Add(this.textBox11);
-            this.xtraTabPage2.Controls.Add(this.textBox9);
             this.xtraTabPage2.Controls.Add(this.dataGridView2);
             this.xtraTabPage2.Controls.Add(this.button1);
             this.xtraTabPage2.Controls.Add(this.button6);
@@ -510,6 +511,14 @@ namespace RmSoft
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1195, 599);
             this.xtraTabPage2.Text = "xtraTabPage2";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(345, 293);
+            this.textBox9.Mask = "00,00";
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 21);
+            this.textBox9.TabIndex = 13;
             // 
             // label14
             // 
@@ -535,13 +544,6 @@ namespace RmSoft
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(254, 21);
             this.textBox11.TabIndex = 10;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(345, 293);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(99, 21);
-            this.textBox9.TabIndex = 9;
             // 
             // dataGridView2
             // 
@@ -775,7 +777,6 @@ namespace RmSoft
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
@@ -792,5 +793,6 @@ namespace RmSoft
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.MaskedTextBox textBox9;
     }
 }

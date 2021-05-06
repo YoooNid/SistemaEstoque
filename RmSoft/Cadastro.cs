@@ -12,7 +12,7 @@ namespace RmSoft
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public CadastroFuncionario(String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro,  String Cidade, String OBS)
+        public CadastroFuncionario(String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro,  String Cidade, String OBS) // construtor (obriga a entrada de dados)
         {
 
 

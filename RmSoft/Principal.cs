@@ -196,8 +196,13 @@ namespace RmSoft
         private void button7_Click(object sender, EventArgs e)
         {
 
-            float preco = float.Parse(textBox9.Text);
+            float preco = (float)Convert.ToDouble(textBox9.Text);
+            
+
+            MessageBox.Show(preco.ToString());
             CadastroProdutos cadProd = new CadastroProdutos(textBox11.Text,preco);
         }
+
+     
     }
 }

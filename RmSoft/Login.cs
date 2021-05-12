@@ -76,15 +76,15 @@ namespace RmSoft
                     {
                         Conexao conexao = new Conexao();
                         SqlCommand cmd = new SqlCommand();
-                        String mensagem = "";
+                        
 
                         cmd.CommandText = "update RmSoft..Funcionario set Lembrar = '0'  ";
                         //cmd.Connection = conexao.Conectar();
                         //cmd.ExecuteNonQuery();
                         //conexao.Desconectar();
                         //cmd.CommandText = "update RmSoft..Funcionario set lembrar = '1' where Usuario = '"+Usuario.Text+"'";
+                      
                         
-                        Lembrar lembrar = new Lembrar(Usuario.Text.ToString());
 
 
                         try
@@ -93,12 +93,12 @@ namespace RmSoft
                             cmd.Connection = conexao.Conectar();
                             cmd.ExecuteNonQuery();
                             conexao.Desconectar();
-
+                            Lembrar lembrar = new Lembrar(Usuario.Text);
 
                         }
                         catch (SqlException E)
                         {
-                            mensagem = "Erro ao tentar se comunicar com o banco de dados";
+                            String mensagem = "Erro ao tentar se comunicar com o banco de dados";
                         }
                     }
                     MessageBox.Show("bem vindo");
@@ -158,10 +158,9 @@ namespace RmSoft
 
         }
 
-    
-
-      
-
-      
+        private void Login_Load(object sender, EventArgs e)
+        {
+            Usuario.Text = "digite o usuario";
+        }
     }
 }

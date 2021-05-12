@@ -16,20 +16,16 @@ namespace lembrar.Bd
         String mensagem = "";
         public Lembrar(String Usuario)
         {
-
             cmd.CommandText = "update RmSoft..Funcionario set lembrar = 1 where Usuario = @Usuario";
             cmd.Parameters.AddWithValue("@Usuario", Usuario);
-
-
-
+            
+           
             try
             {
 
                 cmd.Connection = conexao.Conectar();
                 cmd.ExecuteNonQuery();
                 conexao.Desconectar();
-
-
             }
             catch (SqlException E)
             {
@@ -40,6 +36,6 @@ namespace lembrar.Bd
 
 
         }
-        
+
     }
 }

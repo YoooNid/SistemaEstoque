@@ -41,7 +41,6 @@ namespace RmSoft
             this.label21 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -170,7 +169,6 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.label21);
             this.xtraTabPage1.Controls.Add(this.textBox12);
             this.xtraTabPage1.Controls.Add(this.label20);
-            this.xtraTabPage1.Controls.Add(this.label19);
             this.xtraTabPage1.Controls.Add(this.dataGridView1);
             this.xtraTabPage1.Controls.Add(this.Codigo);
             this.xtraTabPage1.Controls.Add(this.textBox10);
@@ -215,7 +213,7 @@ namespace RmSoft
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(304, 356);
+            this.textBox12.Location = new System.Drawing.Point(319, 338);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(131, 21);
             this.textBox12.TabIndex = 30;
@@ -224,25 +222,11 @@ namespace RmSoft
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(731, 390);
+            this.label20.Location = new System.Drawing.Point(633, 397);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 23);
             this.label20.TabIndex = 29;
             this.label20.Text = "Sexo";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(52, 316);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(1028, 23);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "------------------------------------------------------------Informações Pessoais-" +
-    "-----------------------------------------------------------";
             // 
             // dataGridView1
             // 
@@ -269,7 +253,7 @@ namespace RmSoft
             // textBox10
             // 
             this.textBox10.ForeColor = System.Drawing.Color.Red;
-            this.textBox10.Location = new System.Drawing.Point(216, 213);
+            this.textBox10.Location = new System.Drawing.Point(319, 213);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(135, 21);
             this.textBox10.TabIndex = 5;
@@ -286,7 +270,7 @@ namespace RmSoft
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(631, 450);
+            this.label11.Location = new System.Drawing.Point(633, 432);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 23);
             this.label11.TabIndex = 25;
@@ -296,7 +280,7 @@ namespace RmSoft
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(356, 450);
+            this.label10.Location = new System.Drawing.Point(358, 432);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 23);
             this.label10.TabIndex = 24;
@@ -304,14 +288,14 @@ namespace RmSoft
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(450, 450);
+            this.textBox8.Location = new System.Drawing.Point(452, 432);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 21);
             this.textBox8.TabIndex = 15;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(693, 450);
+            this.textBox1.Location = new System.Drawing.Point(695, 432);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 16;
@@ -324,7 +308,7 @@ namespace RmSoft
             this.comboBox1.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBox1.Location = new System.Drawing.Point(802, 390);
+            this.comboBox1.Location = new System.Drawing.Point(695, 402);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(86, 21);
             this.comboBox1.TabIndex = 11;
@@ -334,7 +318,7 @@ namespace RmSoft
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(119, 354);
+            this.label8.Location = new System.Drawing.Point(119, 333);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 23);
             this.label8.TabIndex = 20;
@@ -384,7 +368,7 @@ namespace RmSoft
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(119, 445);
+            this.label7.Location = new System.Drawing.Point(121, 427);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 23);
             this.label7.TabIndex = 15;
@@ -394,7 +378,7 @@ namespace RmSoft
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(356, 418);
+            this.label6.Location = new System.Drawing.Point(358, 400);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 23);
             this.label6.TabIndex = 14;
@@ -404,7 +388,7 @@ namespace RmSoft
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(119, 418);
+            this.label5.Location = new System.Drawing.Point(121, 400);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 23);
             this.label5.TabIndex = 13;
@@ -414,7 +398,7 @@ namespace RmSoft
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(119, 390);
+            this.label4.Location = new System.Drawing.Point(119, 364);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 23);
             this.label4.TabIndex = 12;
@@ -424,7 +408,7 @@ namespace RmSoft
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(456, 271);
+            this.label3.Location = new System.Drawing.Point(119, 307);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 23);
             this.label3.TabIndex = 11;
@@ -452,49 +436,49 @@ namespace RmSoft
             // 
             // Txt_Nome
             // 
-            this.Txt_Nome.Location = new System.Drawing.Point(216, 243);
+            this.Txt_Nome.Location = new System.Drawing.Point(319, 243);
             this.Txt_Nome.Name = "Txt_Nome";
             this.Txt_Nome.Size = new System.Drawing.Size(693, 21);
             this.Txt_Nome.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(216, 273);
+            this.textBox2.Location = new System.Drawing.Point(319, 273);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(143, 21);
             this.textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(531, 273);
+            this.textBox3.Location = new System.Drawing.Point(319, 309);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(108, 21);
             this.textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(216, 390);
+            this.textBox4.Location = new System.Drawing.Point(319, 366);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(445, 21);
             this.textBox4.TabIndex = 10;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(216, 420);
+            this.textBox5.Location = new System.Drawing.Point(218, 402);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(108, 21);
             this.textBox5.TabIndex = 12;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(450, 420);
+            this.textBox6.Location = new System.Drawing.Point(452, 402);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(108, 21);
             this.textBox6.TabIndex = 13;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(216, 450);
+            this.textBox7.Location = new System.Drawing.Point(218, 432);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(108, 21);
             this.textBox7.TabIndex = 14;
@@ -516,15 +500,17 @@ namespace RmSoft
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(345, 293);
+            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox9.Location = new System.Drawing.Point(246, 256);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 21);
             this.textBox9.TabIndex = 13;
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(271, 296);
+            this.label14.Location = new System.Drawing.Point(163, 259);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(34, 13);
             this.label14.TabIndex = 12;
@@ -532,8 +518,9 @@ namespace RmSoft
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(271, 249);
+            this.label13.Location = new System.Drawing.Point(163, 220);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 11;
@@ -541,7 +528,8 @@ namespace RmSoft
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(345, 246);
+            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox11.Location = new System.Drawing.Point(246, 217);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(254, 21);
             this.textBox11.TabIndex = 10;
@@ -558,7 +546,7 @@ namespace RmSoft
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Location = new System.Drawing.Point(882, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 33);
@@ -568,7 +556,7 @@ namespace RmSoft
             // 
             // button6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button6.Location = new System.Drawing.Point(641, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(209, 33);
@@ -579,7 +567,7 @@ namespace RmSoft
             // 
             // button7
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button7.Location = new System.Drawing.Point(399, 148);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 33);
@@ -590,7 +578,7 @@ namespace RmSoft
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.Location = new System.Drawing.Point(166, 148);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(166, 33);
@@ -723,7 +711,9 @@ namespace RmSoft
             this.Controls.Add(this.label9);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.accordionControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Funcionario";
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
@@ -800,7 +790,6 @@ namespace RmSoft
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.MaskedTextBox textBox9;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
     }

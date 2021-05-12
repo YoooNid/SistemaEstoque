@@ -16,8 +16,9 @@ namespace lembrar.Bd
         String mensagem = "";
         public Lembrar(String Usuario)
         {
-            cmd.CommandText = "update Funcionario set marcado = '1' where Usuario = @Usuario ";
-            cmd.Parameters.AddWithValue("@Codigo", Usuario);
+
+            cmd.CommandText = "update RmSoft..Funcionario set lembrar = 1 where Usuario = @Usuario";
+            cmd.Parameters.AddWithValue("@Usuario", Usuario);
 
 
 

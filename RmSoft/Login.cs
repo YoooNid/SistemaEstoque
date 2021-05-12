@@ -14,6 +14,7 @@ using RmSoft;
 using RmSoft.Bd;
 using Validacao;
 
+
 namespace RmSoft
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
@@ -26,23 +27,27 @@ namespace RmSoft
         }
         public String usuario;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load( object sender, EventArgs e)
 
         {
             
-            
             SqlConnection Con = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            
+
 
             try
             {
                 Con.ConnectionString = (@"Data Source=" + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Initial Catalog=RmSoft;Integrated Security=True");
                 Con.Open();
+              
             }
             catch (Exception)
             {
                 MessageBox.Show("erro ao conectar o banco de dados");
                 Application.Exit();
             }
+           
 
 
 
@@ -65,7 +70,7 @@ namespace RmSoft
             {
                 if (controle.tem)
                 {
-                    MessageBox.Show("bem vindo");
+                   
 
                     if (checkBox1.Checked)
                     {
@@ -73,8 +78,13 @@ namespace RmSoft
                         SqlCommand cmd = new SqlCommand();
                         String mensagem = "";
 
-                        cmd.CommandText = "update Funcionario set marcado = '0'  ";
-                        Lembrar lembrar = new Lembrar(Usuario.Text);
+                        cmd.CommandText = "update RmSoft..Funcionario set Lembrar = '0'  ";
+                        //cmd.Connection = conexao.Conectar();
+                        //cmd.ExecuteNonQuery();
+                        //conexao.Desconectar();
+                        //cmd.CommandText = "update RmSoft..Funcionario set lembrar = '1' where Usuario = '"+Usuario.Text+"'";
+                        
+                        Lembrar lembrar = new Lembrar(Usuario.Text.ToString());
 
 
                         try
@@ -91,8 +101,9 @@ namespace RmSoft
                             mensagem = "Erro ao tentar se comunicar com o banco de dados";
                         }
                     }
+                    MessageBox.Show("bem vindo");
 
-                        
+
                     // comando para tirar o 1 do usuario logado antes 
                     // comando para gravar 1 no usuario logado no sistema 
 

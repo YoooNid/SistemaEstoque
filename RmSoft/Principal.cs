@@ -38,7 +38,6 @@ namespace RmSoft
         {
             label12.Visible = true;
             label12.Text = usuario;
-            // TODO: esta linha de código carrega dados na tabela 'rmSoftDataSet.Usuario'. Você pode movê-la ou removê-la conforme necessário.
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             xtraTabControl1.SelectedTabPageIndex = 2;
             label1.AutoEllipsis = true;
@@ -203,6 +202,11 @@ namespace RmSoft
             CadastroProdutos cadProd = new CadastroProdutos(textBox11.Text,preco);
         }
 
-     
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.textBox11.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Descricao"].Value);
+            this.textBox9.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Preco"].Value);
+        }
     }
 }

@@ -82,6 +82,7 @@ namespace RmSoft
             this.button8 = new System.Windows.Forms.Button();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.label18 = new System.Windows.Forms.Label();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -161,7 +162,8 @@ namespace RmSoft
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2,
-            this.xtraTabPage3});
+            this.xtraTabPage3,
+            this.xtraTabPage4});
             // 
             // xtraTabPage1
             // 
@@ -515,7 +517,6 @@ namespace RmSoft
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(345, 293);
-            this.textBox9.Mask = "00,00";
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 21);
             this.textBox9.TabIndex = 13;
@@ -553,6 +554,7 @@ namespace RmSoft
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(1195, 139);
             this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
             // button1
             // 
@@ -616,6 +618,12 @@ namespace RmSoft
             this.label18.Size = new System.Drawing.Size(339, 80);
             this.label18.TabIndex = 0;
             this.label18.Text = "Bem vindo!!";
+            // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(1195, 599);
+            this.xtraTabPage4.Text = "xtraTabPage4";
             // 
             // label9
             // 
@@ -794,5 +802,6 @@ namespace RmSoft
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.MaskedTextBox textBox9;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
     }
 }

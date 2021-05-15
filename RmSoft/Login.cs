@@ -27,27 +27,27 @@ namespace RmSoft
         }
         public String usuario;
 
-        private void Form1_Load( object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
 
         {
-            
+
             SqlConnection Con = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
-            
+
 
 
             try
             {
                 Con.ConnectionString = (@"Data Source=" + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Initial Catalog=RmSoft;Integrated Security=True");
                 Con.Open();
-              
+
             }
             catch (Exception)
             {
                 MessageBox.Show("erro ao conectar o banco de dados");
                 Application.Exit();
             }
-           
+
 
 
 
@@ -70,21 +70,21 @@ namespace RmSoft
             {
                 if (controle.tem)
                 {
-                   
+
 
                     if (checkBox1.Checked)
                     {
                         Conexao conexao = new Conexao();
                         SqlCommand cmd = new SqlCommand();
-                        
+
 
                         cmd.CommandText = "update RmSoft..Funcionario set Lembrar = '0'  ";
                         //cmd.Connection = conexao.Conectar();
                         //cmd.ExecuteNonQuery();
                         //conexao.Desconectar();
                         //cmd.CommandText = "update RmSoft..Funcionario set lembrar = '1' where Usuario = '"+Usuario.Text+"'";
-                      
-                        
+
+
 
 
                         try
@@ -112,7 +112,7 @@ namespace RmSoft
                     f.Closed += (s, args) => this.Close();
                     f.usuario = Usuario.Text;
                     f.ShowDialog();
-                    
+
 
 
 
@@ -160,7 +160,7 @@ namespace RmSoft
 
         private void Login_Load(object sender, EventArgs e)
         {
-            Usuario.Text = "digite o usuario";
+          
         }
     }
 }

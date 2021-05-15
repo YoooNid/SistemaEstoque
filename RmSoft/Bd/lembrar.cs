@@ -36,6 +36,25 @@ namespace lembrar.Bd
 
 
         }
+        // public string Rem()
+        //{
+            
+        //    cmd.CommandText = "select usuario from rmsoft..funcionario where lembrar = 1";
+        //    try
+        //    {
+
+        //        cmd.Connection = conexao.Conectar();
+        //        cmd.ExecuteNonQuery();
+        //        string User = Convert.ToString( cmd.ExecuteScalar());
+        //        conexao.Desconectar();
+        //    }
+        //    catch (SqlException E)
+        //    {
+        //        this.mensagem = "Erro ao tentar se comunicar com o banco de dados";
+        //    }
+            
+            
+        //}
 
     }
 }

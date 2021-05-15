@@ -156,7 +156,7 @@ namespace RmSoft
             this.xtraTabControl1.Location = new System.Drawing.Point(174, 73);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1197, 624);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1193, 624);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -198,7 +198,7 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.textBox6);
             this.xtraTabPage1.Controls.Add(this.textBox7);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1195, 599);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage1.Text = "xtraTabPage1";
             // 
             // label21
@@ -235,7 +235,7 @@ namespace RmSoft
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1195, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1191, 150);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.Visible = false;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -495,13 +495,13 @@ namespace RmSoft
             this.xtraTabPage2.Controls.Add(this.button7);
             this.xtraTabPage2.Controls.Add(this.button8);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1195, 599);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // textBox9
             // 
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox9.Location = new System.Drawing.Point(246, 256);
+            this.textBox9.Location = new System.Drawing.Point(244, 256);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 21);
             this.textBox9.TabIndex = 13;
@@ -510,7 +510,7 @@ namespace RmSoft
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(163, 259);
+            this.label14.Location = new System.Drawing.Point(161, 259);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(34, 13);
             this.label14.TabIndex = 12;
@@ -520,7 +520,7 @@ namespace RmSoft
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(163, 220);
+            this.label13.Location = new System.Drawing.Point(161, 220);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 11;
@@ -529,7 +529,7 @@ namespace RmSoft
             // textBox11
             // 
             this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox11.Location = new System.Drawing.Point(246, 217);
+            this.textBox11.Location = new System.Drawing.Point(244, 217);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(254, 21);
             this.textBox11.TabIndex = 10;
@@ -540,14 +540,14 @@ namespace RmSoft
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1195, 139);
+            this.dataGridView2.Size = new System.Drawing.Size(1191, 139);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(882, 148);
+            this.button1.Location = new System.Drawing.Point(880, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 33);
             this.button1.TabIndex = 8;
@@ -557,7 +557,7 @@ namespace RmSoft
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Location = new System.Drawing.Point(641, 148);
+            this.button6.Location = new System.Drawing.Point(639, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(209, 33);
             this.button6.TabIndex = 7;
@@ -568,7 +568,7 @@ namespace RmSoft
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.Location = new System.Drawing.Point(399, 148);
+            this.button7.Location = new System.Drawing.Point(397, 148);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 33);
             this.button7.TabIndex = 6;
@@ -579,19 +579,20 @@ namespace RmSoft
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.Location = new System.Drawing.Point(166, 148);
+            this.button8.Location = new System.Drawing.Point(164, 148);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(166, 33);
             this.button8.TabIndex = 5;
             this.button8.Text = "LIMPAR";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.xtraTabPage3.Controls.Add(this.label18);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1195, 599);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage3.Text = "xtraTabPage3";
             // 
             // label18
@@ -610,7 +611,7 @@ namespace RmSoft
             // xtraTabPage4
             // 
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1195, 599);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage4.Text = "xtraTabPage4";
             // 
             // label9
@@ -702,7 +703,7 @@ namespace RmSoft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 690);
+            this.ClientSize = new System.Drawing.Size(1366, 690);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Hora);
             this.Controls.Add(this.label16);

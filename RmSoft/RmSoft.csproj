@@ -68,6 +68,7 @@
     <Compile Include="Bd\lembrar.cs" />
     <Compile Include="Bd\LoginDaoComandos.cs" />
     <Compile Include="CadastroProdutos.cs" />
+    <Compile Include="UpProdutos.cs" />
     <Compile Include="DeletarFuncionario.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>

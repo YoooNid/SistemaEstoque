@@ -20,6 +20,7 @@ namespace RmSoft
     {
         IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
         public string usuario { get; internal set; }
+        public int con;
 
         public Principal()
         {
@@ -50,7 +51,7 @@ namespace RmSoft
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            con = 0;
             Txt_Nome.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
@@ -69,14 +70,22 @@ namespace RmSoft
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            if (Txt_Nome.Text == "")
+            if (con == 1)
             {
-                MessageBox.Show("Campo 'NOME' Obrigatorio!");
+                if (Txt_Nome.Text == "")
+                {
+                    MessageBox.Show("Campo 'NOME' Obrigatorio!");
+                }
+                else
+                {
+                    UpdProdutos up = new UpdProdutos(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                    MessageBox.Show("Alterado com sucesso");
+                }
+
+
             }
             else
             {
-
                 CadastroFuncionario cad = new CadastroFuncionario(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
 
                 Txt_Nome.Text = "";
@@ -92,10 +101,11 @@ namespace RmSoft
                 comboBox1.Text = "";
                 textBox10.Text = "";
                 MessageBox.Show("Cadastrado com sucesso");
-
             }
 
-        }
+         }
+            
+        
 
       
         private void button4_Click(object sender, EventArgs e)
@@ -123,6 +133,7 @@ namespace RmSoft
 
         private void button5_Click(object sender, EventArgs e)
         {
+            con = 0;
             DeletarFuncionario del = new DeletarFuncionario(textBox10.Text, textBox2.Text);
             Txt_Nome.Text = "";
             textBox1.Text = "";
@@ -145,7 +156,7 @@ namespace RmSoft
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
-
+            con = 1;
             //carrega informações nos campos. 
             this.textBox10.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["codigo"].Value);
             this.Txt_Nome.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Nome"].Value);
@@ -195,7 +206,7 @@ namespace RmSoft
         private void button7_Click(object sender, EventArgs e)
         {
 
-            float preco = (float)Convert.ToDouble(textBox9.Text);
+            float preco = float.Parse (textBox9.Text);
             
 
             MessageBox.Show(preco.ToString());
@@ -204,9 +215,17 @@ namespace RmSoft
 
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            con = 1;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.textBox11.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Descricao"].Value);
             this.textBox9.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Preco"].Value);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            con = 0;
+            textBox11.Text = "";
+            textBox9.Text = "";
         }
     }
 }

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace RmSoft
 {
-    class UpdProdutos
+    class UpdFuncionario
     {
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public UpdProdutos(String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro, String Cidade, String OBS) // construtor (obriga a entrada de dados)
+        public UpdFuncionario(String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro, String Cidade, String OBS) // construtor (obriga a entrada de dados)
         {
 
 

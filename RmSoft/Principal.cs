@@ -37,6 +37,7 @@ namespace RmSoft
 
 
         {
+            
             label12.Visible = true;
             label12.Text = usuario;
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
@@ -78,7 +79,7 @@ namespace RmSoft
                 }
                 else
                 {
-                    UpdProdutos up = new UpdProdutos(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                    UpdFuncionario up = new UpdFuncionario(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
                     MessageBox.Show("Alterado com sucesso");
                 }
 
@@ -110,22 +111,31 @@ namespace RmSoft
       
         private void button4_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
-
-            SqlDataAdapter da;
-            DataSet ds;
-            SqlConnection con = new SqlConnection();
-            ds = new DataSet();
-            con.ConnectionString = (@"Data Source = " + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Integrated Security = True");
-            con.Open();
-            da = new SqlDataAdapter("select * from rmsoft..Funcionario", con);
-            da.Fill(ds, "all");
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = ds.Tables["all"];
-            con.Close();
-
             
-            
+            if (dataGridView1.Visible == false)
+            {
+                label19.Visible = false;
+                dataGridView1.Visible = true;
+
+                SqlDataAdapter da;
+                DataSet ds;
+                SqlConnection con = new SqlConnection();
+                ds = new DataSet();
+                con.ConnectionString = (@"Data Source = " + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Integrated Security = True");
+                con.Open();
+                da = new SqlDataAdapter("select * from rmsoft..Funcionario", con);
+                da.Fill(ds, "all");
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = ds.Tables["all"];
+                con.Close();
+            }
+            else
+            {
+                dataGridView1.Visible = false;
+                label19.Visible = true;
+            }
+
+
 
 
 
@@ -173,6 +183,7 @@ namespace RmSoft
 
 
             dataGridView1.Visible = false;
+            label19.Visible = true;
 
         }
 
@@ -227,5 +238,7 @@ namespace RmSoft
             textBox11.Text = "";
             textBox9.Text = "";
         }
+
+   
     }
 }

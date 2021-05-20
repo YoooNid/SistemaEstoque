@@ -32,8 +32,8 @@ namespace RmSoft
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.Senha = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Btn_Entrar = new System.Windows.Forms.Button();
+            this.Btn_Sair = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,25 +63,25 @@ namespace RmSoft
             this.checkBox1.Text = "Lembrar Usuario/Senha";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // Btn_Entrar
             // 
-            this.button1.Location = new System.Drawing.Point(41, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Entrar.Location = new System.Drawing.Point(41, 273);
+            this.Btn_Entrar.Name = "Btn_Entrar";
+            this.Btn_Entrar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Entrar.TabIndex = 4;
+            this.Btn_Entrar.Text = "Entrar";
+            this.Btn_Entrar.UseVisualStyleBackColor = true;
+            this.Btn_Entrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Btn_Sair
             // 
-            this.button2.Location = new System.Drawing.Point(232, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Sair";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Btn_Sair.Location = new System.Drawing.Point(232, 273);
+            this.Btn_Sair.Name = "Btn_Sair";
+            this.Btn_Sair.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Sair.TabIndex = 5;
+            this.Btn_Sair.Text = "Sair";
+            this.Btn_Sair.UseVisualStyleBackColor = true;
+            this.Btn_Sair.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -126,8 +126,8 @@ namespace RmSoft
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_Sair);
+            this.Controls.Add(this.Btn_Entrar);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Senha);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
@@ -146,8 +146,8 @@ namespace RmSoft
         #endregion
         private System.Windows.Forms.TextBox Senha;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_Entrar;
+        private System.Windows.Forms.Button Btn_Sair;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Usuario;
         private System.Windows.Forms.Label label2;

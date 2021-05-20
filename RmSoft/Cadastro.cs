@@ -13,13 +13,7 @@ namespace RmSoft
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
         public CadastroFuncionario(String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro,  String Cidade, String OBS) // construtor (obriga a entrada de dados)
-        {
-
-
-
-
-
-            
+        { 
             cmd.CommandText = "insert into Funcionario (Codigo, Nome, Sexo, RG, CPF, Usuario, Senha, Endereco, Bairro, Cidade, OBS) values (@Codigo, @Nome, @Sexo, @RG, @CPF, @Usuario, @Senha, @Endereco, @Bairro, @Cidade, @OBS)";
             //            
             

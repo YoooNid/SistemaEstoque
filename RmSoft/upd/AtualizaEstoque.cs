@@ -12,44 +12,111 @@ namespace RmSoft.upd
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public AtualizaEstoque(int Codigo, int QntEstoque) // construtor (obriga a entrada de dados)
+        public AtualizaEstoque(int Codigo, int QntEstoque, int ent, String nome, int EstoqueAntigo, int entrSaid, String us) // construtor (obriga a entrada de dados)
         {
-            cmd.CommandText = "update RmSoft..Produtos set Estoque = Estoque + @Estoque where codigo = @Codigo";
-            cmd.Parameters.AddWithValue("@Codigo", Codigo);
-            cmd.Parameters.AddWithValue("@Estoque", QntEstoque);
-            try
+            int res;
+            if (ent == 1)
             {
+               res = EstoqueAntigo + entrSaid;
+                cmd.CommandText = "update RmSoft..Produtos set Estoque = Estoque + @Estoque where codigo = @Codigo";
+                cmd.Parameters.AddWithValue("@Codigo", Codigo);
+                cmd.Parameters.AddWithValue("@Estoque", QntEstoque);
+                try
+                {
 
-                cmd.Connection = conexao.Conectar();
-                cmd.ExecuteNonQuery();
-                conexao.Desconectar();
+                    cmd.Connection = conexao.Conectar();
+                    cmd.ExecuteNonQuery();
+                    conexao.Desconectar();
+
+
+                }
+                catch (SqlException E)
+                {
+                    this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
+                }
+
+                cmd.CommandText = "insert into Historico (cod_prod, prod_descricao, Estoque_anterior, Qnt_Entrada, Qnt_Saida, Qnt_Inventario, Saldo_atual, Usuario) values " +
+                "(@cod_prod, @prod_descricao, @Estoque_anterior, @Qnt_Entrada, '0', '',  @Saldo_Atual, @Usuario)";
+                cmd.Parameters.AddWithValue("@cod_prod", Codigo);
+                cmd.Parameters.AddWithValue("prod_descricao", nome);
+                cmd.Parameters.AddWithValue("@Estoque_anterior", EstoqueAntigo);
+                cmd.Parameters.AddWithValue("@Qnt_Entrada", entrSaid);
+                cmd.Parameters.AddWithValue("@Usuario", us);
+                cmd.Parameters.AddWithValue("@Saldo_Atual", res);
+
+
+
+
+                try
+                {
+
+                    cmd.Connection = conexao.Conectar();
+                    cmd.ExecuteNonQuery();
+                    conexao.Desconectar();
+
+
+                }
+                catch (SqlException E)
+                {
+                    this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
+                }
+
+
+
+
 
 
             }
-            catch (SqlException E)
+            else
             {
-                this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
-            }
-        }
-        public void RetiraEstoque(int Codigo, int QntEstoque)
-        {
-            cmd.CommandText = "update RmSoft..Produtos set Estoque = Estoque - @Estoque where codigo = @Codigo";
-            cmd.Parameters.AddWithValue("@Codigo", Codigo);
-            cmd.Parameters.AddWithValue("@Estoque", QntEstoque);
-            try
-            {
+                res = EstoqueAntigo - entrSaid;
+                cmd.CommandText = "update RmSoft..Produtos set Estoque = Estoque - @Estoque where codigo = @Codigo";
+                cmd.Parameters.AddWithValue("@Codigo", Codigo);
+                cmd.Parameters.AddWithValue("@Estoque", QntEstoque);
+                try
+                {
 
-                cmd.Connection = conexao.Conectar();
-                cmd.ExecuteNonQuery();
-                conexao.Desconectar();
+                    cmd.Connection = conexao.Conectar();
+                    cmd.ExecuteNonQuery();
+                    conexao.Desconectar();
 
 
+                }
+                catch (SqlException E)
+                {
+                    this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
+                }
+
+
+                cmd.CommandText = "insert into Historico (cod_prod,   prod_descricao,  Estoque_anterior, Qnt_Entrada, Qnt_Saida, Qnt_Inventario,Saldo_atual, Usuario) values " +
+                                                        "(@cod_prod, @prod_descricao, @Estoque_anterior, '0', @Qnt_Saida, '', @Saldo_Atual, @Usuario)";
+                cmd.Parameters.AddWithValue("@cod_prod", Codigo);
+                cmd.Parameters.AddWithValue("prod_descricao", nome);
+                cmd.Parameters.AddWithValue("@Estoque_anterior", EstoqueAntigo);
+                cmd.Parameters.AddWithValue("@Qnt_Saida", entrSaid);
+                cmd.Parameters.AddWithValue("@Usuario", us);
+                cmd.Parameters.AddWithValue("@Saldo_Atual", res);
+
+
+
+
+
+                try
+                {
+
+                    cmd.Connection = conexao.Conectar();
+                    cmd.ExecuteNonQuery();
+                    conexao.Desconectar();
+
+
+                }
+                catch (SqlException E)
+                {
+                    this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
+                }
+
+
             }
-            catch (SqlException E)
-            {
-                this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
-            }
-            return;
         }
     }
 }

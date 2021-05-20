@@ -54,9 +54,9 @@ namespace RmSoft
         {
             xtraTabControl1.SelectedTabPageIndex = 1;
             con = 0;
-            Txt_Nome.Text = "";
+            Txt_NomeFuncionario.Text = "";
             textBox1.Text = "";
-            textBox2.Text = "";
+            Tb_UsuarioFuncionario.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
@@ -65,15 +65,15 @@ namespace RmSoft
             textBox8.Text = "";
             richTextBox1.Text = "";
             comboBox1.Text = "";
-            textBox10.Text = "";
+            Tb_CodFuncionario.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             con = 0;
-            Txt_Nome.Text = "";
+            Txt_NomeFuncionario.Text = "";
             textBox1.Text = "";
-            textBox2.Text = "";
+            Tb_UsuarioFuncionario.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
@@ -82,7 +82,7 @@ namespace RmSoft
             textBox8.Text = "";
             richTextBox1.Text = "";
             comboBox1.Text = "";
-            textBox10.Text = "";
+            Tb_CodFuncionario.Text = "";
 
 
         }
@@ -91,13 +91,13 @@ namespace RmSoft
         {
             if (con == 1)
             {
-                if (Txt_Nome.Text == "")
+                if (Txt_NomeFuncionario.Text == "")
                 {
                     MessageBox.Show("Campo 'NOME' Obrigatorio!");
                 }
                 else
                 {
-                    UpdFuncionario up = new UpdFuncionario(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                    UpdFuncionario up = new UpdFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, comboBox1.Text, textBox8.Text, textBox1.Text, Tb_UsuarioFuncionario.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
                     
                     MessageBox.Show("Alterado com sucesso");
                 }
@@ -106,11 +106,11 @@ namespace RmSoft
             }
             else
             {
-                CadastroFuncionario cad = new CadastroFuncionario(textBox10.Text, Txt_Nome.Text, comboBox1.Text, textBox8.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                CadastroFuncionario cad = new CadastroFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, comboBox1.Text, textBox8.Text, textBox1.Text, Tb_UsuarioFuncionario.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
 
-                Txt_Nome.Text = "";
+                Txt_NomeFuncionario.Text = "";
                 textBox1.Text = "";
-                textBox2.Text = "";
+                Tb_UsuarioFuncionario.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
@@ -119,7 +119,7 @@ namespace RmSoft
                 textBox8.Text = "";
                 richTextBox1.Text = "";
                 comboBox1.Text = "";
-                textBox10.Text = "";
+                Tb_CodFuncionario.Text = "";
                 MessageBox.Show("Cadastrado com sucesso");
             }
 
@@ -131,10 +131,10 @@ namespace RmSoft
         private void button4_Click(object sender, EventArgs e)
         {
             
-            if (dataGridView1.Visible == false)
+            if (Grid_Funcionario.Visible == false)
             {
                 label19.Visible = false;
-                dataGridView1.Visible = true;
+                Grid_Funcionario.Visible = true;
 
                 SqlDataAdapter da;
                 DataSet ds;
@@ -144,13 +144,13 @@ namespace RmSoft
                 con.Open();
                 da = new SqlDataAdapter("select * from rmsoft..Funcionario", con);
                 da.Fill(ds, "all");
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = ds.Tables["all"];
+                Grid_Funcionario.DataSource = null;
+                Grid_Funcionario.DataSource = ds.Tables["all"];
                 con.Close();
             }
             else
             {
-                dataGridView1.Visible = false;
+                Grid_Funcionario.Visible = false;
                 label19.Visible = true;
             }
 
@@ -165,10 +165,10 @@ namespace RmSoft
             if (con == 1)
             {
                 
-                    DeletarFuncionario del = new DeletarFuncionario(textBox10.Text, textBox2.Text);
-                    Txt_Nome.Text = "";
+                    DeletarFuncionario del = new DeletarFuncionario(Tb_CodFuncionario.Text, Tb_UsuarioFuncionario.Text);
+                    Txt_NomeFuncionario.Text = "";
                     textBox1.Text = "";
-                    textBox2.Text = "";
+                    Tb_UsuarioFuncionario.Text = "";
                     textBox3.Text = "";
                     textBox4.Text = "";
                     textBox5.Text = "";
@@ -177,7 +177,7 @@ namespace RmSoft
                     textBox8.Text = "";
                     richTextBox1.Text = "";
                     comboBox1.Text = "";
-                    textBox10.Text = "";
+                    Tb_CodFuncionario.Text = "";
                     MessageBox.Show("deletado com sucesso");
                     con = 0;
             }
@@ -244,31 +244,31 @@ namespace RmSoft
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
+            Grid_Funcionario.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
             con = 1;
             //carrega informações nos campos. 
-            this.textBox10.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["codigo"].Value);
-            this.Txt_Nome.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Nome"].Value);
-            this.textBox2.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Usuario"].Value);
-            this.textBox3.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Senha"].Value);
-            this.textBox4.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Endereco"].Value);
-            this.textBox5.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Bairro"].Value);
-            this.textBox6.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Cidade"].Value);
+            this.Tb_CodFuncionario.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["codigo"].Value);
+            this.Txt_NomeFuncionario.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Nome"].Value);
+            this.Tb_UsuarioFuncionario.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Usuario"].Value);
+            this.textBox3.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Senha"].Value);
+            this.textBox4.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Endereco"].Value);
+            this.textBox5.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Bairro"].Value);
+            this.textBox6.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Cidade"].Value);
             //this.textBox7.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Telefone"].Value);
-            this.textBox8.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["RG"].Value);
-            this.textBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["CPF"].Value);
-            this.comboBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Sexo"].Value);
-            this.richTextBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["OBS"].Value);
+            this.textBox8.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["RG"].Value);
+            this.textBox1.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["CPF"].Value);
+            this.comboBox1.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Sexo"].Value);
+            this.richTextBox1.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["OBS"].Value);
 
 
-            dataGridView1.Visible = false;
+            Grid_Funcionario.Visible = false;
             label19.Visible = true;
 
         }
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             con = 1;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            Grid_Funcionario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.textBox9.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Codigo"].Value);
             this.textBox11.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Descricao"].Value);
             this.textBox13.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Estoque"].Value);
@@ -280,7 +280,11 @@ namespace RmSoft
             dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.textBox14.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Codigo"].Value);
             this.label28.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Descricao"].Value);
+            this.label29.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Estoque"].Value);
             label28.Visible = true;
+            label29.Visible = true;
+            textBox14.Enabled = false;
+
 
         }
         private void button8_Click(object sender, EventArgs e)
@@ -295,12 +299,12 @@ namespace RmSoft
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
         {
-            xtraTabControl1.SelectedTabPageIndex = 3;
+            xtraTabControl1.SelectedTabPageIndex = 4;
         }
 
         private void accordionControlElement8_Click(object sender, EventArgs e)
         {
-            xtraTabControl1.SelectedTabPageIndex = 5;
+            xtraTabControl1.SelectedTabPageIndex = 3;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -321,18 +325,31 @@ namespace RmSoft
 
         private void button9_Click(object sender, EventArgs e)
         {
+            string Nome = label28.Text;
+            int Cod = int.Parse(textBox14.Text);
+            int Est = int.Parse(label29.Text);
+            int EntradaSaida = int.Parse(textBox15.Text);
+            int entrada;
+            String User = label12.Text;
+
             if (radioButton1.Checked == true)
             {
-                AtualizaEstoque att = new AtualizaEstoque(int.Parse(textBox14.Text), int.Parse(textBox15.Text));
+                entrada = 1;
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(textBox14.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
             if (radioButton2.Checked == true)
             {
-                
+                entrada = 0;
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(textBox14.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
+                MessageBox.Show("atualizado com sucesso");
             }
-            
 
-
+            label28.Visible = false;
+            label29.Visible = false;
+            textBox14.Enabled = true;
+            textBox14.Text = "";
+            textBox15.Text = "";
         }
 
         private void button3_Click_1(object sender, EventArgs e)

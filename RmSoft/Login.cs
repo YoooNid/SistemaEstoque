@@ -142,7 +142,7 @@ namespace RmSoft
         {
             if (e.KeyChar == (char)13)
             {
-                button1.PerformClick();
+                Btn_Entrar.PerformClick();
             }
         }
         private void Check(object sender, System.Windows.Forms.KeyPressEventArgs e)

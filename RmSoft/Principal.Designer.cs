@@ -32,21 +32,23 @@ namespace RmSoft
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ACE_Cadastro = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Cadastro_Funcionario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Cadastro_Produto = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ACE_Estoque = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Estoque_Inventario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Estoque_EntradaSaida = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ACE_Relatorios = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Grid_Funcionario = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.Tb_CodFuncionario = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -54,10 +56,10 @@ namespace RmSoft
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.SaveFun = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Bnt_DeletarFuncionario = new System.Windows.Forms.Button();
+            this.Bnt_PesquisarFuncionario = new System.Windows.Forms.Button();
+            this.Bnt_SaveFun = new System.Windows.Forms.Button();
+            this.Bnt_LimpaFuncionario = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,14 +67,18 @@ namespace RmSoft
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Txt_Nome = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_NomeFuncionario = new System.Windows.Forms.TextBox();
+            this.Tb_UsuarioFuncionario = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -84,6 +90,20 @@ namespace RmSoft
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -92,36 +112,17 @@ namespace RmSoft
             this.Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid_Funcionario)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
             this.xtraTabPage4.SuspendLayout();
-            this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.xtraTabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // accordionControl1
@@ -130,64 +131,78 @@ namespace RmSoft
             this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement1,
-            this.accordionControlElement5,
-            this.accordionControlElement4});
+            this.ACE_Cadastro,
+            this.ACE_Estoque,
+            this.ACE_Relatorios});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
             this.accordionControl1.Size = new System.Drawing.Size(174, 690);
             this.accordionControl1.TabIndex = 0;
             // 
-            // accordionControlElement1
+            // ACE_Cadastro
             // 
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement2,
-            this.accordionControlElement3,
+            this.ACE_Cadastro.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.Cadastro_Funcionario,
+            this.Cadastro_Produto,
             this.accordionControlSeparator1});
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.ACE_Cadastro.Expanded = true;
+            this.ACE_Cadastro.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl)});
-            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Cadastro";
+            this.ACE_Cadastro.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.ACE_Cadastro.Name = "ACE_Cadastro";
+            this.ACE_Cadastro.Text = "Cadastro";
             // 
-            // accordionControlElement2
+            // Cadastro_Funcionario
             // 
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement2.Text = "Funcionario";
-            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click);
+            this.Cadastro_Funcionario.Name = "Cadastro_Funcionario";
+            this.Cadastro_Funcionario.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Cadastro_Funcionario.Text = "Funcionario";
+            this.Cadastro_Funcionario.Click += new System.EventHandler(this.accordionControlElement2_Click);
             // 
-            // accordionControlElement3
+            // Cadastro_Produto
             // 
-            this.accordionControlElement3.Name = "accordionControlElement3";
-            this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement3.Text = "produtos";
-            this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
+            this.Cadastro_Produto.Name = "Cadastro_Produto";
+            this.Cadastro_Produto.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Cadastro_Produto.Text = "produtos";
+            this.Cadastro_Produto.Click += new System.EventHandler(this.accordionControlElement3_Click);
             // 
             // accordionControlSeparator1
             // 
             this.accordionControlSeparator1.Name = "accordionControlSeparator1";
             // 
-            // accordionControlElement5
+            // ACE_Estoque
             // 
-            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement7,
-            this.accordionControlElement8});
-            this.accordionControlElement5.Expanded = true;
-            this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Text = "Estoque";
+            this.ACE_Estoque.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.Estoque_Inventario,
+            this.Estoque_EntradaSaida});
+            this.ACE_Estoque.Expanded = true;
+            this.ACE_Estoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
+            this.ACE_Estoque.Name = "ACE_Estoque";
+            this.ACE_Estoque.Text = "Estoque";
             // 
-            // accordionControlElement4
+            // Estoque_Inventario
             // 
-            this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Text = "Relatorios";
+            this.Estoque_Inventario.Name = "Estoque_Inventario";
+            this.Estoque_Inventario.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Estoque_Inventario.Text = "Inventario";
+            this.Estoque_Inventario.Click += new System.EventHandler(this.accordionControlElement7_Click);
+            // 
+            // Estoque_EntradaSaida
+            // 
+            this.Estoque_EntradaSaida.Name = "Estoque_EntradaSaida";
+            this.Estoque_EntradaSaida.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Estoque_EntradaSaida.Text = "Entrada/saida";
+            this.Estoque_EntradaSaida.Click += new System.EventHandler(this.accordionControlElement8_Click);
+            // 
+            // ACE_Relatorios
+            // 
+            this.ACE_Relatorios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
+            this.ACE_Relatorios.Name = "ACE_Relatorios";
+            this.ACE_Relatorios.Text = "Relatorios";
             // 
             // xtraTabControl1
             // 
@@ -211,9 +226,9 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.label21);
             this.xtraTabPage1.Controls.Add(this.textBox12);
             this.xtraTabPage1.Controls.Add(this.label20);
-            this.xtraTabPage1.Controls.Add(this.dataGridView1);
+            this.xtraTabPage1.Controls.Add(this.Grid_Funcionario);
             this.xtraTabPage1.Controls.Add(this.Codigo);
-            this.xtraTabPage1.Controls.Add(this.textBox10);
+            this.xtraTabPage1.Controls.Add(this.Tb_CodFuncionario);
             this.xtraTabPage1.Controls.Add(this.richTextBox1);
             this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.label10);
@@ -221,10 +236,10 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.textBox1);
             this.xtraTabPage1.Controls.Add(this.comboBox1);
             this.xtraTabPage1.Controls.Add(this.label8);
-            this.xtraTabPage1.Controls.Add(this.button5);
-            this.xtraTabPage1.Controls.Add(this.button4);
-            this.xtraTabPage1.Controls.Add(this.SaveFun);
-            this.xtraTabPage1.Controls.Add(this.button2);
+            this.xtraTabPage1.Controls.Add(this.Bnt_DeletarFuncionario);
+            this.xtraTabPage1.Controls.Add(this.Bnt_PesquisarFuncionario);
+            this.xtraTabPage1.Controls.Add(this.Bnt_SaveFun);
+            this.xtraTabPage1.Controls.Add(this.Bnt_LimpaFuncionario);
             this.xtraTabPage1.Controls.Add(this.label7);
             this.xtraTabPage1.Controls.Add(this.label6);
             this.xtraTabPage1.Controls.Add(this.label5);
@@ -232,8 +247,8 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.label3);
             this.xtraTabPage1.Controls.Add(this.label2);
             this.xtraTabPage1.Controls.Add(this.label1);
-            this.xtraTabPage1.Controls.Add(this.Txt_Nome);
-            this.xtraTabPage1.Controls.Add(this.textBox2);
+            this.xtraTabPage1.Controls.Add(this.Txt_NomeFuncionario);
+            this.xtraTabPage1.Controls.Add(this.Tb_UsuarioFuncionario);
             this.xtraTabPage1.Controls.Add(this.textBox3);
             this.xtraTabPage1.Controls.Add(this.textBox4);
             this.xtraTabPage1.Controls.Add(this.textBox5);
@@ -268,7 +283,7 @@ namespace RmSoft
             this.textBox12.Location = new System.Drawing.Point(319, 338);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(131, 21);
-            this.textBox12.TabIndex = 30;
+            this.textBox12.TabIndex = 9;
             // 
             // label20
             // 
@@ -280,17 +295,17 @@ namespace RmSoft
             this.label20.TabIndex = 29;
             this.label20.Text = "Sexo";
             // 
-            // dataGridView1
+            // Grid_Funcionario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1191, 150);
-            this.dataGridView1.TabIndex = 27;
-            this.dataGridView1.Visible = false;
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.Grid_Funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_Funcionario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Grid_Funcionario.Location = new System.Drawing.Point(0, 0);
+            this.Grid_Funcionario.Name = "Grid_Funcionario";
+            this.Grid_Funcionario.ReadOnly = true;
+            this.Grid_Funcionario.Size = new System.Drawing.Size(1191, 150);
+            this.Grid_Funcionario.TabIndex = 27;
+            this.Grid_Funcionario.Visible = false;
+            this.Grid_Funcionario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Codigo
             // 
@@ -302,20 +317,20 @@ namespace RmSoft
             this.Codigo.TabIndex = 26;
             this.Codigo.Text = "Codigo";
             // 
-            // textBox10
+            // Tb_CodFuncionario
             // 
-            this.textBox10.ForeColor = System.Drawing.Color.Red;
-            this.textBox10.Location = new System.Drawing.Point(319, 213);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(135, 21);
-            this.textBox10.TabIndex = 5;
+            this.Tb_CodFuncionario.ForeColor = System.Drawing.Color.Red;
+            this.Tb_CodFuncionario.Location = new System.Drawing.Point(319, 213);
+            this.Tb_CodFuncionario.Name = "Tb_CodFuncionario";
+            this.Tb_CodFuncionario.Size = new System.Drawing.Size(135, 21);
+            this.Tb_CodFuncionario.TabIndex = 5;
             // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(216, 498);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(637, 96);
-            this.richTextBox1.TabIndex = 17;
+            this.richTextBox1.TabIndex = 20;
             this.richTextBox1.Text = "";
             // 
             // label11
@@ -363,7 +378,7 @@ namespace RmSoft
             this.comboBox1.Location = new System.Drawing.Point(695, 402);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(86, 21);
-            this.comboBox1.TabIndex = 11;
+            this.comboBox1.TabIndex = 13;
             this.comboBox1.Text = "Selecione";
             // 
             // label8
@@ -376,45 +391,45 @@ namespace RmSoft
             this.label8.TabIndex = 20;
             this.label8.Text = "Data de Nascimento";
             // 
-            // button5
+            // Bnt_DeletarFuncionario
             // 
-            this.button5.Location = new System.Drawing.Point(802, 170);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 33);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "EXCLUIR";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Bnt_DeletarFuncionario.Location = new System.Drawing.Point(802, 170);
+            this.Bnt_DeletarFuncionario.Name = "Bnt_DeletarFuncionario";
+            this.Bnt_DeletarFuncionario.Size = new System.Drawing.Size(200, 33);
+            this.Bnt_DeletarFuncionario.TabIndex = 4;
+            this.Bnt_DeletarFuncionario.Text = "EXCLUIR";
+            this.Bnt_DeletarFuncionario.UseVisualStyleBackColor = true;
+            this.Bnt_DeletarFuncionario.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // Bnt_PesquisarFuncionario
             // 
-            this.button4.Location = new System.Drawing.Point(561, 170);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(209, 33);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "PESQUISAR";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Bnt_PesquisarFuncionario.Location = new System.Drawing.Point(561, 170);
+            this.Bnt_PesquisarFuncionario.Name = "Bnt_PesquisarFuncionario";
+            this.Bnt_PesquisarFuncionario.Size = new System.Drawing.Size(209, 33);
+            this.Bnt_PesquisarFuncionario.TabIndex = 3;
+            this.Bnt_PesquisarFuncionario.Text = "PESQUISAR";
+            this.Bnt_PesquisarFuncionario.UseVisualStyleBackColor = true;
+            this.Bnt_PesquisarFuncionario.Click += new System.EventHandler(this.button4_Click);
             // 
-            // SaveFun
+            // Bnt_SaveFun
             // 
-            this.SaveFun.Location = new System.Drawing.Point(319, 170);
-            this.SaveFun.Name = "SaveFun";
-            this.SaveFun.Size = new System.Drawing.Size(200, 33);
-            this.SaveFun.TabIndex = 2;
-            this.SaveFun.Text = "SALVAR";
-            this.SaveFun.UseVisualStyleBackColor = true;
-            this.SaveFun.Click += new System.EventHandler(this.button3_Click);
+            this.Bnt_SaveFun.Location = new System.Drawing.Point(319, 170);
+            this.Bnt_SaveFun.Name = "Bnt_SaveFun";
+            this.Bnt_SaveFun.Size = new System.Drawing.Size(200, 33);
+            this.Bnt_SaveFun.TabIndex = 2;
+            this.Bnt_SaveFun.Text = "SALVAR";
+            this.Bnt_SaveFun.UseVisualStyleBackColor = true;
+            this.Bnt_SaveFun.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // Bnt_LimpaFuncionario
             // 
-            this.button2.Location = new System.Drawing.Point(86, 170);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "LIMPAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Bnt_LimpaFuncionario.Location = new System.Drawing.Point(86, 170);
+            this.Bnt_LimpaFuncionario.Name = "Bnt_LimpaFuncionario";
+            this.Bnt_LimpaFuncionario.Size = new System.Drawing.Size(166, 33);
+            this.Bnt_LimpaFuncionario.TabIndex = 1;
+            this.Bnt_LimpaFuncionario.Text = "LIMPAR";
+            this.Bnt_LimpaFuncionario.UseVisualStyleBackColor = true;
+            this.Bnt_LimpaFuncionario.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -486,19 +501,19 @@ namespace RmSoft
             this.label1.TabIndex = 9;
             this.label1.Text = "Nome";
             // 
-            // Txt_Nome
+            // Txt_NomeFuncionario
             // 
-            this.Txt_Nome.Location = new System.Drawing.Point(319, 243);
-            this.Txt_Nome.Name = "Txt_Nome";
-            this.Txt_Nome.Size = new System.Drawing.Size(693, 21);
-            this.Txt_Nome.TabIndex = 6;
+            this.Txt_NomeFuncionario.Location = new System.Drawing.Point(319, 243);
+            this.Txt_NomeFuncionario.Name = "Txt_NomeFuncionario";
+            this.Txt_NomeFuncionario.Size = new System.Drawing.Size(693, 21);
+            this.Txt_NomeFuncionario.TabIndex = 6;
             // 
-            // textBox2
+            // Tb_UsuarioFuncionario
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 273);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 21);
-            this.textBox2.TabIndex = 7;
+            this.Tb_UsuarioFuncionario.Location = new System.Drawing.Point(319, 273);
+            this.Tb_UsuarioFuncionario.Name = "Tb_UsuarioFuncionario";
+            this.Tb_UsuarioFuncionario.Size = new System.Drawing.Size(143, 21);
+            this.Tb_UsuarioFuncionario.TabIndex = 7;
             // 
             // textBox3
             // 
@@ -519,14 +534,14 @@ namespace RmSoft
             this.textBox5.Location = new System.Drawing.Point(218, 402);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(108, 21);
-            this.textBox5.TabIndex = 12;
+            this.textBox5.TabIndex = 11;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(452, 402);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(108, 21);
-            this.textBox6.TabIndex = 13;
+            this.textBox6.TabIndex = 12;
             // 
             // textBox7
             // 
@@ -553,13 +568,48 @@ namespace RmSoft
             this.xtraTabPage2.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(316, 44);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(479, 58);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Cadastro de Produtos";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(154, 223);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(40, 13);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "Codigo";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(258, 301);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(254, 21);
+            this.textBox13.TabIndex = 7;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(154, 304);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "Estoque";
+            // 
             // textBox9
             // 
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.Location = new System.Drawing.Point(258, 220);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 21);
-            this.textBox9.TabIndex = 13;
+            this.textBox9.TabIndex = 5;
             // 
             // label13
             // 
@@ -577,7 +627,7 @@ namespace RmSoft
             this.textBox11.Location = new System.Drawing.Point(258, 264);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(254, 21);
-            this.textBox11.TabIndex = 10;
+            this.textBox11.TabIndex = 6;
             // 
             // dataGridView2
             // 
@@ -596,7 +646,7 @@ namespace RmSoft
             this.button1.Location = new System.Drawing.Point(880, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 33);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 4;
             this.button1.Text = "EXCLUIR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -607,7 +657,7 @@ namespace RmSoft
             this.button6.Location = new System.Drawing.Point(639, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(209, 33);
-            this.button6.TabIndex = 7;
+            this.button6.TabIndex = 3;
             this.button6.Text = "PESQUISAR";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -618,7 +668,7 @@ namespace RmSoft
             this.button7.Location = new System.Drawing.Point(397, 148);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 33);
-            this.button7.TabIndex = 6;
+            this.button7.TabIndex = 2;
             this.button7.Text = "SALVAR";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -629,7 +679,7 @@ namespace RmSoft
             this.button8.Location = new System.Drawing.Point(164, 148);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(166, 33);
-            this.button8.TabIndex = 5;
+            this.button8.TabIndex = 1;
             this.button8.Text = "LIMPAR";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -657,6 +707,7 @@ namespace RmSoft
             // 
             // xtraTabPage4
             // 
+            this.xtraTabPage4.Controls.Add(this.label29);
             this.xtraTabPage4.Controls.Add(this.label28);
             this.xtraTabPage4.Controls.Add(this.button9);
             this.xtraTabPage4.Controls.Add(this.label27);
@@ -670,6 +721,139 @@ namespace RmSoft
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage4.Text = "xtraTabPage4";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Red;
+            this.label29.Location = new System.Drawing.Point(359, 255);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(69, 23);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "label29";
+            this.label29.Visible = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Red;
+            this.label28.Location = new System.Drawing.Point(101, 255);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(69, 23);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "label28";
+            this.label28.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(105, 448);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(323, 23);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Processar";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(101, 358);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(100, 13);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Digite a quantidade";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(328, 358);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 21);
+            this.textBox15.TabIndex = 5;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(319, 305);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(109, 17);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Remover Produto";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(104, 305);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(110, 17);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Adicionar produto";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(328, 213);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 21);
+            this.textBox14.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.Location = new System.Drawing.Point(104, 159);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(209, 33);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "PESQUISAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(1191, 139);
+            this.dataGridView3.TabIndex = 4;
+            this.dataGridView3.Visible = false;
+            this.dataGridView3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellDoubleClick);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(101, 216);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Codigo Produto";
+            // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.Controls.Add(this.label24);
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(1191, 599);
+            this.xtraTabPage5.Text = "xtraTabPage5";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(279, 150);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(41, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "label24";
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1191, 599);
+            this.xtraTabPage6.Text = "xtraTabPage6";
             // 
             // label9
             // 
@@ -755,176 +939,6 @@ namespace RmSoft
             this.label22.TabIndex = 8;
             this.label22.Text = "Apenas para demostração ";
             // 
-            // xtraTabPage5
-            // 
-            this.xtraTabPage5.Controls.Add(this.label24);
-            this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1191, 599);
-            this.xtraTabPage5.Text = "xtraTabPage5";
-            // 
-            // xtraTabPage6
-            // 
-            this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1191, 599);
-            this.xtraTabPage6.Text = "xtraTabPage6";
-            // 
-            // accordionControlElement7
-            // 
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Inventario";
-            this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
-            // 
-            // accordionControlElement8
-            // 
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Entrada/saida";
-            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(101, 216);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Codigo Produto";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(279, 150);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "label24";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 304);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 13);
-            this.label25.TabIndex = 14;
-            this.label25.Text = "Estoque";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(258, 301);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(254, 21);
-            this.textBox13.TabIndex = 15;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(154, 223);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(40, 13);
-            this.label26.TabIndex = 16;
-            this.label26.Text = "Codigo";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(316, 44);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(479, 58);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "Cadastro de Produtos";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(1191, 139);
-            this.dataGridView3.TabIndex = 4;
-            this.dataGridView3.Visible = false;
-            this.dataGridView3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellDoubleClick);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(104, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 33);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "PESQUISAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(213, 213);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 21);
-            this.textBox14.TabIndex = 9;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(104, 290);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 17);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Adicionar produto";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(213, 290);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(109, 17);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Remover Produto";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(213, 355);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 21);
-            this.textBox15.TabIndex = 13;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(101, 358);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(100, 13);
-            this.label27.TabIndex = 14;
-            this.label27.Text = "Digite a quantidade";
-            // 
-            // button9
-            // 
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(104, 401);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(209, 23);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Processar";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(101, 255);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(69, 23);
-            this.label28.TabIndex = 16;
-            this.label28.Text = "label28";
-            this.label28.Visible = false;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -949,7 +963,7 @@ namespace RmSoft
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid_Funcionario)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -957,9 +971,9 @@ namespace RmSoft
             this.xtraTabPage3.PerformLayout();
             this.xtraTabPage4.ResumeLayout(false);
             this.xtraTabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
             this.xtraTabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -968,23 +982,23 @@ namespace RmSoft
         #endregion
 
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ACE_Cadastro;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Cadastro_Funcionario;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private System.Windows.Forms.TextBox Txt_Nome;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_NomeFuncionario;
+        private System.Windows.Forms.TextBox Tb_UsuarioFuncionario;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button SaveFun;
-        private System.Windows.Forms.Button button2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Cadastro_Produto;
+        private System.Windows.Forms.Button Bnt_DeletarFuncionario;
+        private System.Windows.Forms.Button Bnt_PesquisarFuncionario;
+        private System.Windows.Forms.Button Bnt_SaveFun;
+        private System.Windows.Forms.Button Bnt_LimpaFuncionario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -1001,10 +1015,10 @@ namespace RmSoft
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Tb_CodFuncionario;
         private System.Windows.Forms.Label Codigo;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Grid_Funcionario;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1012,7 +1026,7 @@ namespace RmSoft
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ACE_Relatorios;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Timer timer1;
@@ -1026,10 +1040,10 @@ namespace RmSoft
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private System.Windows.Forms.Label label19;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ACE_Estoque;
         private System.Windows.Forms.Label label22;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Estoque_Inventario;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Estoque_EntradaSaida;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
         private System.Windows.Forms.Label label23;
@@ -1047,5 +1061,6 @@ namespace RmSoft
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
     }
 }

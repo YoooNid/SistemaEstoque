@@ -13,6 +13,7 @@ using RmSoft;
 using RmSoft.Bd;
 using Validacao;
 using System.Globalization;
+using RmSoft.upd;
 
 namespace RmSoft
 {
@@ -31,6 +32,10 @@ namespace RmSoft
         {
 
             xtraTabControl1.SelectedTabPageIndex = 0;
+            con = 0;
+            textBox11.Text = "";
+            textBox9.Text = "";
+            textBox13.Text = "";
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -48,6 +53,19 @@ namespace RmSoft
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 1;
+            con = 0;
+            Txt_Nome.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            richTextBox1.Text = "";
+            comboBox1.Text = "";
+            textBox10.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -169,29 +187,7 @@ namespace RmSoft
         }
 
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
-            con = 1;
-            //carrega informações nos campos. 
-            this.textBox10.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["codigo"].Value);
-            this.Txt_Nome.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Nome"].Value);
-            this.textBox2.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Usuario"].Value);
-            this.textBox3.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Senha"].Value);
-            this.textBox4.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Endereco"].Value);
-            this.textBox5.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Bairro"].Value);
-            this.textBox6.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Cidade"].Value);
-            //this.textBox7.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Telefone"].Value);
-            this.textBox8.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["RG"].Value);
-            this.textBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["CPF"].Value);
-            this.comboBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Sexo"].Value);
-            this.richTextBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["OBS"].Value);
-
-
-            dataGridView1.Visible = false;
-            label19.Visible = true;
-
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -246,7 +242,29 @@ namespace RmSoft
             
             
         }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // mostra a linha inteira selecionada quando clica em uma celula do datagrid
+            con = 1;
+            //carrega informações nos campos. 
+            this.textBox10.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["codigo"].Value);
+            this.Txt_Nome.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Nome"].Value);
+            this.textBox2.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Usuario"].Value);
+            this.textBox3.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Senha"].Value);
+            this.textBox4.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Endereco"].Value);
+            this.textBox5.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Bairro"].Value);
+            this.textBox6.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Cidade"].Value);
+            //this.textBox7.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Telefone"].Value);
+            this.textBox8.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["RG"].Value);
+            this.textBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["CPF"].Value);
+            this.comboBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Sexo"].Value);
+            this.richTextBox1.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["OBS"].Value);
 
+
+            dataGridView1.Visible = false;
+            label19.Visible = true;
+
+        }
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             con = 1;
@@ -257,7 +275,14 @@ namespace RmSoft
             dataGridView2.Visible = false;
             label14.Visible = true;
         }
+        private void dataGridView3_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.textBox14.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Codigo"].Value);
+            this.label28.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Descricao"].Value);
+            label28.Visible = true;
 
+        }
         private void button8_Click(object sender, EventArgs e)
         {
             dataGridView2.Visible = false;
@@ -270,7 +295,7 @@ namespace RmSoft
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
         {
-            xtraTabControl1.SelectedTabPageIndex = 4;
+            xtraTabControl1.SelectedTabPageIndex = 3;
         }
 
         private void accordionControlElement8_Click(object sender, EventArgs e)
@@ -293,5 +318,40 @@ namespace RmSoft
             else
                 MessageBox.Show("Selecione um produto");
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(textBox14.Text), int.Parse(textBox15.Text));
+                MessageBox.Show("atualizado com sucesso");
+            }
+            if (radioButton2.Checked == true)
+            {
+                
+            }
+            
+
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            dataGridView3.Visible = true;
+           
+            SqlDataAdapter da;
+            DataSet ds;
+            SqlConnection con = new SqlConnection();
+            ds = new DataSet();
+            con.ConnectionString = (@"Data Source = " + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Integrated Security = True");
+            con.Open();
+            da = new SqlDataAdapter("select * from rmsoft..produtos", con);
+            da.Fill(ds, "all");
+            dataGridView3.DataSource = null;
+            dataGridView3.DataSource = ds.Tables["all"];
+            con.Close();
+        }
+
+        
     }
 }

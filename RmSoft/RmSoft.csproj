@@ -78,6 +78,7 @@
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdProdutos.cs" />
+    <Compile Include="upd\AtualizaEstoque.cs" />
     <Compile Include="Validacao.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Cadastro.cs" />

@@ -782,7 +782,7 @@ namespace RmSoft
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 320);
+            this.label25.Location = new System.Drawing.Point(154, 304);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(46, 13);
             this.label25.TabIndex = 14;
@@ -790,7 +790,7 @@ namespace RmSoft
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(258, 317);
+            this.textBox13.Location = new System.Drawing.Point(258, 301);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(254, 21);
             this.textBox13.TabIndex = 15;

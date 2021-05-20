@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 
 namespace RmSoft
 {
-    class CadastroProdutos
+    class UpdProdutos
     {
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public CadastroProdutos(int Codigo, String Desc, int Estoque)
+        public UpdProdutos(int Codigo, String Descricao) // construtor (obriga a entrada de dados)
         {
-            cmd.CommandText = "insert into Rmsoft..produtos (Codigo, descricao, Estoque) values (@Codigo, @descricao, @Estoque)";
+            cmd.CommandText = "update RmSoft..Produtos set Descricao = @Descricao where codigo = @Codigo";
             cmd.Parameters.AddWithValue("@Codigo", Codigo);
-            cmd.Parameters.AddWithValue("@Descricao", Desc);
-            cmd.Parameters.AddWithValue("@Estoque",Estoque);
-
+            cmd.Parameters.AddWithValue("@Descricao", Descricao);
             try
             {
 
@@ -32,7 +30,7 @@ namespace RmSoft
             {
                 this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
             }
+
         }
-        
     }
 }

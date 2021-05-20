@@ -68,6 +68,7 @@
     <Compile Include="Bd\lembrar.cs" />
     <Compile Include="Bd\LoginDaoComandos.cs" />
     <Compile Include="CadastroProdutos.cs" />
+    <Compile Include="DeletarProduto.cs" />
     <Compile Include="UpdFuncionario.cs" />
     <Compile Include="DeletarFuncionario.cs" />
     <Compile Include="Principal.cs">
@@ -76,6 +77,7 @@
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdProdutos.cs" />
     <Compile Include="Validacao.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Cadastro.cs" />

@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 
 namespace RmSoft
 {
-    class CadastroProdutos
+    class DeletarProduto
     {
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public CadastroProdutos(int Codigo, String Desc, int Estoque)
+        public DeletarProduto(int Codigo)
         {
-            cmd.CommandText = "insert into Rmsoft..produtos (Codigo, descricao, Estoque) values (@Codigo, @descricao, @Estoque)";
-            cmd.Parameters.AddWithValue("@Codigo", Codigo);
-            cmd.Parameters.AddWithValue("@Descricao", Desc);
-            cmd.Parameters.AddWithValue("@Estoque",Estoque);
 
+            cmd.CommandText = "delete from RmSoft..Produtos where Codigo = @Codigo";
+            cmd.Parameters.AddWithValue("@Codigo", Codigo);
             try
             {
 
@@ -30,9 +28,11 @@ namespace RmSoft
             }
             catch (SqlException E)
             {
-                this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
+                this.mensagem = "Erro ao tentar se comunicar com o banco de dados";
             }
+
+
+
         }
-        
     }
 }

@@ -35,6 +35,8 @@ namespace RmSoft
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -54,7 +56,7 @@ namespace RmSoft
             this.label8 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SaveFun = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,7 +74,6 @@ namespace RmSoft
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.textBox9 = new System.Windows.Forms.MaskedTextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -90,6 +91,17 @@ namespace RmSoft
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -98,6 +110,8 @@ namespace RmSoft
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
+            this.xtraTabPage4.SuspendLayout();
+            this.xtraTabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // accordionControl1
@@ -107,6 +121,7 @@ namespace RmSoft
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
+            this.accordionControlElement5,
             this.accordionControlElement4});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
@@ -118,7 +133,8 @@ namespace RmSoft
             // 
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement2,
-            this.accordionControlElement3});
+            this.accordionControlElement3,
+            this.accordionControlSeparator1});
             this.accordionControlElement1.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
@@ -142,9 +158,21 @@ namespace RmSoft
             this.accordionControlElement3.Text = "produtos";
             this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
             // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement7,
+            this.accordionControlElement8});
+            this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Text = "Estoque";
+            // 
             // accordionControlElement4
             // 
-            this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Text = "Relatorios";
@@ -161,7 +189,9 @@ namespace RmSoft
             this.xtraTabPage1,
             this.xtraTabPage2,
             this.xtraTabPage3,
-            this.xtraTabPage4});
+            this.xtraTabPage4,
+            this.xtraTabPage5,
+            this.xtraTabPage6});
             // 
             // xtraTabPage1
             // 
@@ -181,7 +211,7 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.label8);
             this.xtraTabPage1.Controls.Add(this.button5);
             this.xtraTabPage1.Controls.Add(this.button4);
-            this.xtraTabPage1.Controls.Add(this.button3);
+            this.xtraTabPage1.Controls.Add(this.SaveFun);
             this.xtraTabPage1.Controls.Add(this.button2);
             this.xtraTabPage1.Controls.Add(this.label7);
             this.xtraTabPage1.Controls.Add(this.label6);
@@ -354,15 +384,15 @@ namespace RmSoft
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // SaveFun
             // 
-            this.button3.Location = new System.Drawing.Point(319, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "SALVAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.SaveFun.Location = new System.Drawing.Point(319, 170);
+            this.SaveFun.Name = "SaveFun";
+            this.SaveFun.Size = new System.Drawing.Size(200, 33);
+            this.SaveFun.TabIndex = 2;
+            this.SaveFun.Text = "SALVAR";
+            this.SaveFun.UseVisualStyleBackColor = true;
+            this.SaveFun.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -495,8 +525,11 @@ namespace RmSoft
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.textBox9);
             this.xtraTabPage2.Controls.Add(this.label14);
+            this.xtraTabPage2.Controls.Add(this.label26);
+            this.xtraTabPage2.Controls.Add(this.textBox13);
+            this.xtraTabPage2.Controls.Add(this.label25);
+            this.xtraTabPage2.Controls.Add(this.textBox9);
             this.xtraTabPage2.Controls.Add(this.label13);
             this.xtraTabPage2.Controls.Add(this.textBox11);
             this.xtraTabPage2.Controls.Add(this.dataGridView2);
@@ -511,26 +544,16 @@ namespace RmSoft
             // textBox9
             // 
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox9.Location = new System.Drawing.Point(244, 256);
+            this.textBox9.Location = new System.Drawing.Point(258, 220);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 21);
             this.textBox9.TabIndex = 13;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(161, 259);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 13);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Preco";
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(161, 220);
+            this.label13.Location = new System.Drawing.Point(154, 267);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 11;
@@ -539,7 +562,7 @@ namespace RmSoft
             // textBox11
             // 
             this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox11.Location = new System.Drawing.Point(244, 217);
+            this.textBox11.Location = new System.Drawing.Point(258, 264);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(254, 21);
             this.textBox11.TabIndex = 10;
@@ -552,6 +575,7 @@ namespace RmSoft
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(1191, 139);
             this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.Visible = false;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
             // button1
@@ -563,6 +587,7 @@ namespace RmSoft
             this.button1.TabIndex = 8;
             this.button1.Text = "EXCLUIR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button6
             // 
@@ -620,6 +645,7 @@ namespace RmSoft
             // 
             // xtraTabPage4
             // 
+            this.xtraTabPage4.Controls.Add(this.label23);
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage4.Text = "xtraTabPage4";
@@ -697,11 +723,103 @@ namespace RmSoft
             this.label17.TabIndex = 7;
             this.label17.Text = "Data:";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Red;
+            this.label22.Location = new System.Drawing.Point(343, 8);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(627, 55);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Apenas para demostração ";
+            // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.Controls.Add(this.label24);
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(1191, 599);
+            this.xtraTabPage5.Text = "xtraTabPage5";
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1191, 599);
+            this.xtraTabPage6.Text = "xtraTabPage6";
+            // 
+            // accordionControlElement7
+            // 
+            this.accordionControlElement7.Name = "accordionControlElement7";
+            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement7.Text = "Inventario";
+            this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
+            // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement8.Text = "Entrada/saida";
+            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(273, 142);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "label23";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(279, 150);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(41, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "label24";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(154, 320);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "Estoque";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(258, 317);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(254, 21);
+            this.textBox13.TabIndex = 15;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(154, 223);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(40, 13);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "Codigo";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(316, 44);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(479, 58);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Cadastro de Produtos";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 690);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Hora);
             this.Controls.Add(this.label16);
@@ -726,6 +844,10 @@ namespace RmSoft
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
+            this.xtraTabPage4.ResumeLayout(false);
+            this.xtraTabPage4.PerformLayout();
+            this.xtraTabPage5.ResumeLayout(false);
+            this.xtraTabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -749,7 +871,7 @@ namespace RmSoft
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SaveFun;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -771,7 +893,6 @@ namespace RmSoft
         private System.Windows.Forms.Label Codigo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -792,5 +913,18 @@ namespace RmSoft
         private System.Windows.Forms.MaskedTextBox textBox9;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private System.Windows.Forms.Label label19;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private System.Windows.Forms.Label label22;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label14;
     }
 }

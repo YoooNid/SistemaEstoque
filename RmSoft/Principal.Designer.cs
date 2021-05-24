@@ -97,10 +97,8 @@ namespace RmSoft
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label23 = new System.Windows.Forms.Label();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
@@ -112,6 +110,7 @@ namespace RmSoft
             this.Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -152,7 +151,7 @@ namespace RmSoft
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl)});
-            this.ACE_Cadastro.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.ACE_Cadastro.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Cadastro.ImageOptions.Image")));
             this.ACE_Cadastro.Name = "ACE_Cadastro";
             this.ACE_Cadastro.Text = "Cadastro";
             // 
@@ -180,7 +179,7 @@ namespace RmSoft
             this.Estoque_Inventario,
             this.Estoque_EntradaSaida});
             this.ACE_Estoque.Expanded = true;
-            this.ACE_Estoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
+            this.ACE_Estoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Estoque.ImageOptions.Image")));
             this.ACE_Estoque.Name = "ACE_Estoque";
             this.ACE_Estoque.Text = "Estoque";
             // 
@@ -200,13 +199,15 @@ namespace RmSoft
             // 
             // ACE_Relatorios
             // 
-            this.ACE_Relatorios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
+            this.ACE_Relatorios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Relatorios.ImageOptions.Image")));
             this.ACE_Relatorios.Name = "ACE_Relatorios";
             this.ACE_Relatorios.Text = "Relatorios";
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.Location = new System.Drawing.Point(174, 73);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
@@ -580,6 +581,7 @@ namespace RmSoft
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(154, 223);
             this.label26.Name = "label26";
@@ -589,6 +591,7 @@ namespace RmSoft
             // 
             // textBox13
             // 
+            this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox13.Location = new System.Drawing.Point(258, 301);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(254, 21);
@@ -596,6 +599,7 @@ namespace RmSoft
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(154, 304);
             this.label25.Name = "label25";
@@ -707,6 +711,7 @@ namespace RmSoft
             // 
             // xtraTabPage4
             // 
+            this.xtraTabPage4.Controls.Add(this.label30);
             this.xtraTabPage4.Controls.Add(this.label29);
             this.xtraTabPage4.Controls.Add(this.label28);
             this.xtraTabPage4.Controls.Add(this.button9);
@@ -714,20 +719,19 @@ namespace RmSoft
             this.xtraTabPage4.Controls.Add(this.textBox15);
             this.xtraTabPage4.Controls.Add(this.radioButton2);
             this.xtraTabPage4.Controls.Add(this.radioButton1);
-            this.xtraTabPage4.Controls.Add(this.textBox14);
             this.xtraTabPage4.Controls.Add(this.button3);
             this.xtraTabPage4.Controls.Add(this.dataGridView3);
-            this.xtraTabPage4.Controls.Add(this.label23);
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage4.Text = "xtraTabPage4";
             // 
             // label29
             // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(359, 255);
+            this.label29.Location = new System.Drawing.Point(616, 216);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(69, 23);
             this.label29.TabIndex = 6;
@@ -736,10 +740,11 @@ namespace RmSoft
             // 
             // label28
             // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(101, 255);
+            this.label28.Location = new System.Drawing.Point(426, 216);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(69, 23);
             this.label28.TabIndex = 16;
@@ -748,8 +753,9 @@ namespace RmSoft
             // 
             // button9
             // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(105, 448);
+            this.button9.Location = new System.Drawing.Point(335, 442);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(323, 23);
             this.button9.TabIndex = 6;
@@ -759,8 +765,9 @@ namespace RmSoft
             // 
             // label27
             // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(101, 358);
+            this.label27.Location = new System.Drawing.Point(395, 355);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(100, 13);
             this.label27.TabIndex = 14;
@@ -768,15 +775,17 @@ namespace RmSoft
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(328, 358);
+            this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox15.Location = new System.Drawing.Point(549, 352);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 21);
             this.textBox15.TabIndex = 5;
             // 
             // radioButton2
             // 
+            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(319, 305);
+            this.radioButton2.Location = new System.Drawing.Point(549, 283);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(109, 17);
             this.radioButton2.TabIndex = 4;
@@ -786,8 +795,9 @@ namespace RmSoft
             // 
             // radioButton1
             // 
+            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(104, 305);
+            this.radioButton1.Location = new System.Drawing.Point(282, 283);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(110, 17);
             this.radioButton1.TabIndex = 3;
@@ -795,17 +805,10 @@ namespace RmSoft
             this.radioButton1.Text = "Adicionar produto";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(328, 213);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 21);
-            this.textBox14.TabIndex = 2;
-            // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(104, 159);
+            this.button3.Location = new System.Drawing.Point(385, 159);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(209, 33);
             this.button3.TabIndex = 1;
@@ -815,23 +818,15 @@ namespace RmSoft
             // 
             // dataGridView3
             // 
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(1191, 139);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.Visible = false;
             this.dataGridView3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellDoubleClick);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(101, 216);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Codigo Produto";
             // 
             // xtraTabPage5
             // 
@@ -939,6 +934,19 @@ namespace RmSoft
             this.label22.TabIndex = 8;
             this.label22.Text = "Apenas para demostração ";
             // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Red;
+            this.label30.Location = new System.Drawing.Point(249, 216);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(69, 23);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "label30";
+            this.label30.Visible = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,7 +961,7 @@ namespace RmSoft
             this.Controls.Add(this.label9);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.accordionControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Funcionario";
@@ -1046,7 +1054,6 @@ namespace RmSoft
         private DevExpress.XtraBars.Navigation.AccordionControlElement Estoque_EntradaSaida;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label25;
@@ -1057,10 +1064,10 @@ namespace RmSoft
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
     }
 }

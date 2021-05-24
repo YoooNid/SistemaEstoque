@@ -278,12 +278,12 @@ namespace RmSoft
         private void dataGridView3_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.textBox14.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Codigo"].Value);
+            this.label30.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Codigo"].Value);
             this.label28.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Descricao"].Value);
             this.label29.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Estoque"].Value);
             label28.Visible = true;
             label29.Visible = true;
-            textBox14.Enabled = false;
+            label30.Visible = true;
 
 
         }
@@ -326,7 +326,7 @@ namespace RmSoft
         private void button9_Click(object sender, EventArgs e)
         {
             string Nome = label28.Text;
-            int Cod = int.Parse(textBox14.Text);
+            int Cod = int.Parse(label30.Text);
             int Est = int.Parse(label29.Text);
             int EntradaSaida = int.Parse(textBox15.Text);
             int entrada;
@@ -335,20 +335,20 @@ namespace RmSoft
             if (radioButton1.Checked == true)
             {
                 entrada = 1;
-                AtualizaEstoque att = new AtualizaEstoque(int.Parse(textBox14.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(label30.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
             if (radioButton2.Checked == true)
             {
                 entrada = 0;
-                AtualizaEstoque att = new AtualizaEstoque(int.Parse(textBox14.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(label30.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
 
             label28.Visible = false;
             label29.Visible = false;
-            textBox14.Enabled = true;
-            textBox14.Text = "";
+            label30.Visible = false;
+            label30.Text = "";
             textBox15.Text = "";
         }
 

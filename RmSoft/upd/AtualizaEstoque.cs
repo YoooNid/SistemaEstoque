@@ -15,7 +15,7 @@ namespace RmSoft.upd
         public AtualizaEstoque(int Codigo, int QntEstoque, int ent, String nome, int EstoqueAntigo, int entrSaid, String us) // construtor (obriga a entrada de dados)
         {
             int res;
-            if (ent == 1)
+            if (ent == 1) // caso for adicionar produtos 
             {
                res = EstoqueAntigo + entrSaid;
                 cmd.CommandText = "update RmSoft..Produtos set Estoque = Estoque + @Estoque where codigo = @Codigo";
@@ -34,9 +34,9 @@ namespace RmSoft.upd
                 {
                     this.mensagem = "Erro ao tentar se comunicar com o banco de dados" + E;
                 }
+                //insere o tipo de movimento e usuario que fez a alteração e o horario 
 
-                cmd.CommandText = "insert into Historico (cod_prod, prod_descricao, Estoque_anterior, Qnt_Entrada, Qnt_Saida, Qnt_Inventario, Saldo_atual, Usuario) values " +
-                "(@cod_prod, @prod_descricao, @Estoque_anterior, @Qnt_Entrada, '0', '',  @Saldo_Atual, @Usuario)";
+                cmd.CommandText = "insert into Historico (cod_prod, prod_descricao, Estoque_anterior, Qnt_Entrada, Qnt_Saida, Qnt_Inventario, Saldo_atual, Usuario) values (@cod_prod, @prod_descricao, @Estoque_anterior, @Qnt_Entrada, '0', '',  @Saldo_Atual, @Usuario)";
                 cmd.Parameters.AddWithValue("@cod_prod", Codigo);
                 cmd.Parameters.AddWithValue("prod_descricao", nome);
                 cmd.Parameters.AddWithValue("@Estoque_anterior", EstoqueAntigo);

@@ -33,9 +33,9 @@ namespace RmSoft
 
             xtraTabControl1.SelectedTabPageIndex = 0;
             con = 0;
-            textBox11.Text = "";
-            textBox9.Text = "";
-            textBox13.Text = "";
+            Tb_descricaoProd.Text = "";
+            Tb_codigoProd.Text = "";
+            Tb_estoque.Text = "";
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -43,8 +43,8 @@ namespace RmSoft
 
         {
             
-            label12.Visible = true;
-            label12.Text = usuario;
+            Lb_usuarioIni.Visible = true;
+            Lb_usuarioIni.Text = usuario;
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             xtraTabControl1.SelectedTabPageIndex = 2;
             label1.AutoEllipsis = true;
@@ -55,16 +55,16 @@ namespace RmSoft
             xtraTabControl1.SelectedTabPageIndex = 1;
             con = 0;
             Txt_NomeFuncionario.Text = "";
-            textBox1.Text = "";
+            Tb_Cpf.Text = "";
             Tb_UsuarioFuncionario.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            richTextBox1.Text = "";
-            comboBox1.Text = "";
+            Tb_senha.Text = "";
+            Tb_endereco.Text = "";
+            Tb_bairro.Text = "";
+            Tb_cidade.Text = "";
+            Tb_telefone.Text = "";
+            Tb_rg.Text = "";
+            Rtb_obs.Text = "";
+            Cb_sexo.Text = "";
             Tb_CodFuncionario.Text = "";
         }
 
@@ -72,16 +72,16 @@ namespace RmSoft
         {
             con = 0;
             Txt_NomeFuncionario.Text = "";
-            textBox1.Text = "";
+            Tb_Cpf.Text = "";
             Tb_UsuarioFuncionario.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            richTextBox1.Text = "";
-            comboBox1.Text = "";
+            Tb_senha.Text = "";
+            Tb_endereco.Text = "";
+            Tb_bairro.Text = "";
+            Tb_cidade.Text = "";
+            Tb_telefone.Text = "";
+            Tb_rg.Text = "";
+            Rtb_obs.Text = "";
+            Cb_sexo.Text = "";
             Tb_CodFuncionario.Text = "";
 
 
@@ -97,7 +97,7 @@ namespace RmSoft
                 }
                 else
                 {
-                    UpdFuncionario up = new UpdFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, comboBox1.Text, textBox8.Text, textBox1.Text, Tb_UsuarioFuncionario.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                    UpdFuncionario up = new UpdFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, Cb_sexo.Text, Tb_rg.Text, Tb_Cpf.Text, Tb_UsuarioFuncionario.Text, Tb_senha.Text, Tb_endereco.Text, Tb_bairro.Text, Tb_cidade.Text, Rtb_obs.Text);
                     
                     MessageBox.Show("Alterado com sucesso");
                 }
@@ -106,19 +106,19 @@ namespace RmSoft
             }
             else
             {
-                CadastroFuncionario cad = new CadastroFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, comboBox1.Text, textBox8.Text, textBox1.Text, Tb_UsuarioFuncionario.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, richTextBox1.Text);
+                CadastroFuncionario cad = new CadastroFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, Cb_sexo.Text, Tb_rg.Text, Tb_Cpf.Text, Tb_UsuarioFuncionario.Text, Tb_senha.Text, Tb_endereco.Text, Tb_bairro.Text, Tb_cidade.Text, Rtb_obs.Text);
 
                 Txt_NomeFuncionario.Text = "";
-                textBox1.Text = "";
+                Tb_Cpf.Text = "";
                 Tb_UsuarioFuncionario.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
-                textBox7.Text = "";
-                textBox8.Text = "";
-                richTextBox1.Text = "";
-                comboBox1.Text = "";
+                Tb_senha.Text = "";
+                Tb_endereco.Text = "";
+                Tb_bairro.Text = "";
+                Tb_cidade.Text = "";
+                Tb_telefone.Text = "";
+                Tb_rg.Text = "";
+                Rtb_obs.Text = "";
+                Cb_sexo.Text = "";
                 Tb_CodFuncionario.Text = "";
                 MessageBox.Show("Cadastrado com sucesso");
             }
@@ -167,16 +167,16 @@ namespace RmSoft
                 
                     DeletarFuncionario del = new DeletarFuncionario(Tb_CodFuncionario.Text, Tb_UsuarioFuncionario.Text);
                     Txt_NomeFuncionario.Text = "";
-                    textBox1.Text = "";
+                    Tb_Cpf.Text = "";
                     Tb_UsuarioFuncionario.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                    textBox5.Text = "";
-                    textBox6.Text = "";
-                    textBox7.Text = "";
-                    textBox8.Text = "";
-                    richTextBox1.Text = "";
-                    comboBox1.Text = "";
+                    Tb_senha.Text = "";
+                    Tb_endereco.Text = "";
+                    Tb_bairro.Text = "";
+                    Tb_cidade.Text = "";
+                    Tb_telefone.Text = "";
+                    Tb_rg.Text = "";
+                    Rtb_obs.Text = "";
+                    Cb_sexo.Text = "";
                     Tb_CodFuncionario.Text = "";
                     MessageBox.Show("deletado com sucesso");
                     con = 0;
@@ -191,7 +191,7 @@ namespace RmSoft
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Hora.Text = DateTime.Now.ToString();
+            Lb_Hora.Text = DateTime.Now.ToString();
         }
 
         private void Hora_Click(object sender, EventArgs e)
@@ -220,22 +220,22 @@ namespace RmSoft
         private void button7_Click(object sender, EventArgs e)
         {
 
-            int Codigo = int.Parse(textBox9.Text);
-            int Estoque = int.Parse(textBox13.Text);
+            int Codigo = int.Parse(Tb_codigoProd.Text);
+            int Estoque = int.Parse(Tb_estoque.Text);
             if (con == 1)
             {
-                UpdProdutos up = new UpdProdutos(Codigo, textBox11.Text);
-                textBox11.Text = "";
-                textBox9.Text = "";
-                textBox13.Text = "";
+                UpdProdutos up = new UpdProdutos(Codigo, Tb_descricaoProd.Text);
+                Tb_descricaoProd.Text = "";
+                Tb_codigoProd.Text = "";
+                Tb_estoque.Text = "";
                 MessageBox.Show("Alterado com sucesso");
             }
             else
             {
-                CadastroProdutos cadProd = new CadastroProdutos(Codigo, textBox11.Text, Estoque);
-                textBox11.Text = "";
-                textBox9.Text = "";
-                textBox13.Text = "";
+                CadastroProdutos cadProd = new CadastroProdutos(Codigo, Tb_descricaoProd.Text, Estoque);
+                Tb_descricaoProd.Text = "";
+                Tb_codigoProd.Text = "";
+                Tb_estoque.Text = "";
                 MessageBox.Show("cadastrado com sucesso");
 
             }
@@ -250,15 +250,15 @@ namespace RmSoft
             this.Tb_CodFuncionario.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["codigo"].Value);
             this.Txt_NomeFuncionario.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Nome"].Value);
             this.Tb_UsuarioFuncionario.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Usuario"].Value);
-            this.textBox3.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Senha"].Value);
-            this.textBox4.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Endereco"].Value);
-            this.textBox5.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Bairro"].Value);
-            this.textBox6.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Cidade"].Value);
+            this.Tb_senha.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Senha"].Value);
+            this.Tb_endereco.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Endereco"].Value);
+            this.Tb_bairro.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Bairro"].Value);
+            this.Tb_cidade.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Cidade"].Value);
             //this.textBox7.Text = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Telefone"].Value);
-            this.textBox8.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["RG"].Value);
-            this.textBox1.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["CPF"].Value);
-            this.comboBox1.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Sexo"].Value);
-            this.richTextBox1.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["OBS"].Value);
+            this.Tb_rg.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["RG"].Value);
+            this.Tb_Cpf.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["CPF"].Value);
+            this.Cb_sexo.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["Sexo"].Value);
+            this.Rtb_obs.Text = Convert.ToString(this.Grid_Funcionario.CurrentRow.Cells["OBS"].Value);
 
 
             Grid_Funcionario.Visible = false;
@@ -269,9 +269,9 @@ namespace RmSoft
         {
             con = 1;
             Grid_Funcionario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.textBox9.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Codigo"].Value);
-            this.textBox11.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Descricao"].Value);
-            this.textBox13.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Estoque"].Value);
+            this.Tb_codigoProd.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Codigo"].Value);
+            this.Tb_descricaoProd.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Descricao"].Value);
+            this.Tb_estoque.Text = Convert.ToString(this.dataGridView2.CurrentRow.Cells["Estoque"].Value);
             dataGridView2.Visible = false;
             label14.Visible = true;
         }
@@ -292,9 +292,9 @@ namespace RmSoft
             dataGridView2.Visible = false;
             label14.Visible = true;
             con = 0;
-            textBox11.Text = "";
-            textBox9.Text = "";
-            textBox13.Text = "";
+            Tb_descricaoProd.Text = "";
+            Tb_codigoProd.Text = "";
+            Tb_estoque.Text = "";
         }
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
@@ -312,12 +312,12 @@ namespace RmSoft
             
             if (con == 1)
             {
-                DeletarProduto del = new DeletarProduto(int.Parse(textBox9.Text));
+                DeletarProduto del = new DeletarProduto(int.Parse(Tb_codigoProd.Text));
                 MessageBox.Show("deletado com sucesso");
                 con = 0;
-                textBox11.Text = "";
-                textBox9.Text = "";
-                textBox13.Text = "";
+                Tb_descricaoProd.Text = "";
+                Tb_codigoProd.Text = "";
+                Tb_estoque.Text = "";
             }
             else
                 MessageBox.Show("Selecione um produto");
@@ -330,7 +330,7 @@ namespace RmSoft
             int Est = int.Parse(label29.Text);
             int EntradaSaida = int.Parse(textBox15.Text);
             int entrada;
-            String User = label12.Text;
+            String User = Lb_usuarioIni.Text;
 
             if (radioButton1.Checked == true)
             {
@@ -344,6 +344,7 @@ namespace RmSoft
                 AtualizaEstoque att = new AtualizaEstoque(int.Parse(label30.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
+            else { MessageBox.Show("selecione o tipo de movimento"); }
 
             label28.Visible = false;
             label29.Visible = false;

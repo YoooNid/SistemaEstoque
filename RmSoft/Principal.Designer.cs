@@ -44,17 +44,17 @@ namespace RmSoft
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.Tb_dtnasc = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.Grid_Funcionario = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.Label();
             this.Tb_CodFuncionario = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Rtb_obs = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Tb_rg = new System.Windows.Forms.TextBox();
+            this.Tb_Cpf = new System.Windows.Forms.TextBox();
+            this.Cb_sexo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Bnt_DeletarFuncionario = new System.Windows.Forms.Button();
             this.Bnt_PesquisarFuncionario = new System.Windows.Forms.Button();
@@ -69,27 +69,28 @@ namespace RmSoft
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_NomeFuncionario = new System.Windows.Forms.TextBox();
             this.Tb_UsuarioFuncionario = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Tb_senha = new System.Windows.Forms.TextBox();
+            this.Tb_endereco = new System.Windows.Forms.TextBox();
+            this.Tb_bairro = new System.Windows.Forms.TextBox();
+            this.Tb_cidade = new System.Windows.Forms.TextBox();
+            this.Tb_telefone = new System.Windows.Forms.TextBox();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Tb_estoque = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.MaskedTextBox();
+            this.Tb_codigoProd = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.Tb_descricaoProd = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Bt_excluirProd = new System.Windows.Forms.Button();
+            this.Bt_pesquisarProd = new System.Windows.Forms.Button();
+            this.Bt_salvarProd = new System.Windows.Forms.Button();
+            this.Bt_limparProd = new System.Windows.Forms.Button();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -103,14 +104,13 @@ namespace RmSoft
             this.label24 = new System.Windows.Forms.Label();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Lb_usuarioIni = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.Lb_versao = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Hora = new System.Windows.Forms.Label();
+            this.Lb_Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -225,17 +225,17 @@ namespace RmSoft
             // 
             this.xtraTabPage1.Controls.Add(this.label19);
             this.xtraTabPage1.Controls.Add(this.label21);
-            this.xtraTabPage1.Controls.Add(this.textBox12);
+            this.xtraTabPage1.Controls.Add(this.Tb_dtnasc);
             this.xtraTabPage1.Controls.Add(this.label20);
             this.xtraTabPage1.Controls.Add(this.Grid_Funcionario);
             this.xtraTabPage1.Controls.Add(this.Codigo);
             this.xtraTabPage1.Controls.Add(this.Tb_CodFuncionario);
-            this.xtraTabPage1.Controls.Add(this.richTextBox1);
+            this.xtraTabPage1.Controls.Add(this.Rtb_obs);
             this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.label10);
-            this.xtraTabPage1.Controls.Add(this.textBox8);
-            this.xtraTabPage1.Controls.Add(this.textBox1);
-            this.xtraTabPage1.Controls.Add(this.comboBox1);
+            this.xtraTabPage1.Controls.Add(this.Tb_rg);
+            this.xtraTabPage1.Controls.Add(this.Tb_Cpf);
+            this.xtraTabPage1.Controls.Add(this.Cb_sexo);
             this.xtraTabPage1.Controls.Add(this.label8);
             this.xtraTabPage1.Controls.Add(this.Bnt_DeletarFuncionario);
             this.xtraTabPage1.Controls.Add(this.Bnt_PesquisarFuncionario);
@@ -250,11 +250,11 @@ namespace RmSoft
             this.xtraTabPage1.Controls.Add(this.label1);
             this.xtraTabPage1.Controls.Add(this.Txt_NomeFuncionario);
             this.xtraTabPage1.Controls.Add(this.Tb_UsuarioFuncionario);
-            this.xtraTabPage1.Controls.Add(this.textBox3);
-            this.xtraTabPage1.Controls.Add(this.textBox4);
-            this.xtraTabPage1.Controls.Add(this.textBox5);
-            this.xtraTabPage1.Controls.Add(this.textBox6);
-            this.xtraTabPage1.Controls.Add(this.textBox7);
+            this.xtraTabPage1.Controls.Add(this.Tb_senha);
+            this.xtraTabPage1.Controls.Add(this.Tb_endereco);
+            this.xtraTabPage1.Controls.Add(this.Tb_bairro);
+            this.xtraTabPage1.Controls.Add(this.Tb_cidade);
+            this.xtraTabPage1.Controls.Add(this.Tb_telefone);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage1.Text = "xtraTabPage1";
@@ -279,12 +279,12 @@ namespace RmSoft
             this.label21.TabIndex = 31;
             this.label21.Text = "OBS";
             // 
-            // textBox12
+            // Tb_dtnasc
             // 
-            this.textBox12.Location = new System.Drawing.Point(319, 338);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(131, 21);
-            this.textBox12.TabIndex = 9;
+            this.Tb_dtnasc.Location = new System.Drawing.Point(319, 338);
+            this.Tb_dtnasc.Name = "Tb_dtnasc";
+            this.Tb_dtnasc.Size = new System.Drawing.Size(131, 21);
+            this.Tb_dtnasc.TabIndex = 9;
             // 
             // label20
             // 
@@ -326,13 +326,13 @@ namespace RmSoft
             this.Tb_CodFuncionario.Size = new System.Drawing.Size(135, 21);
             this.Tb_CodFuncionario.TabIndex = 5;
             // 
-            // richTextBox1
+            // Rtb_obs
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(216, 498);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(637, 96);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
+            this.Rtb_obs.Location = new System.Drawing.Point(216, 498);
+            this.Rtb_obs.Name = "Rtb_obs";
+            this.Rtb_obs.Size = new System.Drawing.Size(637, 96);
+            this.Rtb_obs.TabIndex = 20;
+            this.Rtb_obs.Text = "";
             // 
             // label11
             // 
@@ -354,33 +354,33 @@ namespace RmSoft
             this.label10.TabIndex = 24;
             this.label10.Text = "RG";
             // 
-            // textBox8
+            // Tb_rg
             // 
-            this.textBox8.Location = new System.Drawing.Point(452, 432);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 21);
-            this.textBox8.TabIndex = 15;
+            this.Tb_rg.Location = new System.Drawing.Point(452, 432);
+            this.Tb_rg.Name = "Tb_rg";
+            this.Tb_rg.Size = new System.Drawing.Size(100, 21);
+            this.Tb_rg.TabIndex = 15;
             // 
-            // textBox1
+            // Tb_Cpf
             // 
-            this.textBox1.Location = new System.Drawing.Point(695, 432);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 16;
+            this.Tb_Cpf.Location = new System.Drawing.Point(695, 432);
+            this.Tb_Cpf.Name = "Tb_Cpf";
+            this.Tb_Cpf.Size = new System.Drawing.Size(100, 21);
+            this.Tb_Cpf.TabIndex = 16;
             // 
-            // comboBox1
+            // Cb_sexo
             // 
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 13;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Cb_sexo.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Cb_sexo.FormattingEnabled = true;
+            this.Cb_sexo.ItemHeight = 13;
+            this.Cb_sexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBox1.Location = new System.Drawing.Point(695, 402);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(86, 21);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Text = "Selecione";
+            this.Cb_sexo.Location = new System.Drawing.Point(695, 402);
+            this.Cb_sexo.Name = "Cb_sexo";
+            this.Cb_sexo.Size = new System.Drawing.Size(86, 21);
+            this.Cb_sexo.TabIndex = 13;
+            this.Cb_sexo.Text = "Selecione";
             // 
             // label8
             // 
@@ -516,55 +516,55 @@ namespace RmSoft
             this.Tb_UsuarioFuncionario.Size = new System.Drawing.Size(143, 21);
             this.Tb_UsuarioFuncionario.TabIndex = 7;
             // 
-            // textBox3
+            // Tb_senha
             // 
-            this.textBox3.Location = new System.Drawing.Point(319, 309);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(108, 21);
-            this.textBox3.TabIndex = 8;
+            this.Tb_senha.Location = new System.Drawing.Point(319, 309);
+            this.Tb_senha.Name = "Tb_senha";
+            this.Tb_senha.Size = new System.Drawing.Size(108, 21);
+            this.Tb_senha.TabIndex = 8;
             // 
-            // textBox4
+            // Tb_endereco
             // 
-            this.textBox4.Location = new System.Drawing.Point(319, 366);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(445, 21);
-            this.textBox4.TabIndex = 10;
+            this.Tb_endereco.Location = new System.Drawing.Point(319, 366);
+            this.Tb_endereco.Name = "Tb_endereco";
+            this.Tb_endereco.Size = new System.Drawing.Size(445, 21);
+            this.Tb_endereco.TabIndex = 10;
             // 
-            // textBox5
+            // Tb_bairro
             // 
-            this.textBox5.Location = new System.Drawing.Point(218, 402);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 21);
-            this.textBox5.TabIndex = 11;
+            this.Tb_bairro.Location = new System.Drawing.Point(218, 402);
+            this.Tb_bairro.Name = "Tb_bairro";
+            this.Tb_bairro.Size = new System.Drawing.Size(108, 21);
+            this.Tb_bairro.TabIndex = 11;
             // 
-            // textBox6
+            // Tb_cidade
             // 
-            this.textBox6.Location = new System.Drawing.Point(452, 402);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(108, 21);
-            this.textBox6.TabIndex = 12;
+            this.Tb_cidade.Location = new System.Drawing.Point(452, 402);
+            this.Tb_cidade.Name = "Tb_cidade";
+            this.Tb_cidade.Size = new System.Drawing.Size(108, 21);
+            this.Tb_cidade.TabIndex = 12;
             // 
-            // textBox7
+            // Tb_telefone
             // 
-            this.textBox7.Location = new System.Drawing.Point(218, 432);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(108, 21);
-            this.textBox7.TabIndex = 14;
+            this.Tb_telefone.Location = new System.Drawing.Point(218, 432);
+            this.Tb_telefone.Name = "Tb_telefone";
+            this.Tb_telefone.Size = new System.Drawing.Size(108, 21);
+            this.Tb_telefone.TabIndex = 14;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.label14);
             this.xtraTabPage2.Controls.Add(this.label26);
-            this.xtraTabPage2.Controls.Add(this.textBox13);
+            this.xtraTabPage2.Controls.Add(this.Tb_estoque);
             this.xtraTabPage2.Controls.Add(this.label25);
-            this.xtraTabPage2.Controls.Add(this.textBox9);
+            this.xtraTabPage2.Controls.Add(this.Tb_codigoProd);
             this.xtraTabPage2.Controls.Add(this.label13);
-            this.xtraTabPage2.Controls.Add(this.textBox11);
+            this.xtraTabPage2.Controls.Add(this.Tb_descricaoProd);
             this.xtraTabPage2.Controls.Add(this.dataGridView2);
-            this.xtraTabPage2.Controls.Add(this.button1);
-            this.xtraTabPage2.Controls.Add(this.button6);
-            this.xtraTabPage2.Controls.Add(this.button7);
-            this.xtraTabPage2.Controls.Add(this.button8);
+            this.xtraTabPage2.Controls.Add(this.Bt_excluirProd);
+            this.xtraTabPage2.Controls.Add(this.Bt_pesquisarProd);
+            this.xtraTabPage2.Controls.Add(this.Bt_salvarProd);
+            this.xtraTabPage2.Controls.Add(this.Bt_limparProd);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage2.Text = "xtraTabPage2";
@@ -589,13 +589,13 @@ namespace RmSoft
             this.label26.TabIndex = 16;
             this.label26.Text = "Codigo";
             // 
-            // textBox13
+            // Tb_estoque
             // 
-            this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox13.Location = new System.Drawing.Point(258, 301);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(254, 21);
-            this.textBox13.TabIndex = 7;
+            this.Tb_estoque.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Tb_estoque.Location = new System.Drawing.Point(258, 301);
+            this.Tb_estoque.Name = "Tb_estoque";
+            this.Tb_estoque.Size = new System.Drawing.Size(254, 21);
+            this.Tb_estoque.TabIndex = 7;
             // 
             // label25
             // 
@@ -607,13 +607,13 @@ namespace RmSoft
             this.label25.TabIndex = 14;
             this.label25.Text = "Estoque";
             // 
-            // textBox9
+            // Tb_codigoProd
             // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox9.Location = new System.Drawing.Point(258, 220);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 21);
-            this.textBox9.TabIndex = 5;
+            this.Tb_codigoProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Tb_codigoProd.Location = new System.Drawing.Point(258, 220);
+            this.Tb_codigoProd.Name = "Tb_codigoProd";
+            this.Tb_codigoProd.Size = new System.Drawing.Size(100, 21);
+            this.Tb_codigoProd.TabIndex = 5;
             // 
             // label13
             // 
@@ -625,13 +625,13 @@ namespace RmSoft
             this.label13.TabIndex = 11;
             this.label13.Text = "Descricao";
             // 
-            // textBox11
+            // Tb_descricaoProd
             // 
-            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox11.Location = new System.Drawing.Point(258, 264);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(254, 21);
-            this.textBox11.TabIndex = 6;
+            this.Tb_descricaoProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Tb_descricaoProd.Location = new System.Drawing.Point(258, 264);
+            this.Tb_descricaoProd.Name = "Tb_descricaoProd";
+            this.Tb_descricaoProd.Size = new System.Drawing.Size(254, 21);
+            this.Tb_descricaoProd.TabIndex = 6;
             // 
             // dataGridView2
             // 
@@ -644,49 +644,49 @@ namespace RmSoft
             this.dataGridView2.Visible = false;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
-            // button1
+            // Bt_excluirProd
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(880, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "EXCLUIR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Bt_excluirProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Bt_excluirProd.Location = new System.Drawing.Point(880, 148);
+            this.Bt_excluirProd.Name = "Bt_excluirProd";
+            this.Bt_excluirProd.Size = new System.Drawing.Size(200, 33);
+            this.Bt_excluirProd.TabIndex = 4;
+            this.Bt_excluirProd.Text = "EXCLUIR";
+            this.Bt_excluirProd.UseVisualStyleBackColor = true;
+            this.Bt_excluirProd.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
+            // Bt_pesquisarProd
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Location = new System.Drawing.Point(639, 148);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(209, 33);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "PESQUISAR";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.Bt_pesquisarProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Bt_pesquisarProd.Location = new System.Drawing.Point(639, 148);
+            this.Bt_pesquisarProd.Name = "Bt_pesquisarProd";
+            this.Bt_pesquisarProd.Size = new System.Drawing.Size(209, 33);
+            this.Bt_pesquisarProd.TabIndex = 3;
+            this.Bt_pesquisarProd.Text = "PESQUISAR";
+            this.Bt_pesquisarProd.UseVisualStyleBackColor = true;
+            this.Bt_pesquisarProd.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // Bt_salvarProd
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.Location = new System.Drawing.Point(397, 148);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 33);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "SALVAR";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Bt_salvarProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Bt_salvarProd.Location = new System.Drawing.Point(397, 148);
+            this.Bt_salvarProd.Name = "Bt_salvarProd";
+            this.Bt_salvarProd.Size = new System.Drawing.Size(200, 33);
+            this.Bt_salvarProd.TabIndex = 2;
+            this.Bt_salvarProd.Text = "SALVAR";
+            this.Bt_salvarProd.UseVisualStyleBackColor = true;
+            this.Bt_salvarProd.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // Bt_limparProd
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.Location = new System.Drawing.Point(164, 148);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(166, 33);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "LIMPAR";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Bt_limparProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Bt_limparProd.Location = new System.Drawing.Point(164, 148);
+            this.Bt_limparProd.Name = "Bt_limparProd";
+            this.Bt_limparProd.Size = new System.Drawing.Size(166, 33);
+            this.Bt_limparProd.TabIndex = 1;
+            this.Bt_limparProd.Text = "LIMPAR";
+            this.Bt_limparProd.UseVisualStyleBackColor = true;
+            this.Bt_limparProd.Click += new System.EventHandler(this.button8_Click);
             // 
             // xtraTabPage3
             // 
@@ -724,6 +724,19 @@ namespace RmSoft
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage4.Text = "xtraTabPage4";
+            // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Red;
+            this.label30.Location = new System.Drawing.Point(249, 216);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(69, 23);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "label30";
+            this.label30.Visible = false;
             // 
             // label29
             // 
@@ -838,7 +851,7 @@ namespace RmSoft
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(279, 150);
+            this.label24.Location = new System.Drawing.Point(132, 167);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(41, 13);
             this.label24.TabIndex = 0;
@@ -860,17 +873,17 @@ namespace RmSoft
             this.label9.TabIndex = 2;
             this.label9.Text = "Bem vindo:";
             // 
-            // label12
+            // Lb_usuarioIni
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1196, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 16);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "label12";
+            this.Lb_usuarioIni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lb_usuarioIni.AutoSize = true;
+            this.Lb_usuarioIni.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Lb_usuarioIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_usuarioIni.Location = new System.Drawing.Point(1196, 8);
+            this.Lb_usuarioIni.Name = "Lb_usuarioIni";
+            this.Lb_usuarioIni.Size = new System.Drawing.Size(59, 16);
+            this.Lb_usuarioIni.TabIndex = 3;
+            this.Lb_usuarioIni.Text = "label12";
             // 
             // label15
             // 
@@ -882,17 +895,17 @@ namespace RmSoft
             this.label15.TabIndex = 4;
             this.label15.Text = "Versão:";
             // 
-            // label16
+            // Lb_versao
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1196, 31);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 16);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "1,0";
+            this.Lb_versao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lb_versao.AutoSize = true;
+            this.Lb_versao.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Lb_versao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_versao.Location = new System.Drawing.Point(1196, 31);
+            this.Lb_versao.Name = "Lb_versao";
+            this.Lb_versao.Size = new System.Drawing.Size(28, 16);
+            this.Lb_versao.TabIndex = 5;
+            this.Lb_versao.Text = "1,0";
             // 
             // timer1
             // 
@@ -900,18 +913,18 @@ namespace RmSoft
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Hora
+            // Lb_Hora
             // 
-            this.Hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Hora.AutoSize = true;
-            this.Hora.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hora.Location = new System.Drawing.Point(1196, 54);
-            this.Hora.Name = "Hora";
-            this.Hora.Size = new System.Drawing.Size(61, 18);
-            this.Hora.TabIndex = 6;
-            this.Hora.Text = "label17";
-            this.Hora.Click += new System.EventHandler(this.Hora_Click);
+            this.Lb_Hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lb_Hora.AutoSize = true;
+            this.Lb_Hora.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Lb_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Hora.Location = new System.Drawing.Point(1196, 54);
+            this.Lb_Hora.Name = "Lb_Hora";
+            this.Lb_Hora.Size = new System.Drawing.Size(61, 18);
+            this.Lb_Hora.TabIndex = 6;
+            this.Lb_Hora.Text = "label17";
+            this.Lb_Hora.Click += new System.EventHandler(this.Hora_Click);
             // 
             // label17
             // 
@@ -934,19 +947,6 @@ namespace RmSoft
             this.label22.TabIndex = 8;
             this.label22.Text = "Apenas para demostração ";
             // 
-            // label30
-            // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Red;
-            this.label30.Location = new System.Drawing.Point(249, 216);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(69, 23);
-            this.label30.TabIndex = 17;
-            this.label30.Text = "label30";
-            this.label30.Visible = false;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -954,17 +954,17 @@ namespace RmSoft
             this.ClientSize = new System.Drawing.Size(1366, 690);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.Hora);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.Lb_Hora);
+            this.Controls.Add(this.Lb_versao);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.Lb_usuarioIni);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.accordionControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Funcionario";
+            this.Text = "5";
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -997,11 +997,11 @@ namespace RmSoft
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private System.Windows.Forms.TextBox Txt_NomeFuncionario;
         private System.Windows.Forms.TextBox Tb_UsuarioFuncionario;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Tb_senha;
+        private System.Windows.Forms.TextBox Tb_endereco;
+        private System.Windows.Forms.TextBox Tb_bairro;
+        private System.Windows.Forms.TextBox Tb_cidade;
+        private System.Windows.Forms.TextBox Tb_telefone;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Cadastro_Produto;
         private System.Windows.Forms.Button Bnt_DeletarFuncionario;
         private System.Windows.Forms.Button Bnt_PesquisarFuncionario;
@@ -1017,34 +1017,34 @@ namespace RmSoft
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cb_sexo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox Tb_rg;
+        private System.Windows.Forms.TextBox Tb_Cpf;
+        private System.Windows.Forms.RichTextBox Rtb_obs;
         private System.Windows.Forms.TextBox Tb_CodFuncionario;
         private System.Windows.Forms.Label Codigo;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label Lb_usuarioIni;
         private System.Windows.Forms.DataGridView Grid_Funcionario;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox Tb_descricaoProd;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Bt_excluirProd;
+        private System.Windows.Forms.Button Bt_pesquisarProd;
+        private System.Windows.Forms.Button Bt_salvarProd;
+        private System.Windows.Forms.Button Bt_limparProd;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ACE_Relatorios;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label Lb_versao;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label Hora;
+        private System.Windows.Forms.Label Lb_Hora;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox Tb_dtnasc;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.MaskedTextBox textBox9;
+        private System.Windows.Forms.MaskedTextBox Tb_codigoProd;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private System.Windows.Forms.Label label19;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
@@ -1055,7 +1055,7 @@ namespace RmSoft
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox Tb_estoque;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label14;

@@ -48,6 +48,8 @@ namespace RmSoft
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             xtraTabControl1.SelectedTabPageIndex = 2;
             label1.AutoEllipsis = true;
+            xtraTab_Relatorio.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
+            Cb_Relatorios.SelectedIndex = 0;
         }
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
@@ -278,12 +280,12 @@ namespace RmSoft
         private void dataGridView3_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.label30.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Codigo"].Value);
-            this.label28.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Descricao"].Value);
-            this.label29.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Estoque"].Value);
-            label28.Visible = true;
-            label29.Visible = true;
-            label30.Visible = true;
+            this.Lb_CodProd.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Codigo"].Value);
+            this.Lb_DescProd.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Descricao"].Value);
+            this.Lb_Qnt.Text = Convert.ToString(this.dataGridView3.CurrentRow.Cells["Estoque"].Value);
+            Lb_DescProd.Visible = true;
+            Lb_Qnt.Visible = true;
+            Lb_CodProd.Visible = true;
 
 
         }
@@ -325,32 +327,32 @@ namespace RmSoft
 
         private void button9_Click(object sender, EventArgs e)
         {
-            string Nome = label28.Text;
-            int Cod = int.Parse(label30.Text);
-            int Est = int.Parse(label29.Text);
-            int EntradaSaida = int.Parse(textBox15.Text);
+            string Nome = Lb_DescProd.Text;
+            int Cod = int.Parse(Lb_CodProd.Text);
+            int Est = int.Parse(Lb_Qnt.Text);
+            int EntradaSaida = int.Parse(Tb_QntProdEst.Text);
             int entrada;
             String User = Lb_usuarioIni.Text;
 
-            if (radioButton1.Checked == true)
+            if (Rb_adicionar.Checked == true)
             {
                 entrada = 1;
-                AtualizaEstoque att = new AtualizaEstoque(int.Parse(label30.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(Lb_CodProd.Text), int.Parse(Tb_QntProdEst.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
-            if (radioButton2.Checked == true)
+            if (Rb_remover.Checked == true)
             {
                 entrada = 0;
-                AtualizaEstoque att = new AtualizaEstoque(int.Parse(label30.Text), int.Parse(textBox15.Text), entrada, Nome, Est, EntradaSaida, User);
+                AtualizaEstoque att = new AtualizaEstoque(int.Parse(Lb_CodProd.Text), int.Parse(Tb_QntProdEst.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
-            else { MessageBox.Show("selecione o tipo de movimento"); }
+            
 
-            label28.Visible = false;
-            label29.Visible = false;
-            label30.Visible = false;
-            label30.Text = "";
-            textBox15.Text = "";
+            Lb_DescProd.Visible = false;
+            Lb_Qnt.Visible = false;
+            Lb_CodProd.Visible = false;
+            Lb_CodProd.Text = "";
+            Tb_QntProdEst.Text = "";
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -370,6 +372,36 @@ namespace RmSoft
             con.Close();
         }
 
-        
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 5;
+            
+        }
+
+        private void Cb_Relatorios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            string rel = Cb_Relatorios.Text.Substring(0,2);
+
+            switch (rel)
+            {
+                case "01":
+                    xtraTab_Relatorio.SelectedTabPageIndex = 0;
+                    //classe de relatorios para listagem de produtos
+                    break;
+
+                case "02":
+                    xtraTab_Relatorio.SelectedTabPageIndex = 1;
+                    //classe de relatorios para listagem de funcionarios
+                    break;
+                case "03":
+                    xtraTab_Relatorio.SelectedTabPageIndex = 2;
+                    //classe para listagem de alterações feitas
+                    break;
+
+
+            }
+           
+        }
     }
 }

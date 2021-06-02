@@ -222,7 +222,6 @@ C:\Users\yoooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.CoreC
 C:\Users\yoooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.CopyComplete
 C:\Users\yoooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.exe
 C:\Users\yoooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.pdb
-C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csprojAssemblyReference.cache
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.Login.resources
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.Principal.resources
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.Properties.Resources.resources
@@ -334,3 +333,4 @@ C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\bin\Debug\es\DevExpress.Office
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\bin\Debug\ja\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\bin\Debug\ru\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.CopyComplete
+C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.AssemblyReference.cache

@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ArquivoIni;
-using RmSoft;
-using RmSoft.Bd;
-using Validacao;
-using System.Globalization;
 using RmSoft.upd;
 
 namespace RmSoft
@@ -73,6 +63,8 @@ namespace RmSoft
         private void button2_Click(object sender, EventArgs e)
         {
             con = 0;
+            label19.Visible = true;
+            Grid_Funcionario.Visible = false;
             Txt_NomeFuncionario.Text = "";
             Tb_Cpf.Text = "";
             Tb_UsuarioFuncionario.Text = "";
@@ -241,8 +233,9 @@ namespace RmSoft
                 MessageBox.Show("cadastrado com sucesso");
 
             }
-            
-            
+            Bt_pesquisarProd.PerformClick();
+
+
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

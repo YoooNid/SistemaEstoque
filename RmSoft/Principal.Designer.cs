@@ -40,6 +40,7 @@ namespace RmSoft
             this.Estoque_Inventario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Estoque_EntradaSaida = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ACE_Relatorios = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.label19 = new System.Windows.Forms.Label();
@@ -103,6 +104,16 @@ namespace RmSoft
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.Tab_Relatorios = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTab_Relatorio = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Cb_Relatorios = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Lb_usuarioIni = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -110,17 +121,6 @@ namespace RmSoft
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Lb_Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Cb_Relatorios = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.xtraTab_Relatorio = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -193,7 +193,6 @@ namespace RmSoft
             this.ACE_Estoque.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.Estoque_Inventario,
             this.Estoque_EntradaSaida});
-            this.ACE_Estoque.Expanded = true;
             this.ACE_Estoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Estoque.ImageOptions.Image")));
             this.ACE_Estoque.Name = "ACE_Estoque";
             this.ACE_Estoque.Text = "Estoque";
@@ -216,10 +215,16 @@ namespace RmSoft
             // 
             this.ACE_Relatorios.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.ACE_Relatorios.Expanded = true;
             this.ACE_Relatorios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Relatorios.ImageOptions.Image")));
             this.ACE_Relatorios.Name = "ACE_Relatorios";
             this.ACE_Relatorios.Text = "Relatorios";
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "Listas de relatorios ";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
             // 
             // xtraTabControl1
             // 
@@ -885,6 +890,99 @@ namespace RmSoft
             this.Tab_Relatorios.Size = new System.Drawing.Size(1191, 599);
             this.Tab_Relatorios.Text = "xtraTabPage6";
             // 
+            // xtraTab_Relatorio
+            // 
+            this.xtraTab_Relatorio.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.xtraTab_Relatorio.Location = new System.Drawing.Point(0, 114);
+            this.xtraTab_Relatorio.Name = "xtraTab_Relatorio";
+            this.xtraTab_Relatorio.SelectedTabPage = this.xtraTabPage6;
+            this.xtraTab_Relatorio.Size = new System.Drawing.Size(1191, 485);
+            this.xtraTab_Relatorio.TabIndex = 9;
+            this.xtraTab_Relatorio.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage6,
+            this.xtraTabPage7,
+            this.xtraTabPage8});
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Controls.Add(this.label22);
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
+            this.xtraTabPage6.Text = "ListagemProduto";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(400, 54);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(110, 13);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Listagem de produtos";
+            // 
+            // xtraTabPage7
+            // 
+            this.xtraTabPage7.Controls.Add(this.label23);
+            this.xtraTabPage7.Name = "xtraTabPage7";
+            this.xtraTabPage7.Size = new System.Drawing.Size(1189, 460);
+            this.xtraTabPage7.Text = "ListagemFuncionario";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(457, 93);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(122, 13);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Listagem de Funcionario";
+            // 
+            // xtraTabPage8
+            // 
+            this.xtraTabPage8.Controls.Add(this.label28);
+            this.xtraTabPage8.Name = "xtraTabPage8";
+            this.xtraTabPage8.Size = new System.Drawing.Size(1189, 460);
+            this.xtraTabPage8.Text = "Alteraçõesfeitas";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(466, 128);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(87, 13);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "alterações feitas";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(265, 90);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(107, 13);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Selecione o Relatório";
+            // 
+            // Cb_Relatorios
+            // 
+            this.Cb_Relatorios.FormattingEnabled = true;
+            this.Cb_Relatorios.Items.AddRange(new object[] {
+            "01 - Listagem de produtos",
+            "02 - Listagem de Funcionários",
+            "03 - Alterações feitas "});
+            this.Cb_Relatorios.Location = new System.Drawing.Point(559, 87);
+            this.Cb_Relatorios.Name = "Cb_Relatorios";
+            this.Cb_Relatorios.Size = new System.Drawing.Size(354, 21);
+            this.Cb_Relatorios.TabIndex = 7;
+            this.Cb_Relatorios.SelectedIndexChanged += new System.EventHandler(this.Cb_Relatorios_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(455, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(154, 33);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Relatórios";
+            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -957,106 +1055,6 @@ namespace RmSoft
             this.label17.Size = new System.Drawing.Size(33, 13);
             this.label17.TabIndex = 7;
             this.label17.Text = "Data:";
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement1.Text = "Listas de relatorios ";
-            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(455, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 33);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Relatórios";
-            // 
-            // Cb_Relatorios
-            // 
-            this.Cb_Relatorios.FormattingEnabled = true;
-            this.Cb_Relatorios.Items.AddRange(new object[] {
-            "01 - Listagem de produtos",
-            "02 - Listagem de Funcionários",
-            "03 - Alterações feitas "});
-            this.Cb_Relatorios.Location = new System.Drawing.Point(559, 87);
-            this.Cb_Relatorios.Name = "Cb_Relatorios";
-            this.Cb_Relatorios.Size = new System.Drawing.Size(354, 21);
-            this.Cb_Relatorios.TabIndex = 7;
-            this.Cb_Relatorios.SelectedIndexChanged += new System.EventHandler(this.Cb_Relatorios_SelectedIndexChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(265, 90);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 13);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Selecione o Relatório";
-            // 
-            // xtraTab_Relatorio
-            // 
-            this.xtraTab_Relatorio.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.xtraTab_Relatorio.Location = new System.Drawing.Point(0, 114);
-            this.xtraTab_Relatorio.Name = "xtraTab_Relatorio";
-            this.xtraTab_Relatorio.SelectedTabPage = this.xtraTabPage6;
-            this.xtraTab_Relatorio.Size = new System.Drawing.Size(1191, 485);
-            this.xtraTab_Relatorio.TabIndex = 9;
-            this.xtraTab_Relatorio.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage6,
-            this.xtraTabPage7,
-            this.xtraTabPage8});
-            // 
-            // xtraTabPage6
-            // 
-            this.xtraTabPage6.Controls.Add(this.label22);
-            this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
-            this.xtraTabPage6.Text = "ListagemProduto";
-            // 
-            // xtraTabPage7
-            // 
-            this.xtraTabPage7.Controls.Add(this.label23);
-            this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(1189, 460);
-            this.xtraTabPage7.Text = "ListagemFuncionario";
-            // 
-            // xtraTabPage8
-            // 
-            this.xtraTabPage8.Controls.Add(this.label28);
-            this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(1189, 460);
-            this.xtraTabPage8.Text = "Alteraçõesfeitas";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(400, 54);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 13);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "Listagem de produtos";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(457, 93);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 13);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "Listagem de Funcionario";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(466, 128);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(87, 13);
-            this.label28.TabIndex = 11;
-            this.label28.Text = "alterações feitas";
             // 
             // Principal
             // 

@@ -40,6 +40,7 @@ namespace RmSoft
             this.Estoque_Inventario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Estoque_EntradaSaida = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ACE_Relatorios = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.label19 = new System.Windows.Forms.Label();
@@ -103,6 +104,16 @@ namespace RmSoft
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.Tab_Relatorios = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTab_Relatorio = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Cb_Relatorios = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Lb_usuarioIni = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -110,17 +121,20 @@ namespace RmSoft
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Lb_Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Cb_Relatorios = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.xtraTab_Relatorio = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.Dg_ListagemProd = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.xtraTabPage9 = new DevExpress.XtraTab.XtraTabPage();
+            this.Grid_Grupos = new System.Windows.Forms.DataGridView();
+            this.Bt_ExcluirGrupo = new System.Windows.Forms.Button();
+            this.Bt_PesquisarGrupo = new System.Windows.Forms.Button();
+            this.Bt_SalvarGrupo = new System.Windows.Forms.Button();
+            this.Bt_LimparGrupo = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Tb_CodGrupo = new System.Windows.Forms.TextBox();
+            this.Tb_DescGrupo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -138,6 +152,9 @@ namespace RmSoft
             this.xtraTabPage6.SuspendLayout();
             this.xtraTabPage7.SuspendLayout();
             this.xtraTabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).BeginInit();
+            this.xtraTabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid_Grupos)).BeginInit();
             this.SuspendLayout();
             // 
             // accordionControl1
@@ -160,7 +177,9 @@ namespace RmSoft
             this.ACE_Cadastro.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.Cadastro_Funcionario,
             this.Cadastro_Produto,
-            this.accordionControlSeparator1});
+            this.accordionControlSeparator1,
+            this.accordionControlElement2});
+            this.ACE_Cadastro.Expanded = true;
             this.ACE_Cadastro.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
@@ -221,6 +240,13 @@ namespace RmSoft
             this.ACE_Relatorios.Name = "ACE_Relatorios";
             this.ACE_Relatorios.Text = "Relatorios";
             // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "Listas de relatorios ";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
+            // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -237,7 +263,8 @@ namespace RmSoft
             this.xtraTabPage3,
             this.xtraTabPage4,
             this.xtraTabPage5,
-            this.Tab_Relatorios});
+            this.Tab_Relatorios,
+            this.xtraTabPage9});
             // 
             // xtraTabPage1
             // 
@@ -571,6 +598,8 @@ namespace RmSoft
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.label29);
+            this.xtraTabPage2.Controls.Add(this.comboBox1);
             this.xtraTabPage2.Controls.Add(this.label14);
             this.xtraTabPage2.Controls.Add(this.label26);
             this.xtraTabPage2.Controls.Add(this.Tb_estoque);
@@ -610,7 +639,7 @@ namespace RmSoft
             // Tb_estoque
             // 
             this.Tb_estoque.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Tb_estoque.Location = new System.Drawing.Point(258, 301);
+            this.Tb_estoque.Location = new System.Drawing.Point(258, 330);
             this.Tb_estoque.Name = "Tb_estoque";
             this.Tb_estoque.Size = new System.Drawing.Size(254, 21);
             this.Tb_estoque.TabIndex = 7;
@@ -619,7 +648,7 @@ namespace RmSoft
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 304);
+            this.label25.Location = new System.Drawing.Point(154, 333);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(46, 13);
             this.label25.TabIndex = 14;
@@ -637,7 +666,7 @@ namespace RmSoft
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(154, 267);
+            this.label13.Location = new System.Drawing.Point(154, 296);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 11;
@@ -646,7 +675,7 @@ namespace RmSoft
             // Tb_descricaoProd
             // 
             this.Tb_descricaoProd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Tb_descricaoProd.Location = new System.Drawing.Point(258, 264);
+            this.Tb_descricaoProd.Location = new System.Drawing.Point(258, 293);
             this.Tb_descricaoProd.Name = "Tb_descricaoProd";
             this.Tb_descricaoProd.Size = new System.Drawing.Size(254, 21);
             this.Tb_descricaoProd.TabIndex = 6;
@@ -885,6 +914,100 @@ namespace RmSoft
             this.Tab_Relatorios.Size = new System.Drawing.Size(1191, 599);
             this.Tab_Relatorios.Text = "xtraTabPage6";
             // 
+            // xtraTab_Relatorio
+            // 
+            this.xtraTab_Relatorio.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.xtraTab_Relatorio.Location = new System.Drawing.Point(0, 114);
+            this.xtraTab_Relatorio.Name = "xtraTab_Relatorio";
+            this.xtraTab_Relatorio.SelectedTabPage = this.xtraTabPage6;
+            this.xtraTab_Relatorio.Size = new System.Drawing.Size(1191, 485);
+            this.xtraTab_Relatorio.TabIndex = 9;
+            this.xtraTab_Relatorio.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage6,
+            this.xtraTabPage7,
+            this.xtraTabPage8});
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Controls.Add(this.Dg_ListagemProd);
+            this.xtraTabPage6.Controls.Add(this.label22);
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
+            this.xtraTabPage6.Text = "ListagemProduto";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 25);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(110, 13);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Listagem de produtos";
+            // 
+            // xtraTabPage7
+            // 
+            this.xtraTabPage7.Controls.Add(this.label23);
+            this.xtraTabPage7.Name = "xtraTabPage7";
+            this.xtraTabPage7.Size = new System.Drawing.Size(1189, 460);
+            this.xtraTabPage7.Text = "ListagemFuncionario";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(457, 93);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(122, 13);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Listagem de Funcionario";
+            // 
+            // xtraTabPage8
+            // 
+            this.xtraTabPage8.Controls.Add(this.label28);
+            this.xtraTabPage8.Name = "xtraTabPage8";
+            this.xtraTabPage8.Size = new System.Drawing.Size(1189, 460);
+            this.xtraTabPage8.Text = "Alteraçõesfeitas";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(466, 128);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(87, 13);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "alterações feitas";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(265, 90);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(107, 13);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Selecione o Relatório";
+            // 
+            // Cb_Relatorios
+            // 
+            this.Cb_Relatorios.FormattingEnabled = true;
+            this.Cb_Relatorios.Items.AddRange(new object[] {
+            "01 - Listagem de produtos",
+            "02 - Listagem de Funcionários",
+            "03 - Alterações feitas "});
+            this.Cb_Relatorios.Location = new System.Drawing.Point(559, 87);
+            this.Cb_Relatorios.Name = "Cb_Relatorios";
+            this.Cb_Relatorios.Size = new System.Drawing.Size(354, 21);
+            this.Cb_Relatorios.TabIndex = 7;
+            this.Cb_Relatorios.SelectedIndexChanged += new System.EventHandler(this.Cb_Relatorios_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(455, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(154, 33);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Relatórios";
+            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -958,105 +1081,136 @@ namespace RmSoft
             this.label17.TabIndex = 7;
             this.label17.Text = "Data:";
             // 
-            // accordionControlElement1
+            // Dg_ListagemProd
             // 
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement1.Text = "Listas de relatorios ";
-            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
+            this.Dg_ListagemProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dg_ListagemProd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Dg_ListagemProd.Location = new System.Drawing.Point(651, 0);
+            this.Dg_ListagemProd.Name = "Dg_ListagemProd";
+            this.Dg_ListagemProd.Size = new System.Drawing.Size(538, 460);
+            this.Dg_ListagemProd.TabIndex = 11;
             // 
-            // label12
+            // comboBox1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(455, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 33);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Relatórios";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(258, 257);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 18;
             // 
-            // Cb_Relatorios
+            // label29
             // 
-            this.Cb_Relatorios.FormattingEnabled = true;
-            this.Cb_Relatorios.Items.AddRange(new object[] {
-            "01 - Listagem de produtos",
-            "02 - Listagem de Funcionários",
-            "03 - Alterações feitas "});
-            this.Cb_Relatorios.Location = new System.Drawing.Point(559, 87);
-            this.Cb_Relatorios.Name = "Cb_Relatorios";
-            this.Cb_Relatorios.Size = new System.Drawing.Size(354, 21);
-            this.Cb_Relatorios.TabIndex = 7;
-            this.Cb_Relatorios.SelectedIndexChanged += new System.EventHandler(this.Cb_Relatorios_SelectedIndexChanged);
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(157, 264);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(36, 13);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Grupo";
             // 
-            // label16
+            // accordionControlElement2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(265, 90);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 13);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Selecione o Relatório";
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2.Text = "Grupos";
+            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click_1);
             // 
-            // xtraTab_Relatorio
+            // xtraTabPage9
             // 
-            this.xtraTab_Relatorio.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.xtraTab_Relatorio.Location = new System.Drawing.Point(0, 114);
-            this.xtraTab_Relatorio.Name = "xtraTab_Relatorio";
-            this.xtraTab_Relatorio.SelectedTabPage = this.xtraTabPage6;
-            this.xtraTab_Relatorio.Size = new System.Drawing.Size(1191, 485);
-            this.xtraTab_Relatorio.TabIndex = 9;
-            this.xtraTab_Relatorio.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage6,
-            this.xtraTabPage7,
-            this.xtraTabPage8});
+            this.xtraTabPage9.Controls.Add(this.Tb_DescGrupo);
+            this.xtraTabPage9.Controls.Add(this.Tb_CodGrupo);
+            this.xtraTabPage9.Controls.Add(this.label31);
+            this.xtraTabPage9.Controls.Add(this.label30);
+            this.xtraTabPage9.Controls.Add(this.Bt_ExcluirGrupo);
+            this.xtraTabPage9.Controls.Add(this.Bt_PesquisarGrupo);
+            this.xtraTabPage9.Controls.Add(this.Bt_SalvarGrupo);
+            this.xtraTabPage9.Controls.Add(this.Bt_LimparGrupo);
+            this.xtraTabPage9.Controls.Add(this.Grid_Grupos);
+            this.xtraTabPage9.Name = "xtraTabPage9";
+            this.xtraTabPage9.Size = new System.Drawing.Size(1191, 599);
+            this.xtraTabPage9.Text = "xtraTabPage9";
             // 
-            // xtraTabPage6
+            // Grid_Grupos
             // 
-            this.xtraTabPage6.Controls.Add(this.label22);
-            this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
-            this.xtraTabPage6.Text = "ListagemProduto";
+            this.Grid_Grupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_Grupos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Grid_Grupos.Location = new System.Drawing.Point(0, 0);
+            this.Grid_Grupos.Name = "Grid_Grupos";
+            this.Grid_Grupos.Size = new System.Drawing.Size(1191, 150);
+            this.Grid_Grupos.TabIndex = 0;
+            this.Grid_Grupos.Visible = false;
+            this.Grid_Grupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             // 
-            // xtraTabPage7
+            // Bt_ExcluirGrupo
             // 
-            this.xtraTabPage7.Controls.Add(this.label23);
-            this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(1189, 460);
-            this.xtraTabPage7.Text = "ListagemFuncionario";
+            this.Bt_ExcluirGrupo.Location = new System.Drawing.Point(839, 184);
+            this.Bt_ExcluirGrupo.Name = "Bt_ExcluirGrupo";
+            this.Bt_ExcluirGrupo.Size = new System.Drawing.Size(200, 33);
+            this.Bt_ExcluirGrupo.TabIndex = 8;
+            this.Bt_ExcluirGrupo.Text = "EXCLUIR";
+            this.Bt_ExcluirGrupo.UseVisualStyleBackColor = true;
+            this.Bt_ExcluirGrupo.Click += new System.EventHandler(this.Bt_ExcluirGrupo_Click);
             // 
-            // xtraTabPage8
+            // Bt_PesquisarGrupo
             // 
-            this.xtraTabPage8.Controls.Add(this.label28);
-            this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(1189, 460);
-            this.xtraTabPage8.Text = "Alteraçõesfeitas";
+            this.Bt_PesquisarGrupo.Location = new System.Drawing.Point(598, 184);
+            this.Bt_PesquisarGrupo.Name = "Bt_PesquisarGrupo";
+            this.Bt_PesquisarGrupo.Size = new System.Drawing.Size(209, 33);
+            this.Bt_PesquisarGrupo.TabIndex = 7;
+            this.Bt_PesquisarGrupo.Text = "PESQUISAR";
+            this.Bt_PesquisarGrupo.UseVisualStyleBackColor = true;
+            this.Bt_PesquisarGrupo.Click += new System.EventHandler(this.Bt_PesquisarGrupo_Click);
             // 
-            // label22
+            // Bt_SalvarGrupo
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(400, 54);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 13);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "Listagem de produtos";
+            this.Bt_SalvarGrupo.Location = new System.Drawing.Point(356, 184);
+            this.Bt_SalvarGrupo.Name = "Bt_SalvarGrupo";
+            this.Bt_SalvarGrupo.Size = new System.Drawing.Size(200, 33);
+            this.Bt_SalvarGrupo.TabIndex = 6;
+            this.Bt_SalvarGrupo.Text = "SALVAR";
+            this.Bt_SalvarGrupo.UseVisualStyleBackColor = true;
+            this.Bt_SalvarGrupo.Click += new System.EventHandler(this.Bt_SalvarGrupo_Click);
             // 
-            // label23
+            // Bt_LimparGrupo
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(457, 93);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 13);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "Listagem de Funcionario";
+            this.Bt_LimparGrupo.Location = new System.Drawing.Point(123, 184);
+            this.Bt_LimparGrupo.Name = "Bt_LimparGrupo";
+            this.Bt_LimparGrupo.Size = new System.Drawing.Size(166, 33);
+            this.Bt_LimparGrupo.TabIndex = 5;
+            this.Bt_LimparGrupo.Text = "LIMPAR";
+            this.Bt_LimparGrupo.UseVisualStyleBackColor = true;
+            this.Bt_LimparGrupo.Click += new System.EventHandler(this.Bt_LimparGrupo_Click);
             // 
-            // label28
+            // label30
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(466, 128);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(87, 13);
-            this.label28.TabIndex = 11;
-            this.label28.Text = "alterações feitas";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(145, 299);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(87, 13);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "Codigo do Grupo";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(145, 357);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(53, 13);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Descrição";
+            // 
+            // Tb_CodGrupo
+            // 
+            this.Tb_CodGrupo.Location = new System.Drawing.Point(261, 299);
+            this.Tb_CodGrupo.Name = "Tb_CodGrupo";
+            this.Tb_CodGrupo.Size = new System.Drawing.Size(100, 21);
+            this.Tb_CodGrupo.TabIndex = 11;
+            // 
+            // Tb_DescGrupo
+            // 
+            this.Tb_DescGrupo.Location = new System.Drawing.Point(261, 354);
+            this.Tb_DescGrupo.Name = "Tb_DescGrupo";
+            this.Tb_DescGrupo.Size = new System.Drawing.Size(206, 21);
+            this.Tb_DescGrupo.TabIndex = 12;
             // 
             // Principal
             // 
@@ -1102,6 +1256,10 @@ namespace RmSoft
             this.xtraTabPage7.PerformLayout();
             this.xtraTabPage8.ResumeLayout(false);
             this.xtraTabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).EndInit();
+            this.xtraTabPage9.ResumeLayout(false);
+            this.xtraTabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid_Grupos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1199,5 +1357,19 @@ namespace RmSoft
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.DataGridView Dg_ListagemProd;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage9;
+        private System.Windows.Forms.TextBox Tb_DescGrupo;
+        private System.Windows.Forms.TextBox Tb_CodGrupo;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button Bt_ExcluirGrupo;
+        private System.Windows.Forms.Button Bt_PesquisarGrupo;
+        private System.Windows.Forms.Button Bt_SalvarGrupo;
+        private System.Windows.Forms.Button Bt_LimparGrupo;
+        private System.Windows.Forms.DataGridView Grid_Grupos;
     }
 }

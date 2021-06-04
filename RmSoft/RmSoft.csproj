@@ -67,7 +67,9 @@
     <Compile Include="ArquivoIni.cs" />
     <Compile Include="Bd\lembrar.cs" />
     <Compile Include="Bd\LoginDaoComandos.cs" />
+    <Compile Include="CadastroGrupos.cs" />
     <Compile Include="CadastroProdutos.cs" />
+    <Compile Include="DeletarGrupo.cs" />
     <Compile Include="DeletarProduto.cs" />
     <Compile Include="UpdFuncionario.cs" />
     <Compile Include="DeletarFuncionario.cs" />

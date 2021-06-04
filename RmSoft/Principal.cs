@@ -21,7 +21,8 @@ namespace RmSoft
     {
         IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
         public string usuario { get; internal set; } // pegando o usuario que foi digitado na tela de login
-        public int con;  //variavel de controle para saber se o usuario selecionou o item ou nao
+        public int con;  //variavel de controle para saber se o usuario selecionou o item ou nao para ser alterado,  ou incluido no banco de dados 
+
 
         public Principal()
         {
@@ -402,6 +403,70 @@ namespace RmSoft
 
             }
            
+        }
+
+        private void accordionControlElement2_Click_1(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 6;
+        }
+
+        private void Bt_PesquisarGrupo_Click(object sender, EventArgs e)
+        {
+           Grid_Grupos.Visible = true;
+
+            SqlDataAdapter da;
+            DataSet ds;
+            SqlConnection con = new SqlConnection();
+            ds = new DataSet();
+            con.ConnectionString = (@"Data Source = " + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Integrated Security = True");
+            con.Open();
+            da = new SqlDataAdapter("select * from rmsoft..Grupos", con);
+            da.Fill(ds, "all");
+            Grid_Grupos.DataSource = null;
+            Grid_Grupos.DataSource = ds.Tables["all"];
+            con.Close();
+        }
+
+        private void Bt_LimparGrupo_Click(object sender, EventArgs e)
+        {
+            con = 0;
+            Tb_CodGrupo.Text = "";
+            Tb_DescGrupo.Text = "";
+
+        }
+
+        private void Bt_SalvarGrupo_Click(object sender, EventArgs e)
+        {
+
+                CadastroGrupos cad = new CadastroGrupos(int.Parse(Tb_CodGrupo.Text), Tb_DescGrupo.Text.ToString(),con);
+                Tb_CodGrupo.Text = "";
+                Tb_DescGrupo.Text = "";
+                MessageBox.Show("cadastrado com sucesso");
+            
+        }
+
+        private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            con = 1;
+            Grid_Grupos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.Tb_CodGrupo.Text = Convert.ToString(this.Grid_Grupos.CurrentRow.Cells["Cod_grupo"].Value);
+            this.Tb_DescGrupo.Text = Convert.ToString(this.Grid_Grupos.CurrentRow.Cells["Descricao"].Value);
+            Grid_Grupos.Visible = false;
+        }
+
+        private void Bt_ExcluirGrupo_Click(object sender, EventArgs e)
+        {
+            if (con == 1)
+            {
+                DeletarGrupo Del = new DeletarGrupo(int.Parse(Tb_CodGrupo.Text));
+                Tb_CodGrupo.Text = "";
+                Tb_DescGrupo.Text = "";
+                MessageBox.Show("Grupo deletado com sucesso");
+                con = 0;
+
+            }
+            else
+                MessageBox.Show("Selecione um grupo");
         }
     }
 }

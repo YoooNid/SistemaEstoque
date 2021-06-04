@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RmSoft
 {
@@ -14,11 +11,6 @@ namespace RmSoft
         public String mensagem = "";
         public UpdFuncionario(String Codigo, String Nome, String Sexo, String RG, String CPF, String Usuario, String Senha, String Endereco, String Bairro, String Cidade, String OBS) // construtor (obriga a entrada de dados)
         {
-
-
-
-
-
 
             cmd.CommandText = "update funcionario set Nome = @nome, Sexo = @Sexo, rg = @RG, cpf = @CPF, Endereco = @Endereco, bairro = @Bairro, Cidade = @Cidade, Usuario = @Usuario, Senha = @Senha, Obs = @OBS where codigo = @Codigo";
             cmd.Parameters.AddWithValue("@Codigo", Codigo);

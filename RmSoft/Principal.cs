@@ -431,10 +431,14 @@ namespace RmSoft
         private void Bt_SalvarGrupo_Click(object sender, EventArgs e)
         {
 
-                CadastroGrupos cad = new CadastroGrupos(int.Parse(Tb_CodGrupo.Text), Tb_DescGrupo.Text.ToString(),con);
+                CadastroGrupos cad = new CadastroGrupos(int.Parse(Tb_CodGrupo.Text), Tb_DescGrupo.Text ,con);
                 Tb_CodGrupo.Text = "";
                 Tb_DescGrupo.Text = "";
+            if (con == 1)
+                MessageBox.Show("Alterado com sucesso");
+            else 
                 MessageBox.Show("cadastrado com sucesso");
+            Bt_PesquisarGrupo.PerformClick();
             
         }
 
@@ -456,6 +460,7 @@ namespace RmSoft
                 Tb_DescGrupo.Text = "";
                 MessageBox.Show("Grupo deletado com sucesso");
                 con = 0;
+                Bt_PesquisarGrupo.PerformClick();
 
             }
             else

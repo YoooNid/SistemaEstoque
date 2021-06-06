@@ -333,4 +333,4 @@ C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\bin\Debug\es\DevExpress.Office
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\bin\Debug\ja\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\bin\Debug\ru\DevExpress.Office.v20.2.Core.resources.dll
 C:\Users\Yooon\Source\Repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.CopyComplete
-C:\Users\yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csprojAssemblyReference.cache
+C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.AssemblyReference.cache

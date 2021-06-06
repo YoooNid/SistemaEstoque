@@ -17,7 +17,7 @@ namespace RmSoft
 
             if (Con == 1)
             {
-                cmd.CommandText = "update Rmsoft..Grupos set Descricao = @Descricao where Cod_Grupo = @Codigo)";
+                cmd.CommandText = "update Rmsoft..Grupos set Descricao = @Descricao where Cod_Grupo = @Codigo";
                 cmd.Parameters.AddWithValue("@Codigo", Codigo);
                 cmd.Parameters.AddWithValue("@Descricao", Desc);
 

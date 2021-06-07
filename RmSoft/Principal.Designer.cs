@@ -36,6 +36,7 @@ namespace RmSoft
             this.Cadastro_Funcionario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Cadastro_Produto = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ACE_Estoque = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Estoque_Inventario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Estoque_EntradaSaida = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -76,6 +77,8 @@ namespace RmSoft
             this.Tb_cidade = new System.Windows.Forms.TextBox();
             this.Tb_telefone = new System.Windows.Forms.TextBox();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.Tb_estoque = new System.Windows.Forms.TextBox();
@@ -106,6 +109,7 @@ namespace RmSoft
             this.Tab_Relatorios = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTab_Relatorio = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.Dg_ListagemProd = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
             this.label23 = new System.Windows.Forms.Label();
@@ -114,6 +118,16 @@ namespace RmSoft
             this.label16 = new System.Windows.Forms.Label();
             this.Cb_Relatorios = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.xtraTabPage9 = new DevExpress.XtraTab.XtraTabPage();
+            this.Tb_DescGrupo = new System.Windows.Forms.TextBox();
+            this.Tb_CodGrupo = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.Bt_ExcluirGrupo = new System.Windows.Forms.Button();
+            this.Bt_PesquisarGrupo = new System.Windows.Forms.Button();
+            this.Bt_SalvarGrupo = new System.Windows.Forms.Button();
+            this.Bt_LimparGrupo = new System.Windows.Forms.Button();
+            this.Grid_Grupos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.Lb_usuarioIni = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -121,20 +135,6 @@ namespace RmSoft
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Lb_Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.Dg_ListagemProd = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.xtraTabPage9 = new DevExpress.XtraTab.XtraTabPage();
-            this.Grid_Grupos = new System.Windows.Forms.DataGridView();
-            this.Bt_ExcluirGrupo = new System.Windows.Forms.Button();
-            this.Bt_PesquisarGrupo = new System.Windows.Forms.Button();
-            this.Bt_SalvarGrupo = new System.Windows.Forms.Button();
-            this.Bt_LimparGrupo = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.Tb_CodGrupo = new System.Windows.Forms.TextBox();
-            this.Tb_DescGrupo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -150,9 +150,9 @@ namespace RmSoft
             ((System.ComponentModel.ISupportInitialize)(this.xtraTab_Relatorio)).BeginInit();
             this.xtraTab_Relatorio.SuspendLayout();
             this.xtraTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).BeginInit();
             this.xtraTabPage7.SuspendLayout();
             this.xtraTabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).BeginInit();
             this.xtraTabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Grupos)).BeginInit();
             this.SuspendLayout();
@@ -179,7 +179,6 @@ namespace RmSoft
             this.Cadastro_Produto,
             this.accordionControlSeparator1,
             this.accordionControlElement2});
-            this.ACE_Cadastro.Expanded = true;
             this.ACE_Cadastro.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
@@ -207,12 +206,18 @@ namespace RmSoft
             // 
             this.accordionControlSeparator1.Name = "accordionControlSeparator1";
             // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2.Text = "Grupos";
+            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click_1);
+            // 
             // ACE_Estoque
             // 
             this.ACE_Estoque.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.Estoque_Inventario,
             this.Estoque_EntradaSaida});
-            this.ACE_Estoque.Expanded = true;
             this.ACE_Estoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Estoque.ImageOptions.Image")));
             this.ACE_Estoque.Name = "ACE_Estoque";
             this.ACE_Estoque.Text = "Estoque";
@@ -235,7 +240,6 @@ namespace RmSoft
             // 
             this.ACE_Relatorios.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.ACE_Relatorios.Expanded = true;
             this.ACE_Relatorios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ACE_Relatorios.ImageOptions.Image")));
             this.ACE_Relatorios.Name = "ACE_Relatorios";
             this.ACE_Relatorios.Text = "Relatorios";
@@ -616,6 +620,23 @@ namespace RmSoft
             this.xtraTabPage2.Size = new System.Drawing.Size(1191, 599);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(157, 264);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(36, 13);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Grupo";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(258, 257);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 18;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -935,6 +956,15 @@ namespace RmSoft
             this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
             this.xtraTabPage6.Text = "ListagemProduto";
             // 
+            // Dg_ListagemProd
+            // 
+            this.Dg_ListagemProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dg_ListagemProd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Dg_ListagemProd.Location = new System.Drawing.Point(651, 0);
+            this.Dg_ListagemProd.Name = "Dg_ListagemProd";
+            this.Dg_ListagemProd.Size = new System.Drawing.Size(538, 460);
+            this.Dg_ListagemProd.TabIndex = 11;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -1007,6 +1037,104 @@ namespace RmSoft
             this.label12.Size = new System.Drawing.Size(154, 33);
             this.label12.TabIndex = 6;
             this.label12.Text = "Relatórios";
+            // 
+            // xtraTabPage9
+            // 
+            this.xtraTabPage9.Controls.Add(this.Tb_DescGrupo);
+            this.xtraTabPage9.Controls.Add(this.Tb_CodGrupo);
+            this.xtraTabPage9.Controls.Add(this.label31);
+            this.xtraTabPage9.Controls.Add(this.label30);
+            this.xtraTabPage9.Controls.Add(this.Bt_ExcluirGrupo);
+            this.xtraTabPage9.Controls.Add(this.Bt_PesquisarGrupo);
+            this.xtraTabPage9.Controls.Add(this.Bt_SalvarGrupo);
+            this.xtraTabPage9.Controls.Add(this.Bt_LimparGrupo);
+            this.xtraTabPage9.Controls.Add(this.Grid_Grupos);
+            this.xtraTabPage9.Name = "xtraTabPage9";
+            this.xtraTabPage9.Size = new System.Drawing.Size(1191, 599);
+            this.xtraTabPage9.Text = "xtraTabPage9";
+            // 
+            // Tb_DescGrupo
+            // 
+            this.Tb_DescGrupo.Location = new System.Drawing.Point(261, 354);
+            this.Tb_DescGrupo.Name = "Tb_DescGrupo";
+            this.Tb_DescGrupo.Size = new System.Drawing.Size(206, 21);
+            this.Tb_DescGrupo.TabIndex = 12;
+            // 
+            // Tb_CodGrupo
+            // 
+            this.Tb_CodGrupo.Location = new System.Drawing.Point(261, 299);
+            this.Tb_CodGrupo.Name = "Tb_CodGrupo";
+            this.Tb_CodGrupo.Size = new System.Drawing.Size(100, 21);
+            this.Tb_CodGrupo.TabIndex = 11;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(145, 357);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(53, 13);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Descrição";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(145, 299);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(87, 13);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "Codigo do Grupo";
+            // 
+            // Bt_ExcluirGrupo
+            // 
+            this.Bt_ExcluirGrupo.Location = new System.Drawing.Point(839, 184);
+            this.Bt_ExcluirGrupo.Name = "Bt_ExcluirGrupo";
+            this.Bt_ExcluirGrupo.Size = new System.Drawing.Size(200, 33);
+            this.Bt_ExcluirGrupo.TabIndex = 8;
+            this.Bt_ExcluirGrupo.Text = "EXCLUIR";
+            this.Bt_ExcluirGrupo.UseVisualStyleBackColor = true;
+            this.Bt_ExcluirGrupo.Click += new System.EventHandler(this.Bt_ExcluirGrupo_Click);
+            // 
+            // Bt_PesquisarGrupo
+            // 
+            this.Bt_PesquisarGrupo.Location = new System.Drawing.Point(598, 184);
+            this.Bt_PesquisarGrupo.Name = "Bt_PesquisarGrupo";
+            this.Bt_PesquisarGrupo.Size = new System.Drawing.Size(209, 33);
+            this.Bt_PesquisarGrupo.TabIndex = 7;
+            this.Bt_PesquisarGrupo.Text = "PESQUISAR";
+            this.Bt_PesquisarGrupo.UseVisualStyleBackColor = true;
+            this.Bt_PesquisarGrupo.Click += new System.EventHandler(this.Bt_PesquisarGrupo_Click);
+            // 
+            // Bt_SalvarGrupo
+            // 
+            this.Bt_SalvarGrupo.Location = new System.Drawing.Point(356, 184);
+            this.Bt_SalvarGrupo.Name = "Bt_SalvarGrupo";
+            this.Bt_SalvarGrupo.Size = new System.Drawing.Size(200, 33);
+            this.Bt_SalvarGrupo.TabIndex = 6;
+            this.Bt_SalvarGrupo.Text = "SALVAR";
+            this.Bt_SalvarGrupo.UseVisualStyleBackColor = true;
+            this.Bt_SalvarGrupo.Click += new System.EventHandler(this.Bt_SalvarGrupo_Click);
+            // 
+            // Bt_LimparGrupo
+            // 
+            this.Bt_LimparGrupo.Location = new System.Drawing.Point(123, 184);
+            this.Bt_LimparGrupo.Name = "Bt_LimparGrupo";
+            this.Bt_LimparGrupo.Size = new System.Drawing.Size(166, 33);
+            this.Bt_LimparGrupo.TabIndex = 5;
+            this.Bt_LimparGrupo.Text = "LIMPAR";
+            this.Bt_LimparGrupo.UseVisualStyleBackColor = true;
+            this.Bt_LimparGrupo.Click += new System.EventHandler(this.Bt_LimparGrupo_Click);
+            // 
+            // Grid_Grupos
+            // 
+            this.Grid_Grupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_Grupos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Grid_Grupos.Location = new System.Drawing.Point(0, 0);
+            this.Grid_Grupos.Name = "Grid_Grupos";
+            this.Grid_Grupos.Size = new System.Drawing.Size(1191, 150);
+            this.Grid_Grupos.TabIndex = 0;
+            this.Grid_Grupos.Visible = false;
+            this.Grid_Grupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             // 
             // label9
             // 
@@ -1081,137 +1209,6 @@ namespace RmSoft
             this.label17.TabIndex = 7;
             this.label17.Text = "Data:";
             // 
-            // Dg_ListagemProd
-            // 
-            this.Dg_ListagemProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dg_ListagemProd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Dg_ListagemProd.Location = new System.Drawing.Point(651, 0);
-            this.Dg_ListagemProd.Name = "Dg_ListagemProd";
-            this.Dg_ListagemProd.Size = new System.Drawing.Size(538, 460);
-            this.Dg_ListagemProd.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(258, 257);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 18;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(157, 264);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(36, 13);
-            this.label29.TabIndex = 19;
-            this.label29.Text = "Grupo";
-            // 
-            // accordionControlElement2
-            // 
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement2.Text = "Grupos";
-            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click_1);
-            // 
-            // xtraTabPage9
-            // 
-            this.xtraTabPage9.Controls.Add(this.Tb_DescGrupo);
-            this.xtraTabPage9.Controls.Add(this.Tb_CodGrupo);
-            this.xtraTabPage9.Controls.Add(this.label31);
-            this.xtraTabPage9.Controls.Add(this.label30);
-            this.xtraTabPage9.Controls.Add(this.Bt_ExcluirGrupo);
-            this.xtraTabPage9.Controls.Add(this.Bt_PesquisarGrupo);
-            this.xtraTabPage9.Controls.Add(this.Bt_SalvarGrupo);
-            this.xtraTabPage9.Controls.Add(this.Bt_LimparGrupo);
-            this.xtraTabPage9.Controls.Add(this.Grid_Grupos);
-            this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(1191, 599);
-            this.xtraTabPage9.Text = "xtraTabPage9";
-            // 
-            // Grid_Grupos
-            // 
-            this.Grid_Grupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid_Grupos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Grid_Grupos.Location = new System.Drawing.Point(0, 0);
-            this.Grid_Grupos.Name = "Grid_Grupos";
-            this.Grid_Grupos.Size = new System.Drawing.Size(1191, 150);
-            this.Grid_Grupos.TabIndex = 0;
-            this.Grid_Grupos.Visible = false;
-            this.Grid_Grupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
-            // 
-            // Bt_ExcluirGrupo
-            // 
-            this.Bt_ExcluirGrupo.Location = new System.Drawing.Point(839, 184);
-            this.Bt_ExcluirGrupo.Name = "Bt_ExcluirGrupo";
-            this.Bt_ExcluirGrupo.Size = new System.Drawing.Size(200, 33);
-            this.Bt_ExcluirGrupo.TabIndex = 8;
-            this.Bt_ExcluirGrupo.Text = "EXCLUIR";
-            this.Bt_ExcluirGrupo.UseVisualStyleBackColor = true;
-            this.Bt_ExcluirGrupo.Click += new System.EventHandler(this.Bt_ExcluirGrupo_Click);
-            // 
-            // Bt_PesquisarGrupo
-            // 
-            this.Bt_PesquisarGrupo.Location = new System.Drawing.Point(598, 184);
-            this.Bt_PesquisarGrupo.Name = "Bt_PesquisarGrupo";
-            this.Bt_PesquisarGrupo.Size = new System.Drawing.Size(209, 33);
-            this.Bt_PesquisarGrupo.TabIndex = 7;
-            this.Bt_PesquisarGrupo.Text = "PESQUISAR";
-            this.Bt_PesquisarGrupo.UseVisualStyleBackColor = true;
-            this.Bt_PesquisarGrupo.Click += new System.EventHandler(this.Bt_PesquisarGrupo_Click);
-            // 
-            // Bt_SalvarGrupo
-            // 
-            this.Bt_SalvarGrupo.Location = new System.Drawing.Point(356, 184);
-            this.Bt_SalvarGrupo.Name = "Bt_SalvarGrupo";
-            this.Bt_SalvarGrupo.Size = new System.Drawing.Size(200, 33);
-            this.Bt_SalvarGrupo.TabIndex = 6;
-            this.Bt_SalvarGrupo.Text = "SALVAR";
-            this.Bt_SalvarGrupo.UseVisualStyleBackColor = true;
-            this.Bt_SalvarGrupo.Click += new System.EventHandler(this.Bt_SalvarGrupo_Click);
-            // 
-            // Bt_LimparGrupo
-            // 
-            this.Bt_LimparGrupo.Location = new System.Drawing.Point(123, 184);
-            this.Bt_LimparGrupo.Name = "Bt_LimparGrupo";
-            this.Bt_LimparGrupo.Size = new System.Drawing.Size(166, 33);
-            this.Bt_LimparGrupo.TabIndex = 5;
-            this.Bt_LimparGrupo.Text = "LIMPAR";
-            this.Bt_LimparGrupo.UseVisualStyleBackColor = true;
-            this.Bt_LimparGrupo.Click += new System.EventHandler(this.Bt_LimparGrupo_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(145, 299);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(87, 13);
-            this.label30.TabIndex = 9;
-            this.label30.Text = "Codigo do Grupo";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(145, 357);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(53, 13);
-            this.label31.TabIndex = 10;
-            this.label31.Text = "Descrição";
-            // 
-            // Tb_CodGrupo
-            // 
-            this.Tb_CodGrupo.Location = new System.Drawing.Point(261, 299);
-            this.Tb_CodGrupo.Name = "Tb_CodGrupo";
-            this.Tb_CodGrupo.Size = new System.Drawing.Size(100, 21);
-            this.Tb_CodGrupo.TabIndex = 11;
-            // 
-            // Tb_DescGrupo
-            // 
-            this.Tb_DescGrupo.Location = new System.Drawing.Point(261, 354);
-            this.Tb_DescGrupo.Name = "Tb_DescGrupo";
-            this.Tb_DescGrupo.Size = new System.Drawing.Size(206, 21);
-            this.Tb_DescGrupo.TabIndex = 12;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1228,7 +1225,7 @@ namespace RmSoft
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "5";
+            this.Text = "Inventario e Estoque";
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -1252,11 +1249,11 @@ namespace RmSoft
             this.xtraTab_Relatorio.ResumeLayout(false);
             this.xtraTabPage6.ResumeLayout(false);
             this.xtraTabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).EndInit();
             this.xtraTabPage7.ResumeLayout(false);
             this.xtraTabPage7.PerformLayout();
             this.xtraTabPage8.ResumeLayout(false);
             this.xtraTabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).EndInit();
             this.xtraTabPage9.ResumeLayout(false);
             this.xtraTabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Grupos)).EndInit();

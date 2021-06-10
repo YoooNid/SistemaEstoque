@@ -109,7 +109,6 @@ namespace RmSoft
             this.Tab_Relatorios = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTab_Relatorio = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.Dg_ListagemProd = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
             this.label23 = new System.Windows.Forms.Label();
@@ -150,7 +149,6 @@ namespace RmSoft
             ((System.ComponentModel.ISupportInitialize)(this.xtraTab_Relatorio)).BeginInit();
             this.xtraTab_Relatorio.SuspendLayout();
             this.xtraTabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).BeginInit();
             this.xtraTabPage7.SuspendLayout();
             this.xtraTabPage8.SuspendLayout();
             this.xtraTabPage9.SuspendLayout();
@@ -950,20 +948,10 @@ namespace RmSoft
             // 
             // xtraTabPage6
             // 
-            this.xtraTabPage6.Controls.Add(this.Dg_ListagemProd);
             this.xtraTabPage6.Controls.Add(this.label22);
             this.xtraTabPage6.Name = "xtraTabPage6";
             this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
             this.xtraTabPage6.Text = "ListagemProduto";
-            // 
-            // Dg_ListagemProd
-            // 
-            this.Dg_ListagemProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dg_ListagemProd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Dg_ListagemProd.Location = new System.Drawing.Point(651, 0);
-            this.Dg_ListagemProd.Name = "Dg_ListagemProd";
-            this.Dg_ListagemProd.Size = new System.Drawing.Size(538, 460);
-            this.Dg_ListagemProd.TabIndex = 11;
             // 
             // label22
             // 
@@ -1249,7 +1237,6 @@ namespace RmSoft
             this.xtraTab_Relatorio.ResumeLayout(false);
             this.xtraTabPage6.ResumeLayout(false);
             this.xtraTabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dg_ListagemProd)).EndInit();
             this.xtraTabPage7.ResumeLayout(false);
             this.xtraTabPage7.PerformLayout();
             this.xtraTabPage8.ResumeLayout(false);
@@ -1354,7 +1341,6 @@ namespace RmSoft
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DataGridView Dg_ListagemProd;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;

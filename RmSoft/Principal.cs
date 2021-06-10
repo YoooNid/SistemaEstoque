@@ -41,6 +41,8 @@ namespace RmSoft
             label1.AutoEllipsis = true;
             xtraTab_Relatorio.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             Cb_Relatorios.SelectedIndex = 0;
+            this.Rv_ListagemDeProduto.RefreshReport();
+            this.Rv_ListagemDeProduto.RefreshReport();
         }
 
         private void accordionControlElement3_Click(object sender, EventArgs e)

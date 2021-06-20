@@ -9,9 +9,10 @@ namespace RmSoft
 {
     public partial class Principal : Form
     {
-        IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
+        readonly IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
         public string usuario { get; internal set; } // pegando o usuario que foi digitado na tela de login
         public int con;  //variavel de controle para saber se o usuario selecionou o item ou nao para ser alterado,  ou incluido no banco de dados 
+        
 
 
         public Principal()
@@ -33,7 +34,7 @@ namespace RmSoft
 
 
         {
-            
+
             Lb_usuarioIni.Visible = true;
             Lb_usuarioIni.Text = usuario;
             xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
@@ -41,8 +42,6 @@ namespace RmSoft
             label1.AutoEllipsis = true;
             xtraTab_Relatorio.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             Cb_Relatorios.SelectedIndex = 0;
-            this.Rv_ListagemDeProduto.RefreshReport();
-            this.Rv_ListagemDeProduto.RefreshReport();
         }
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
@@ -95,7 +94,7 @@ namespace RmSoft
                 else
                 {
                     UpdFuncionario up = new UpdFuncionario(Tb_CodFuncionario.Text, Txt_NomeFuncionario.Text, Cb_sexo.Text, Tb_rg.Text, Tb_Cpf.Text, Tb_UsuarioFuncionario.Text, Tb_senha.Text, Tb_endereco.Text, Tb_bairro.Text, Tb_cidade.Text, Rtb_obs.Text);
-                    
+
                     MessageBox.Show("Alterado com sucesso");
                 }
 
@@ -120,30 +119,32 @@ namespace RmSoft
                 MessageBox.Show("Cadastrado com sucesso");
             }
 
-         }
-            
-        
+        }
 
-      
+
+
+
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
             if (Grid_Funcionario.Visible == false)
             {
                 label19.Visible = false;
                 Grid_Funcionario.Visible = true;
 
-                SqlDataAdapter da;
-                DataSet ds;
+
+                
+                DataSet ds = new DataSet();
                 SqlConnection con = new SqlConnection();
-                ds = new DataSet();
+                SqlDataAdapter da;
                 con.ConnectionString = (@"Data Source = " + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Integrated Security = True");
                 con.Open();
-                da = new SqlDataAdapter("select * from rmsoft..Funcionario", con);
+                da = new SqlDataAdapter("select * from rmsoft..Funcionario",con);
                 da.Fill(ds, "all");
                 Grid_Funcionario.DataSource = null;
                 Grid_Funcionario.DataSource = ds.Tables["all"];
                 con.Close();
+
             }
             else
             {
@@ -161,22 +162,22 @@ namespace RmSoft
         {
             if (con == 1)
             {
-                
-                    DeletarFuncionario del = new DeletarFuncionario(Tb_CodFuncionario.Text, Tb_UsuarioFuncionario.Text);
-                    Txt_NomeFuncionario.Text = "";
-                    Tb_Cpf.Text = "";
-                    Tb_UsuarioFuncionario.Text = "";
-                    Tb_senha.Text = "";
-                    Tb_endereco.Text = "";
-                    Tb_bairro.Text = "";
-                    Tb_cidade.Text = "";
-                    Tb_telefone.Text = "";
-                    Tb_rg.Text = "";
-                    Rtb_obs.Text = "";
-                    Cb_sexo.Text = "";
-                    Tb_CodFuncionario.Text = "";
-                    MessageBox.Show("deletado com sucesso");
-                    con = 0;
+
+                DeletarFuncionario del = new DeletarFuncionario(Tb_CodFuncionario.Text, Tb_UsuarioFuncionario.Text);
+                Txt_NomeFuncionario.Text = "";
+                Tb_Cpf.Text = "";
+                Tb_UsuarioFuncionario.Text = "";
+                Tb_senha.Text = "";
+                Tb_endereco.Text = "";
+                Tb_bairro.Text = "";
+                Tb_cidade.Text = "";
+                Tb_telefone.Text = "";
+                Tb_rg.Text = "";
+                Rtb_obs.Text = "";
+                Cb_sexo.Text = "";
+                Tb_CodFuncionario.Text = "";
+                MessageBox.Show("deletado com sucesso");
+                con = 0;
             }
             else
                 MessageBox.Show("selecione um Funcionario");
@@ -184,7 +185,7 @@ namespace RmSoft
         }
 
 
-        
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -307,7 +308,7 @@ namespace RmSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             if (con == 1)
             {
                 DeletarProduto del = new DeletarProduto(int.Parse(Tb_codigoProd.Text));
@@ -342,7 +343,7 @@ namespace RmSoft
                 AtualizaEstoque att = new AtualizaEstoque(int.Parse(Lb_CodProd.Text), int.Parse(Tb_QntProdEst.Text), entrada, Nome, Est, EntradaSaida, User);
                 MessageBox.Show("atualizado com sucesso");
             }
-            
+
 
             Lb_DescProd.Visible = false;
             Lb_Qnt.Visible = false;
@@ -354,7 +355,7 @@ namespace RmSoft
         private void button3_Click_1(object sender, EventArgs e)
         {
             dataGridView3.Visible = true;
-           
+
             SqlDataAdapter da;
             DataSet ds;
             SqlConnection con = new SqlConnection();
@@ -371,13 +372,13 @@ namespace RmSoft
         private void accordionControlElement1_Click(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPageIndex = 5;
-            
+
         }
 
         private void Cb_Relatorios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            string rel = Cb_Relatorios.Text.Substring(0,2);
+
+            string rel = Cb_Relatorios.Text.Substring(0, 2);
 
             switch (rel)
             {
@@ -397,7 +398,7 @@ namespace RmSoft
 
 
             }
-           
+
         }
 
         private void accordionControlElement2_Click_1(object sender, EventArgs e)
@@ -407,7 +408,7 @@ namespace RmSoft
 
         private void Bt_PesquisarGrupo_Click(object sender, EventArgs e)
         {
-           Grid_Grupos.Visible = true;
+            Grid_Grupos.Visible = true;
 
             SqlDataAdapter da;
             DataSet ds;
@@ -433,15 +434,15 @@ namespace RmSoft
         private void Bt_SalvarGrupo_Click(object sender, EventArgs e)
         {
 
-                CadastroGrupos cad = new CadastroGrupos(int.Parse(Tb_CodGrupo.Text), Tb_DescGrupo.Text ,con);
-                Tb_CodGrupo.Text = "";
-                Tb_DescGrupo.Text = "";
+            CadastroGrupos cad = new CadastroGrupos(int.Parse(Tb_CodGrupo.Text), Tb_DescGrupo.Text, con);
+            Tb_CodGrupo.Text = "";
+            Tb_DescGrupo.Text = "";
             if (con == 1)
                 MessageBox.Show("Alterado com sucesso");
-            else 
+            else
                 MessageBox.Show("cadastrado com sucesso");
             Bt_PesquisarGrupo.PerformClick();
-            
+
         }
 
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
@@ -467,6 +468,12 @@ namespace RmSoft
             }
             else
                 MessageBox.Show("Selecione um grupo");
+        }
+
+        private void Bt_ImprimirRelProd_Click(object sender, EventArgs e)
+        {
+            Relatorios.Frm_produtos rel = new Relatorios.Frm_produtos();
+            rel.Show();
         }
     }
 }

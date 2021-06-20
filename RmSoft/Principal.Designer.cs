@@ -134,6 +134,7 @@ namespace RmSoft
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Lb_Hora = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.Bt_ImprimirRelProd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -948,6 +949,7 @@ namespace RmSoft
             // 
             // xtraTabPage6
             // 
+            this.xtraTabPage6.Controls.Add(this.Bt_ImprimirRelProd);
             this.xtraTabPage6.Controls.Add(this.label22);
             this.xtraTabPage6.Name = "xtraTabPage6";
             this.xtraTabPage6.Size = new System.Drawing.Size(1189, 460);
@@ -1197,6 +1199,16 @@ namespace RmSoft
             this.label17.TabIndex = 7;
             this.label17.Text = "Data:";
             // 
+            // Bt_ImprimirRelProd
+            // 
+            this.Bt_ImprimirRelProd.Location = new System.Drawing.Point(193, 315);
+            this.Bt_ImprimirRelProd.Name = "Bt_ImprimirRelProd";
+            this.Bt_ImprimirRelProd.Size = new System.Drawing.Size(75, 23);
+            this.Bt_ImprimirRelProd.TabIndex = 11;
+            this.Bt_ImprimirRelProd.Text = "Imprimir";
+            this.Bt_ImprimirRelProd.UseVisualStyleBackColor = true;
+            this.Bt_ImprimirRelProd.Click += new System.EventHandler(this.Bt_ImprimirRelProd_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1354,5 +1366,6 @@ namespace RmSoft
         private System.Windows.Forms.Button Bt_SalvarGrupo;
         private System.Windows.Forms.Button Bt_LimparGrupo;
         private System.Windows.Forms.DataGridView Grid_Grupos;
+        private System.Windows.Forms.Button Bt_ImprimirRelProd;
     }
 }

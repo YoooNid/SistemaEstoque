@@ -392,3 +392,6 @@ C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\bin\Debug\ru\Microsoft.ReportV
 C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.csproj.AssemblyReference.cache
+C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RmSoft.Relatorios.Frm_produtos.resources
+C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RdlCompile.cache
+C:\Users\Yooon\source\repos\YoooNid\RmSoft\RmSoft\obj\Debug\RdlCompile.compiled

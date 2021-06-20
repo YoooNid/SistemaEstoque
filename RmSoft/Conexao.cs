@@ -8,15 +8,16 @@ using ArquivoIni;
 
 namespace RmSoft
 {
-    public class Conexao
+    public  class Conexao
 
     {
         IniFiles ini = new IniFiles(@"C:\testes\Configuração.ini");
         SqlConnection Con = new SqlConnection();
 
-        public Conexao()
+        public  Conexao()
         {
             Con.ConnectionString = (@"Data Source=" + ini.IniReadValue("DATABASE", "SERVIDOR") + "; Initial Catalog=RmSoft;Integrated Security=True"); //correto
+            
         }
 
         public SqlConnection Conectar()
@@ -35,5 +36,6 @@ namespace RmSoft
                 Con.Close();
             }
         }
+        
     }
 }

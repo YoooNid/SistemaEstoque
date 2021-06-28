@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace RmSoft.Relatorios
 {
-    public partial class Frm_produtos : Form
+    public partial class Frm_produtos : DevExpress.XtraEditors.XtraForm
     {
         public Frm_produtos()
         {

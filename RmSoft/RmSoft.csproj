@@ -95,6 +95,11 @@
     <Compile Include="Relatorios\Frm_produtos.Designer.cs">
       <DependentUpon>Frm_produtos.cs</DependentUpon>
     </Compile>
+    <Compile Include="RmSoftDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RmSoftDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UpdFuncionario.cs" />
     <Compile Include="DeletarFuncionario.cs" />
@@ -147,6 +152,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RmSoftDataSet1.xsc">
+      <DependentUpon>RmSoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RmSoftDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RmSoftDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RmSoftDataSet1.xss">
+      <DependentUpon>RmSoftDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
